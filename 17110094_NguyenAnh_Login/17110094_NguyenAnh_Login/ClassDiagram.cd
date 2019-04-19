@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="_17110094_NguyenAnh_Login._DESKTOP_RRRHOP4DataSet" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAwAAAAJABAAAQAAAAAgCQBgAAAAAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_17110094_NguyenAnh_Login._DESKTOP_RRRHOP4DataSet1" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAwAAAAJABBAAwAAAAAgCQBgAAAAAAAEEBBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_17110094_NguyenAnh_Login._DESKTOP_RRRHOP4DataSet2" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAwQAAAJABAAAQAAAIAgCQBgAAAAAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_17110094_NguyenAnh_Login._DESKTOP_RRRHOP4DataSet3" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAwQAAAJABAAAQAAAIAgCQBgAAAAAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_17110094_NguyenAnh_Login.AddCourse" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAYAAACAAABABBACAAAACAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AddCourse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_17110094_NguyenAnh_Login.AddStudentForm" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IBCAAAARECAACDAAAADAAgAWAEQAAABAAAAAIAAAAAA=</HashCode>
+      <FileName>AddStudentForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_17110094_NguyenAnh_Login.AdvancedSearch" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAABAAAjAQAEAAAACEAACiQASEAAAIAACYAIACAEE=</HashCode>
+      <FileName>AdvancedSearch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_17110094_NguyenAnh_Login.DataClassesSVDataContext" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABCAAAAAAAIACCAAAAAAAAgAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_17110094_NguyenAnh_Login.SinhVienn" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgEAgRAIAEAAAAUAFQgAIBniYABAIgAAQAgMBQAxE=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="_17110094_NguyenAnh_Login.LinQQLSVDataContext" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAACAAAAAgAIACCAAAAAAAAgQAAAAABA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_17110094_NguyenAnh_Login.Login" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQyAAABAAAAAAAAQAEEAAEVjCAAAAAAAAIAAgAUAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="_17110094_NguyenAnh_Login.SinhVien" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIgEAkRAIAAAAAgUAFQgAIBniIABAIgAAQAgEBQAhE=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="_17110094_NguyenAnh_Login.Form1" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAiQIAAQCCAAABAAAADAAAACACAAAAAAABSSgABCAAI=</HashCode>
+      <FileName>Log_in.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_17110094_NguyenAnh_Login.MainForm" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABACQARAGAAEABAAACAAAgLAAAAgJAAkAAAgAIAIBA=</HashCode>
+      <FileName>MainForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_17110094_NguyenAnh_Login.ManageStudentForm" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IBCAQACRQrAQCFAAABLJAgo2QECkFApIAACAIITAQEE=</HashCode>
+      <FileName>ManageStudentForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_17110094_NguyenAnh_Login.MY_DB" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAABAAAAAAQQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MY_DB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_17110094_NguyenAnh_Login.PrintStudentForm" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAjAQIVACAAKDAA2mAYCUBAwIAAAAAYAAAEM=</HashCode>
+      <FileName>Print.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_17110094_NguyenAnh_Login.Program" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_17110094_NguyenAnh_Login.StaticForm" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAQBCAgAAAAIiCAAAACAAACAABAAAAAAgAAAAA=</HashCode>
+      <FileName>StaticForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_17110094_NguyenAnh_Login.STUDENT" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAQAgAABEAAAAAAAEgEAAAAQAAAA=</HashCode>
+      <FileName>Student.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_17110094_NguyenAnh_Login.studentsListForm" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAoAABAAAjAwAEAAAACEAACmQASEAAAIAACYEIACAEE=</HashCode>
+      <FileName>StudentsListForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_17110094_NguyenAnh_Login.updateDeletStdF" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IBCAAACVACAACFAAABDAAgoWAEAAEAAAAAAAAAAgQAA=</HashCode>
+      <FileName>UpdateDeleteStudentForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_17110094_NguyenAnh_Login._DESKTOP_RRRHOP4DataSet1TableAdapters.SinhVienTableAdapter" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_17110094_NguyenAnh_Login._DESKTOP_RRRHOP4DataSet1TableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAABQBAEBAAAAMBAgAAACgAAAAAQAAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_17110094_NguyenAnh_Login._DESKTOP_RRRHOP4DataSet2TableAdapters.StdTableAdapter" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_17110094_NguyenAnh_Login._DESKTOP_RRRHOP4DataSet2TableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQgAACAAAABABAEBAAAAMAAgCAACgAAAAAQAAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_17110094_NguyenAnh_Login._DESKTOP_RRRHOP4DataSet3TableAdapters.StdTableAdapter" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_17110094_NguyenAnh_Login._DESKTOP_RRRHOP4DataSet3TableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQgAACAAAABABAEBAAAAMAAgCAACgAAAAAQAAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_17110094_NguyenAnh_Login.Properties.Resources" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_17110094_NguyenAnh_Login.Properties.Settings" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAgAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_17110094_NguyenAnh_Login.Course" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAQAAAAAEAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>COURSE.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
