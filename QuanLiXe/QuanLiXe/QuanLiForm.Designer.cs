@@ -42,10 +42,10 @@
             this.baiXeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quanLiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBoxBack = new System.Windows.Forms.PictureBox();
-            this.tongDoanThuUC = new QuanLiXe.UserControls.TongDoanThuUC();
             this.quanLiTatCaXe = new QuanLiXe.UserControls.QuanLiTatCaXe();
             this.giaoDienQuanLiXeUC = new QuanLiXe.UserControls.GiaoDienQuanLiXeUC();
             this.gioiThieuUC = new QuanLiXe.UserControls.GioiThieuUC();
+            this.tongDoanThuUC = new QuanLiXe.UserControls.TongDoanThuUC();
             this.panelForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip.SuspendLayout();
@@ -178,7 +178,7 @@
             this.menuTuyChon});
             this.menuStrip.Location = new System.Drawing.Point(350, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(258, 39);
+            this.menuStrip.Size = new System.Drawing.Size(138, 39);
             this.menuStrip.TabIndex = 4;
             this.menuStrip.Text = "menuStrip1";
             // 
@@ -194,14 +194,14 @@
             // baiXeToolStripMenuItem
             // 
             this.baiXeToolStripMenuItem.Name = "baiXeToolStripMenuItem";
-            this.baiXeToolStripMenuItem.Size = new System.Drawing.Size(180, 36);
+            this.baiXeToolStripMenuItem.Size = new System.Drawing.Size(169, 36);
             this.baiXeToolStripMenuItem.Text = "Bãi xe";
             this.baiXeToolStripMenuItem.Click += new System.EventHandler(this.baiXeToolStripMenuItem_Click);
             // 
             // quanLiToolStripMenuItem
             // 
             this.quanLiToolStripMenuItem.Name = "quanLiToolStripMenuItem";
-            this.quanLiToolStripMenuItem.Size = new System.Drawing.Size(180, 36);
+            this.quanLiToolStripMenuItem.Size = new System.Drawing.Size(169, 36);
             this.quanLiToolStripMenuItem.Text = "Quản lí";
             this.quanLiToolStripMenuItem.Click += new System.EventHandler(this.quanLiToolStripMenuItem_Click);
             // 
@@ -216,17 +216,6 @@
             this.pictureBoxBack.TabIndex = 57;
             this.pictureBoxBack.TabStop = false;
             this.pictureBoxBack.Click += new System.EventHandler(this.pictureBoxBack_Click);
-            // 
-            // tongDoanThuUC
-            // 
-            this.tongDoanThuUC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tongDoanThuUC.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.tongDoanThuUC.Location = new System.Drawing.Point(350, 0);
-            this.tongDoanThuUC.Name = "tongDoanThuUC";
-            this.tongDoanThuUC.Size = new System.Drawing.Size(1080, 800);
-            this.tongDoanThuUC.TabIndex = 58;
             // 
             // quanLiTatCaXe
             // 
@@ -260,6 +249,17 @@
             this.gioiThieuUC.Name = "gioiThieuUC";
             this.gioiThieuUC.Size = new System.Drawing.Size(1080, 800);
             this.gioiThieuUC.TabIndex = 1;
+            // 
+            // tongDoanThuUC
+            // 
+            this.tongDoanThuUC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tongDoanThuUC.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.tongDoanThuUC.Location = new System.Drawing.Point(350, 0);
+            this.tongDoanThuUC.Name = "tongDoanThuUC";
+            this.tongDoanThuUC.Size = new System.Drawing.Size(1080, 800);
+            this.tongDoanThuUC.TabIndex = 58;
             // 
             // QuanLiForm
             // 

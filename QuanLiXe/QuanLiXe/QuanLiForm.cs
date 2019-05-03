@@ -35,7 +35,8 @@ namespace QuanLiXe
             pictureBoxBack.Location = new Point(370, 12);
             pictureBoxBack.BackColor = quanLiTatCaXe.BackColor;
             tongDoanThuUC.Location = new Point(350, 0);
-
+            toolStrip.BringToFront();
+            toolStrip.Location = new Point(1355, 0);
         }
 
         private void btThongTinKhachHang_Click(object sender, EventArgs e)

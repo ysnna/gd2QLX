@@ -112,5 +112,13 @@ namespace _17110094_NguyenAnh_Login
             da.Fill(table);
             return table;
         }
+        public int totalCourse()
+        {
+            SqlCommand cmd = new SqlCommand("select * from course",mydb.getConnection);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable table = new DataTable();
+            da.Fill(table);
+            return table.Rows.Count;
+        }
     }
 }

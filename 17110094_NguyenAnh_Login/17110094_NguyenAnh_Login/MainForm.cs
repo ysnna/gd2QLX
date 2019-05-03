@@ -64,5 +64,29 @@ namespace _17110094_NguyenAnh_Login
             EditCourseForm edit = new EditCourseForm();
             edit.ShowDialog(this);
         }
+
+        private void manageCoursesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManageCoursesForm manage = new ManageCoursesForm();
+            manage.ShowDialog(this);
+        }
+
+        private void printToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            PrintCourseForm p = new PrintCourseForm();
+            p.ShowDialog(this);
+        }
+
+        private void addScoreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddScoreForm add = new AddScoreForm();
+            add.ShowDialog(this);
+        }
+
+        private void avgScoreByCourseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AVGScoreByCourseForm avg = new AVGScoreByCourseForm();
+            avg.ShowDialog(this);
+        }
     }
 }

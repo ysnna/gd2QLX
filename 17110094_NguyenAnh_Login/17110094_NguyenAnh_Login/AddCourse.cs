@@ -24,8 +24,6 @@ namespace _17110094_NguyenAnh_Login
             string lable = txtLabel.Text;
             int period = Convert.ToInt32(txtPeriod.Text);
             string description = txtDescription.Text;
-
-
             if (lable.Trim() == "")
             {
                 MessageBox.Show("Add a course name", "Add course", MessageBoxButtons.OK, MessageBoxIcon.Warning);

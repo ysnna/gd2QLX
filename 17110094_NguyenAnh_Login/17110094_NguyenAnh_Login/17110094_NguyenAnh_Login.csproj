@@ -68,6 +68,12 @@
     <Compile Include="AddCourse.Designer.cs">
       <DependentUpon>AddCourse.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddScoreForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddScoreForm.Designer.cs">
+      <DependentUpon>AddScoreForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddStudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,12 @@
     </Compile>
     <Compile Include="AdvancedSearch.Designer.cs">
       <DependentUpon>AdvancedSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AVGScoreByCourseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AVGScoreByCourseForm.Designer.cs">
+      <DependentUpon>AVGScoreByCourseForm.cs</DependentUpon>
     </Compile>
     <Compile Include="COURSE.cs" />
     <Compile Include="DataClassesSV.designer.cs">
@@ -109,6 +121,12 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageCoursesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageCoursesForm.Designer.cs">
+      <DependentUpon>ManageCoursesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManageStudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +140,12 @@
     <Compile Include="Print.Designer.cs">
       <DependentUpon>Print.cs</DependentUpon>
     </Compile>
+    <Compile Include="PrintCourseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintCourseForm.Designer.cs">
+      <DependentUpon>PrintCourseForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RemoveCourseForm.cs">
@@ -130,6 +154,7 @@
     <Compile Include="RemoveCourseForm.Designer.cs">
       <DependentUpon>RemoveCourseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SCORE.cs" />
     <Compile Include="StaticForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,8 +194,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_DESKTOP_RRRHOP4DataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="_DESKTOP_RRRHOP4DataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_DESKTOP_RRRHOP4DataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_DESKTOP_RRRHOP4DataSetCoursePrint.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_DESKTOP_RRRHOP4DataSetCoursePrint.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddCourse.resx">
       <DependentUpon>AddCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddScoreForm.resx">
+      <DependentUpon>AddScoreForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddStudentForm.resx">
       <DependentUpon>AddStudentForm.cs</DependentUpon>
@@ -182,17 +220,26 @@
     <EmbeddedResource Include="AdvancedSearch.resx">
       <DependentUpon>AdvancedSearch.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AVGScoreByCourseForm.resx">
+      <DependentUpon>AVGScoreByCourseForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditCourseForm.resx">
       <DependentUpon>EditCourseForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Log_in.resx">
       <DependentUpon>Log_in.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManageCoursesForm.resx">
+      <DependentUpon>ManageCoursesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManageStudentForm.resx">
       <DependentUpon>ManageStudentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Print.resx">
       <DependentUpon>Print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintCourseForm.resx">
+      <DependentUpon>PrintCourseForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RemoveCourseForm.resx">
       <DependentUpon>RemoveCourseForm.cs</DependentUpon>
@@ -283,6 +330,28 @@
     </None>
     <None Include="_DESKTOP_RRRHOP4DataSet3.xss">
       <DependentUpon>_DESKTOP_RRRHOP4DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="_DESKTOP_RRRHOP4DataSet4.xsc">
+      <DependentUpon>_DESKTOP_RRRHOP4DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="_DESKTOP_RRRHOP4DataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_DESKTOP_RRRHOP4DataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_DESKTOP_RRRHOP4DataSet4.xss">
+      <DependentUpon>_DESKTOP_RRRHOP4DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="_DESKTOP_RRRHOP4DataSetCoursePrint.xsc">
+      <DependentUpon>_DESKTOP_RRRHOP4DataSetCoursePrint.xsd</DependentUpon>
+    </None>
+    <None Include="_DESKTOP_RRRHOP4DataSetCoursePrint.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_DESKTOP_RRRHOP4DataSetCoursePrint.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_DESKTOP_RRRHOP4DataSetCoursePrint.xss">
+      <DependentUpon>_DESKTOP_RRRHOP4DataSetCoursePrint.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

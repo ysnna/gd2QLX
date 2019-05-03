@@ -29,7 +29,6 @@ namespace _17110094_NguyenAnh_Login
             DateTimePic1.Format = DateTimePickerFormat.Custom;
             DateTimePick2.CustomFormat = "yyyy-dd-MM";
             DateTimePick2.Format = DateTimePickerFormat.Custom;
-            // TODO: This line of code loads data into the '_DESKTOP_RRRHOP4DataSet1.SinhVien' table. You can move, or remove it, as needed.
 
             SqlCommand cmd = new SqlCommand("select * from Std");
             fillGrid(cmd);
