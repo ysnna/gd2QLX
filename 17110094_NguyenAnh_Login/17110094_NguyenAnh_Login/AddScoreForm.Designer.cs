@@ -136,6 +136,11 @@
             // 
             // dgvScore
             // 
+            this.dgvScore.AllowUserToResizeColumns = false;
+            this.dgvScore.AllowUserToResizeRows = false;
+            this.dgvScore.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvScore.AutoGenerateColumns = false;
             this.dgvScore.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvScore.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
@@ -174,7 +179,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvScore.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvScore.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dgvScore.Size = new System.Drawing.Size(524, 443);
+            this.dgvScore.Size = new System.Drawing.Size(523, 443);
             this.dgvScore.TabIndex = 8;
             // 
             // studentidDataGridViewTextBoxColumn
@@ -221,7 +226,6 @@
             // 
             // ButtonAddScore
             // 
-            this.ButtonAddScore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ButtonAddScore.BackColor = System.Drawing.Color.DodgerBlue;
             this.ButtonAddScore.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonAddScore.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -242,7 +246,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(897, 475);
+            this.ClientSize = new System.Drawing.Size(896, 475);
             this.Controls.Add(this.ButtonAddScore);
             this.Controls.Add(this.dgvScore);
             this.Controls.Add(this.ComboBoxSelectCourse);

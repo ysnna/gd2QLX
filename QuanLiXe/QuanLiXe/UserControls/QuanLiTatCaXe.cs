@@ -25,18 +25,9 @@ namespace QuanLiXe.UserControls
         {
             labelDauSaiViTri.Visible = false;
             labelQuaGioGui.Visible = false;
-            SqlCommand cmd = new SqlCommand("select * from QUANLIXERAVAO");
             dgvQuanLiAllXe.ReadOnly = true;
-            //xử lí hình ảnh, code có tham khảo msdn
-            DataGridViewImageColumn picCol = new DataGridViewImageColumn();
-            DataGridViewImageColumn picCol1 = new DataGridViewImageColumn();
-            dgvQuanLiAllXe.RowTemplate.Height = 90; //chỉnh pic đẹp
-            dgvQuanLiAllXe.DataSource = kh.getCus(cmd);
-            picCol = (DataGridViewImageColumn)dgvQuanLiAllXe.Columns[2];
-            picCol.ImageLayout = DataGridViewImageCellLayout.Zoom;
-            picCol1 = (DataGridViewImageColumn)dgvQuanLiAllXe.Columns[3];
-            picCol1.ImageLayout = DataGridViewImageCellLayout.Zoom;
-            dgvQuanLiAllXe.AllowUserToAddRows = false;
+            refreshData();
+            refreshData();
         }
 
         private void pictureBoxXeMay_Click(object sender, EventArgs e)
@@ -53,7 +44,7 @@ namespace QuanLiXe.UserControls
             DataGridViewImageColumn picCol = new DataGridViewImageColumn();
             DataGridViewImageColumn picCol1 = new DataGridViewImageColumn();
             dgvQuanLiAllXe.RowTemplate.Height = 90; //chỉnh pic đẹp
-            dgvQuanLiAllXe.DataSource = kh.getCus(cmd);
+            dgvQuanLiAllXe.DataSource = kh.search(cmd);
             picCol = (DataGridViewImageColumn)dgvQuanLiAllXe.Columns[2];
             picCol.ImageLayout = DataGridViewImageCellLayout.Zoom;
             picCol1 = (DataGridViewImageColumn)dgvQuanLiAllXe.Columns[3];
@@ -74,18 +65,22 @@ namespace QuanLiXe.UserControls
             btSearch_Click(sender, e);
         }
 
-        private void pictureBoxRefresh_Click(object sender, EventArgs e)
+        void refreshData()
         {
-            SqlCommand cmd = new SqlCommand("select * from QUANLIXERAVAO");
+            txtSearch.Text = "";
             DataGridViewImageColumn picCol = new DataGridViewImageColumn();
             DataGridViewImageColumn picCol1 = new DataGridViewImageColumn();
             dgvQuanLiAllXe.RowTemplate.Height = 90;
-            dgvQuanLiAllXe.DataSource = kh.getCus(cmd);
+            dgvQuanLiAllXe.DataSource = kh.getQLXRV();
             picCol = (DataGridViewImageColumn)dgvQuanLiAllXe.Columns[2];
             picCol.ImageLayout = DataGridViewImageCellLayout.Zoom;
             picCol1 = (DataGridViewImageColumn)dgvQuanLiAllXe.Columns[3];
             picCol1.ImageLayout = DataGridViewImageCellLayout.Zoom;
             dgvQuanLiAllXe.AllowUserToAddRows = false;
+        }
+        private void pictureBoxRefresh_Click(object sender, EventArgs e)
+        {
+            refreshData();
         }
 
         private void btSua_Click_1(object sender, EventArgs e)

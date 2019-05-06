@@ -35,6 +35,7 @@ namespace _17110094_NguyenAnh_Login
             foreach (DataRow row in dt.Rows)
             {
                 listViewAVG.Items.Add(row["label"].ToString());
+                dt.Rows[i][1] = Convert.ToString(Math.Round(Convert.ToDouble(dt.Rows[i]["averageGrade"].ToString()), 2));
                 listViewAVG.Items[i].SubItems.Add(row["averageGrade"].ToString());
                 i++;
             }

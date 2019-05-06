@@ -55,12 +55,13 @@
             this.XeMay = new System.Windows.Forms.CheckBox();
             this.XeDap = new System.Windows.Forms.CheckBox();
             this.DTPNgayGui = new System.Windows.Forms.DateTimePicker();
-            this.DTPGioGui = new System.Windows.Forms.DateTimePicker();
             this.pictureBoxVienXeDap = new System.Windows.Forms.PictureBox();
             this.pictureBoxVienXeMay = new System.Windows.Forms.PictureBox();
             this.pictureBoxVienOto = new System.Windows.Forms.PictureBox();
             this.btLayXe = new System.Windows.Forms.Button();
             this.txtLayXe = new System.Windows.Forms.TextBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.txtGioGui = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNguoiGui)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBienSoXe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVienXeDap)).BeginInit();
@@ -396,15 +397,6 @@
             this.DTPNgayGui.Size = new System.Drawing.Size(137, 35);
             this.DTPNgayGui.TabIndex = 82;
             // 
-            // DTPGioGui
-            // 
-            this.DTPGioGui.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DTPGioGui.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.DTPGioGui.Location = new System.Drawing.Point(1271, 679);
-            this.DTPGioGui.Name = "DTPGioGui";
-            this.DTPGioGui.Size = new System.Drawing.Size(137, 35);
-            this.DTPGioGui.TabIndex = 83;
-            // 
             // pictureBoxVienXeDap
             // 
             this.pictureBoxVienXeDap.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxVienXeDap.BackgroundImage")));
@@ -457,14 +449,34 @@
             this.txtLayXe.Size = new System.Drawing.Size(176, 39);
             this.txtLayXe.TabIndex = 88;
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(-15, -15);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(85, 17);
+            this.radioButton1.TabIndex = 89;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "radioButton1";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // txtGioGui
+            // 
+            this.txtGioGui.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGioGui.Location = new System.Drawing.Point(1271, 690);
+            this.txtGioGui.Name = "txtGioGui";
+            this.txtGioGui.Size = new System.Drawing.Size(137, 39);
+            this.txtGioGui.TabIndex = 90;
+            // 
             // GiaoDienQuanLiXeUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Controls.Add(this.txtGioGui);
+            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.txtLayXe);
             this.Controls.Add(this.btLayXe);
-            this.Controls.Add(this.DTPGioGui);
             this.Controls.Add(this.DTPNgayGui);
             this.Controls.Add(this.Hour);
             this.Controls.Add(this.Day);
@@ -536,11 +548,12 @@
         public System.Windows.Forms.CheckBox XeMay;
         public System.Windows.Forms.CheckBox XeDap;
         private System.Windows.Forms.DateTimePicker DTPNgayGui;
-        private System.Windows.Forms.DateTimePicker DTPGioGui;
         private System.Windows.Forms.PictureBox pictureBoxVienXeDap;
         private System.Windows.Forms.PictureBox pictureBoxVienXeMay;
         private System.Windows.Forms.PictureBox pictureBoxVienOto;
         private System.Windows.Forms.Button btLayXe;
         private System.Windows.Forms.TextBox txtLayXe;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.TextBox txtGioGui;
     }
 }

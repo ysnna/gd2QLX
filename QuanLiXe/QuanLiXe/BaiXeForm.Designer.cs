@@ -40,21 +40,21 @@
             this.btBaiXeDap = new System.Windows.Forms.Button();
             this.btBackThoat = new System.Windows.Forms.Button();
             this.btRefresh = new System.Windows.Forms.Button();
-            this._DESKTOP_RRRHOP4DataSet1 = new QuanLiXe._DESKTOP_RRRHOP4DataSet1();
+            this._DESKTOP_BAIXE = new QuanLiXe._DESKTOP_BAIXE();
             this.bAIXEBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bAIXETableAdapter = new QuanLiXe._DESKTOP_RRRHOP4DataSet1TableAdapters.BAIXETableAdapter();
+            this.bAIXETableAdapter = new QuanLiXe._DESKTOP_BAIXETableAdapters.BAIXETableAdapter();
             this.vitriXeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.khuADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.khuBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.khuCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.khuDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.khuEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.khuFDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.khuGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.khuHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.khuKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBaiXe)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._DESKTOP_RRRHOP4DataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._DESKTOP_BAIXE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bAIXEBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,15 +79,15 @@
             this.dgvBaiXe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBaiXe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.vitriXeDataGridViewTextBoxColumn,
-            this.aDataGridViewTextBoxColumn,
-            this.bDataGridViewTextBoxColumn,
-            this.cDataGridViewTextBoxColumn,
-            this.dDataGridViewTextBoxColumn,
-            this.eDataGridViewTextBoxColumn,
-            this.fDataGridViewTextBoxColumn,
-            this.gDataGridViewTextBoxColumn,
-            this.hDataGridViewTextBoxColumn,
-            this.kDataGridViewTextBoxColumn});
+            this.khuADataGridViewTextBoxColumn,
+            this.khuBDataGridViewTextBoxColumn,
+            this.khuCDataGridViewTextBoxColumn,
+            this.khuDDataGridViewTextBoxColumn,
+            this.khuEDataGridViewTextBoxColumn,
+            this.khuFDataGridViewTextBoxColumn,
+            this.khuGDataGridViewTextBoxColumn,
+            this.khuHDataGridViewTextBoxColumn,
+            this.khuKDataGridViewTextBoxColumn});
             this.dgvBaiXe.DataSource = this.bAIXEBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
@@ -192,15 +192,15 @@
             this.btRefresh.UseVisualStyleBackColor = false;
             this.btRefresh.Click += new System.EventHandler(this.btRefresh_Click);
             // 
-            // _DESKTOP_RRRHOP4DataSet1
+            // _DESKTOP_BAIXE
             // 
-            this._DESKTOP_RRRHOP4DataSet1.DataSetName = "_DESKTOP_RRRHOP4DataSet1";
-            this._DESKTOP_RRRHOP4DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this._DESKTOP_BAIXE.DataSetName = "_DESKTOP_BAIXE";
+            this._DESKTOP_BAIXE.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bAIXEBindingSource
             // 
             this.bAIXEBindingSource.DataMember = "BAIXE";
-            this.bAIXEBindingSource.DataSource = this._DESKTOP_RRRHOP4DataSet1;
+            this.bAIXEBindingSource.DataSource = this._DESKTOP_BAIXE;
             // 
             // bAIXETableAdapter
             // 
@@ -214,77 +214,77 @@
             this.vitriXeDataGridViewTextBoxColumn.ReadOnly = true;
             this.vitriXeDataGridViewTextBoxColumn.Width = 134;
             // 
-            // aDataGridViewTextBoxColumn
+            // khuADataGridViewTextBoxColumn
             // 
-            this.aDataGridViewTextBoxColumn.DataPropertyName = "A";
-            this.aDataGridViewTextBoxColumn.HeaderText = "Khu A";
-            this.aDataGridViewTextBoxColumn.Name = "aDataGridViewTextBoxColumn";
-            this.aDataGridViewTextBoxColumn.ReadOnly = true;
-            this.aDataGridViewTextBoxColumn.Width = 115;
+            this.khuADataGridViewTextBoxColumn.DataPropertyName = "khuA";
+            this.khuADataGridViewTextBoxColumn.HeaderText = "Khu A";
+            this.khuADataGridViewTextBoxColumn.Name = "khuADataGridViewTextBoxColumn";
+            this.khuADataGridViewTextBoxColumn.ReadOnly = true;
+            this.khuADataGridViewTextBoxColumn.Width = 115;
             // 
-            // bDataGridViewTextBoxColumn
+            // khuBDataGridViewTextBoxColumn
             // 
-            this.bDataGridViewTextBoxColumn.DataPropertyName = "B";
-            this.bDataGridViewTextBoxColumn.HeaderText = "Khu B";
-            this.bDataGridViewTextBoxColumn.Name = "bDataGridViewTextBoxColumn";
-            this.bDataGridViewTextBoxColumn.ReadOnly = true;
-            this.bDataGridViewTextBoxColumn.Width = 115;
+            this.khuBDataGridViewTextBoxColumn.DataPropertyName = "khuB";
+            this.khuBDataGridViewTextBoxColumn.HeaderText = "Khu B";
+            this.khuBDataGridViewTextBoxColumn.Name = "khuBDataGridViewTextBoxColumn";
+            this.khuBDataGridViewTextBoxColumn.ReadOnly = true;
+            this.khuBDataGridViewTextBoxColumn.Width = 115;
             // 
-            // cDataGridViewTextBoxColumn
+            // khuCDataGridViewTextBoxColumn
             // 
-            this.cDataGridViewTextBoxColumn.DataPropertyName = "C";
-            this.cDataGridViewTextBoxColumn.HeaderText = "Khu C";
-            this.cDataGridViewTextBoxColumn.Name = "cDataGridViewTextBoxColumn";
-            this.cDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cDataGridViewTextBoxColumn.Width = 117;
+            this.khuCDataGridViewTextBoxColumn.DataPropertyName = "khuC";
+            this.khuCDataGridViewTextBoxColumn.HeaderText = "Khu C";
+            this.khuCDataGridViewTextBoxColumn.Name = "khuCDataGridViewTextBoxColumn";
+            this.khuCDataGridViewTextBoxColumn.ReadOnly = true;
+            this.khuCDataGridViewTextBoxColumn.Width = 117;
             // 
-            // dDataGridViewTextBoxColumn
+            // khuDDataGridViewTextBoxColumn
             // 
-            this.dDataGridViewTextBoxColumn.DataPropertyName = "D";
-            this.dDataGridViewTextBoxColumn.HeaderText = "Khu D";
-            this.dDataGridViewTextBoxColumn.Name = "dDataGridViewTextBoxColumn";
-            this.dDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dDataGridViewTextBoxColumn.Width = 117;
+            this.khuDDataGridViewTextBoxColumn.DataPropertyName = "khuD";
+            this.khuDDataGridViewTextBoxColumn.HeaderText = "Khu D";
+            this.khuDDataGridViewTextBoxColumn.Name = "khuDDataGridViewTextBoxColumn";
+            this.khuDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.khuDDataGridViewTextBoxColumn.Width = 117;
             // 
-            // eDataGridViewTextBoxColumn
+            // khuEDataGridViewTextBoxColumn
             // 
-            this.eDataGridViewTextBoxColumn.DataPropertyName = "E";
-            this.eDataGridViewTextBoxColumn.HeaderText = "Khu E";
-            this.eDataGridViewTextBoxColumn.Name = "eDataGridViewTextBoxColumn";
-            this.eDataGridViewTextBoxColumn.ReadOnly = true;
-            this.eDataGridViewTextBoxColumn.Width = 115;
+            this.khuEDataGridViewTextBoxColumn.DataPropertyName = "khuE";
+            this.khuEDataGridViewTextBoxColumn.HeaderText = "Khu E";
+            this.khuEDataGridViewTextBoxColumn.Name = "khuEDataGridViewTextBoxColumn";
+            this.khuEDataGridViewTextBoxColumn.ReadOnly = true;
+            this.khuEDataGridViewTextBoxColumn.Width = 115;
             // 
-            // fDataGridViewTextBoxColumn
+            // khuFDataGridViewTextBoxColumn
             // 
-            this.fDataGridViewTextBoxColumn.DataPropertyName = "F";
-            this.fDataGridViewTextBoxColumn.HeaderText = "Khu F";
-            this.fDataGridViewTextBoxColumn.Name = "fDataGridViewTextBoxColumn";
-            this.fDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fDataGridViewTextBoxColumn.Width = 114;
+            this.khuFDataGridViewTextBoxColumn.DataPropertyName = "khuF";
+            this.khuFDataGridViewTextBoxColumn.HeaderText = "Khu F";
+            this.khuFDataGridViewTextBoxColumn.Name = "khuFDataGridViewTextBoxColumn";
+            this.khuFDataGridViewTextBoxColumn.ReadOnly = true;
+            this.khuFDataGridViewTextBoxColumn.Width = 114;
             // 
-            // gDataGridViewTextBoxColumn
+            // khuGDataGridViewTextBoxColumn
             // 
-            this.gDataGridViewTextBoxColumn.DataPropertyName = "G";
-            this.gDataGridViewTextBoxColumn.HeaderText = "Khu G";
-            this.gDataGridViewTextBoxColumn.Name = "gDataGridViewTextBoxColumn";
-            this.gDataGridViewTextBoxColumn.ReadOnly = true;
-            this.gDataGridViewTextBoxColumn.Width = 118;
+            this.khuGDataGridViewTextBoxColumn.DataPropertyName = "khuG";
+            this.khuGDataGridViewTextBoxColumn.HeaderText = "Khu G";
+            this.khuGDataGridViewTextBoxColumn.Name = "khuGDataGridViewTextBoxColumn";
+            this.khuGDataGridViewTextBoxColumn.ReadOnly = true;
+            this.khuGDataGridViewTextBoxColumn.Width = 118;
             // 
-            // hDataGridViewTextBoxColumn
+            // khuHDataGridViewTextBoxColumn
             // 
-            this.hDataGridViewTextBoxColumn.DataPropertyName = "H";
-            this.hDataGridViewTextBoxColumn.HeaderText = "Khu H";
-            this.hDataGridViewTextBoxColumn.Name = "hDataGridViewTextBoxColumn";
-            this.hDataGridViewTextBoxColumn.ReadOnly = true;
-            this.hDataGridViewTextBoxColumn.Width = 118;
+            this.khuHDataGridViewTextBoxColumn.DataPropertyName = "khuH";
+            this.khuHDataGridViewTextBoxColumn.HeaderText = "Khu H";
+            this.khuHDataGridViewTextBoxColumn.Name = "khuHDataGridViewTextBoxColumn";
+            this.khuHDataGridViewTextBoxColumn.ReadOnly = true;
+            this.khuHDataGridViewTextBoxColumn.Width = 118;
             // 
-            // kDataGridViewTextBoxColumn
+            // khuKDataGridViewTextBoxColumn
             // 
-            this.kDataGridViewTextBoxColumn.DataPropertyName = "K";
-            this.kDataGridViewTextBoxColumn.HeaderText = "Khu K";
-            this.kDataGridViewTextBoxColumn.Name = "kDataGridViewTextBoxColumn";
-            this.kDataGridViewTextBoxColumn.ReadOnly = true;
-            this.kDataGridViewTextBoxColumn.Width = 118;
+            this.khuKDataGridViewTextBoxColumn.DataPropertyName = "khuK";
+            this.khuKDataGridViewTextBoxColumn.HeaderText = "Khu K";
+            this.khuKDataGridViewTextBoxColumn.Name = "khuKDataGridViewTextBoxColumn";
+            this.khuKDataGridViewTextBoxColumn.ReadOnly = true;
+            this.khuKDataGridViewTextBoxColumn.Width = 118;
             // 
             // BaiXeForm
             // 
@@ -307,7 +307,7 @@
             this.Text = "BaiXeForm";
             this.Load += new System.EventHandler(this.BaiXeForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBaiXe)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._DESKTOP_RRRHOP4DataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._DESKTOP_BAIXE)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bAIXEBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -321,18 +321,18 @@
         private System.Windows.Forms.Button btBaiXeDap;
         private System.Windows.Forms.Button btBackThoat;
         private System.Windows.Forms.Button btRefresh;
-        private _DESKTOP_RRRHOP4DataSet1 _DESKTOP_RRRHOP4DataSet1;
+        private _DESKTOP_BAIXE _DESKTOP_BAIXE;
         private System.Windows.Forms.BindingSource bAIXEBindingSource;
-        private _DESKTOP_RRRHOP4DataSet1TableAdapters.BAIXETableAdapter bAIXETableAdapter;
+        private _DESKTOP_BAIXETableAdapters.BAIXETableAdapter bAIXETableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn vitriXeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn aDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn eDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn hDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn khuADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn khuBDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn khuCDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn khuDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn khuEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn khuFDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn khuGDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn khuHDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn khuKDataGridViewTextBoxColumn;
     }
 }

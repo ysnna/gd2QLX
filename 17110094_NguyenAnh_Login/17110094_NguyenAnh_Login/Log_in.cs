@@ -8,8 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using System.Data;
-using System.Linq;
 
 namespace _17110094_NguyenAnh_Login
 {

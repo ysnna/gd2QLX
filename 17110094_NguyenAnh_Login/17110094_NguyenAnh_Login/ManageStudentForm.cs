@@ -119,6 +119,7 @@ namespace _17110094_NguyenAnh_Login
                 {
                     if (student.deleteStudent(studentID))
                     {
+
                         MessageBox.Show("Student deleted", " Delete student", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         TextBoxID.Text = "";
                         TextBoxFname.Text = "";

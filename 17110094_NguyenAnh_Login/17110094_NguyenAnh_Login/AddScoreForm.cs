@@ -58,7 +58,8 @@ namespace _17110094_NguyenAnh_Login
             }
             mydb.closeConnection();
             int scoreID = row;
-            float score_student = float.Parse(TextBoxScore.Text);
+            float score_student = float.Parse(Convert.ToString(Math.Round(Convert.ToDouble(TextBoxScore.Text), 2)));
+            //String.Format("{0:0.##}", score_student);
             string description = TextBoxDescription.Text;
             if (score.insertScore(studentID, scoreID, score_student, description))
             {

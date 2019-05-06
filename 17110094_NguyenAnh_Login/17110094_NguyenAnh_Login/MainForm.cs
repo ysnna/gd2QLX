@@ -88,5 +88,23 @@ namespace _17110094_NguyenAnh_Login
             AVGScoreByCourseForm avg = new AVGScoreByCourseForm();
             avg.ShowDialog(this);
         }
+
+        private void resultToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AVGResultByScore avg = new AVGResultByScore();
+            avg.ShowDialog(this);
+        }
+
+        private void removeScoreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RemoveForm result = new RemoveForm();
+            result.ShowDialog(this);
+        }
+
+        private void manageScoreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManageScoreForm m = new ManageScoreForm();
+            m.ShowDialog(this);
+        }
     }
 }

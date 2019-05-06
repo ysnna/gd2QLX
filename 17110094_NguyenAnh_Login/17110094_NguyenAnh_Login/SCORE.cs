@@ -24,7 +24,7 @@ namespace _17110094_NguyenAnh_Login
             return false;
         }
         //kiểm tra trùng
-        public bool studentScoreExist(int studentID,int courseID)
+        public bool studentScoreExist(int studentID, int courseID)
         {
             SqlCommand cmd = new SqlCommand("select * from score where student_id = @ sid and course_id = @cid", mydb.getConnection);
             cmd.Parameters.Add("@sid", SqlDbType.Int).Value = studentID;
@@ -66,13 +66,43 @@ namespace _17110094_NguyenAnh_Login
             da.Fill(table);
             return table;
         }
-         public int totalCourse()
+        public int totalCourse()
         {
             SqlCommand cmd = new SqlCommand("select id from score");
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
             return dt.Rows.Count;
+        }
+        public DataTable getResultByScore()
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = mydb.getConnection;
+            cmd.CommandText = "select std.id, avg(score.student_score) as averageGrade from score, std where std.id = score.student_id group by std.id";
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            return dt;
+        }
+        public DataTable getRemove()
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = mydb.getConnection;
+            cmd.CommandText = "select student_id, fName, lName, course_id, label, student_score from course, score, std where course.id = score.course_id and std.id = score.student_id";
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            return dt;
+        }
+        public DataTable getShowStudent()
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = mydb.getConnection;
+            cmd.CommandText = "select id, fName, lName, bdate from std";
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            return dt;
         }
     }
 }

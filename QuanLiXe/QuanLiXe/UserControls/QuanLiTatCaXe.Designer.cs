@@ -39,6 +39,15 @@
             this.labelQuaGioGui = new System.Windows.Forms.Label();
             this.labelDauSaiViTri = new System.Windows.Forms.Label();
             this.dgvQuanLiAllXe = new System.Windows.Forms.DataGridView();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this._DESKTOP_RRRHOP4DataSet = new QuanLiXe._DESKTOP_RRRHOP4DataSet();
+            this.qUANLIXERAVAOTableAdapter = new QuanLiXe._DESKTOP_RRRHOP4DataSetTableAdapters.QUANLIXERAVAOTableAdapter();
+            this.pictureBoxXeMay = new System.Windows.Forms.PictureBox();
+            this.pictureBoxOto = new System.Windows.Forms.PictureBox();
+            this.pictureBoxXeDap = new System.Windows.Forms.PictureBox();
+            this.btSua = new System.Windows.Forms.Button();
+            this.btSearch = new System.Windows.Forms.Button();
+            this.btXoa = new System.Windows.Forms.Button();
             this.loaixeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vitriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.avaDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
@@ -50,15 +59,6 @@
             this.tongTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timeyeucauDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tongtienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this._DESKTOP_RRRHOP4DataSet = new QuanLiXe._DESKTOP_RRRHOP4DataSet();
-            this.qUANLIXERAVAOTableAdapter = new QuanLiXe._DESKTOP_RRRHOP4DataSetTableAdapters.QUANLIXERAVAOTableAdapter();
-            this.pictureBoxXeMay = new System.Windows.Forms.PictureBox();
-            this.pictureBoxOto = new System.Windows.Forms.PictureBox();
-            this.pictureBoxXeDap = new System.Windows.Forms.PictureBox();
-            this.btSua = new System.Windows.Forms.Button();
-            this.btSearch = new System.Windows.Forms.Button();
-            this.btXoa = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRefresh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuanLiAllXe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
@@ -173,83 +173,6 @@
             this.dgvQuanLiAllXe.Size = new System.Drawing.Size(1080, 660);
             this.dgvQuanLiAllXe.TabIndex = 60;
             // 
-            // loaixeDataGridViewTextBoxColumn
-            // 
-            this.loaixeDataGridViewTextBoxColumn.DataPropertyName = "loaixe";
-            this.loaixeDataGridViewTextBoxColumn.HeaderText = "Loại xe";
-            this.loaixeDataGridViewTextBoxColumn.Name = "loaixeDataGridViewTextBoxColumn";
-            this.loaixeDataGridViewTextBoxColumn.Width = 119;
-            // 
-            // vitriDataGridViewTextBoxColumn
-            // 
-            this.vitriDataGridViewTextBoxColumn.DataPropertyName = "vitri";
-            this.vitriDataGridViewTextBoxColumn.HeaderText = "Vị trí";
-            this.vitriDataGridViewTextBoxColumn.Name = "vitriDataGridViewTextBoxColumn";
-            this.vitriDataGridViewTextBoxColumn.Width = 94;
-            // 
-            // avaDataGridViewImageColumn
-            // 
-            this.avaDataGridViewImageColumn.DataPropertyName = "ava";
-            this.avaDataGridViewImageColumn.HeaderText = "Người gửi";
-            this.avaDataGridViewImageColumn.Name = "avaDataGridViewImageColumn";
-            this.avaDataGridViewImageColumn.Width = 123;
-            // 
-            // biensoDataGridViewImageColumn
-            // 
-            this.biensoDataGridViewImageColumn.DataPropertyName = "bienso";
-            this.biensoDataGridViewImageColumn.HeaderText = "Biển số";
-            this.biensoDataGridViewImageColumn.Name = "biensoDataGridViewImageColumn";
-            this.biensoDataGridViewImageColumn.Width = 101;
-            // 
-            // ngayguixeDataGridViewTextBoxColumn
-            // 
-            this.ngayguixeDataGridViewTextBoxColumn.DataPropertyName = "ngayguixe";
-            this.ngayguixeDataGridViewTextBoxColumn.HeaderText = "Ngày gửi";
-            this.ngayguixeDataGridViewTextBoxColumn.Name = "ngayguixeDataGridViewTextBoxColumn";
-            this.ngayguixeDataGridViewTextBoxColumn.Width = 133;
-            // 
-            // gioguixeDataGridViewTextBoxColumn
-            // 
-            this.gioguixeDataGridViewTextBoxColumn.DataPropertyName = "gioguixe";
-            this.gioguixeDataGridViewTextBoxColumn.HeaderText = "Giờ gửi";
-            this.gioguixeDataGridViewTextBoxColumn.Name = "gioguixeDataGridViewTextBoxColumn";
-            this.gioguixeDataGridViewTextBoxColumn.Width = 118;
-            // 
-            // ngaylayxeDataGridViewTextBoxColumn
-            // 
-            this.ngaylayxeDataGridViewTextBoxColumn.DataPropertyName = "ngaylayxe";
-            this.ngaylayxeDataGridViewTextBoxColumn.HeaderText = "Ngày lấy";
-            this.ngaylayxeDataGridViewTextBoxColumn.Name = "ngaylayxeDataGridViewTextBoxColumn";
-            this.ngaylayxeDataGridViewTextBoxColumn.Width = 132;
-            // 
-            // giolayxeDataGridViewTextBoxColumn
-            // 
-            this.giolayxeDataGridViewTextBoxColumn.DataPropertyName = "giolayxe";
-            this.giolayxeDataGridViewTextBoxColumn.HeaderText = "Giờ lấy";
-            this.giolayxeDataGridViewTextBoxColumn.Name = "giolayxeDataGridViewTextBoxColumn";
-            this.giolayxeDataGridViewTextBoxColumn.Width = 117;
-            // 
-            // tongTimeDataGridViewTextBoxColumn
-            // 
-            this.tongTimeDataGridViewTextBoxColumn.DataPropertyName = "tongTime";
-            this.tongTimeDataGridViewTextBoxColumn.HeaderText = "Tổng giờ thực";
-            this.tongTimeDataGridViewTextBoxColumn.Name = "tongTimeDataGridViewTextBoxColumn";
-            this.tongTimeDataGridViewTextBoxColumn.Width = 189;
-            // 
-            // timeyeucauDataGridViewTextBoxColumn
-            // 
-            this.timeyeucauDataGridViewTextBoxColumn.DataPropertyName = "timeyeucau";
-            this.timeyeucauDataGridViewTextBoxColumn.HeaderText = "Số giờ yêu cầu";
-            this.timeyeucauDataGridViewTextBoxColumn.Name = "timeyeucauDataGridViewTextBoxColumn";
-            this.timeyeucauDataGridViewTextBoxColumn.Width = 192;
-            // 
-            // tongtienDataGridViewTextBoxColumn
-            // 
-            this.tongtienDataGridViewTextBoxColumn.DataPropertyName = "tongtien";
-            this.tongtienDataGridViewTextBoxColumn.HeaderText = "Thành tiền";
-            this.tongtienDataGridViewTextBoxColumn.Name = "tongtienDataGridViewTextBoxColumn";
-            this.tongtienDataGridViewTextBoxColumn.Width = 160;
-            // 
             // bindingSource1
             // 
             this.bindingSource1.DataMember = "QUANLIXERAVAO";
@@ -342,6 +265,83 @@
             this.btXoa.UseVisualStyleBackColor = false;
             this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
             // 
+            // loaixeDataGridViewTextBoxColumn
+            // 
+            this.loaixeDataGridViewTextBoxColumn.DataPropertyName = "loaixe";
+            this.loaixeDataGridViewTextBoxColumn.HeaderText = "Loại xe";
+            this.loaixeDataGridViewTextBoxColumn.Name = "loaixeDataGridViewTextBoxColumn";
+            this.loaixeDataGridViewTextBoxColumn.Width = 119;
+            // 
+            // vitriDataGridViewTextBoxColumn
+            // 
+            this.vitriDataGridViewTextBoxColumn.DataPropertyName = "vitri";
+            this.vitriDataGridViewTextBoxColumn.HeaderText = "Vị trí";
+            this.vitriDataGridViewTextBoxColumn.Name = "vitriDataGridViewTextBoxColumn";
+            this.vitriDataGridViewTextBoxColumn.Width = 94;
+            // 
+            // avaDataGridViewImageColumn
+            // 
+            this.avaDataGridViewImageColumn.DataPropertyName = "ava";
+            this.avaDataGridViewImageColumn.HeaderText = "Người gửi";
+            this.avaDataGridViewImageColumn.Name = "avaDataGridViewImageColumn";
+            this.avaDataGridViewImageColumn.Width = 123;
+            // 
+            // biensoDataGridViewImageColumn
+            // 
+            this.biensoDataGridViewImageColumn.DataPropertyName = "bienso";
+            this.biensoDataGridViewImageColumn.HeaderText = "Biển số";
+            this.biensoDataGridViewImageColumn.Name = "biensoDataGridViewImageColumn";
+            this.biensoDataGridViewImageColumn.Width = 101;
+            // 
+            // ngayguixeDataGridViewTextBoxColumn
+            // 
+            this.ngayguixeDataGridViewTextBoxColumn.DataPropertyName = "ngayguixe";
+            this.ngayguixeDataGridViewTextBoxColumn.HeaderText = "Ngày gửi";
+            this.ngayguixeDataGridViewTextBoxColumn.Name = "ngayguixeDataGridViewTextBoxColumn";
+            this.ngayguixeDataGridViewTextBoxColumn.Width = 133;
+            // 
+            // gioguixeDataGridViewTextBoxColumn
+            // 
+            this.gioguixeDataGridViewTextBoxColumn.DataPropertyName = "gioguixe";
+            this.gioguixeDataGridViewTextBoxColumn.HeaderText = "Giờ gửi";
+            this.gioguixeDataGridViewTextBoxColumn.Name = "gioguixeDataGridViewTextBoxColumn";
+            this.gioguixeDataGridViewTextBoxColumn.Width = 118;
+            // 
+            // ngaylayxeDataGridViewTextBoxColumn
+            // 
+            this.ngaylayxeDataGridViewTextBoxColumn.DataPropertyName = "ngaylayxe";
+            this.ngaylayxeDataGridViewTextBoxColumn.HeaderText = "Ngày lấy";
+            this.ngaylayxeDataGridViewTextBoxColumn.Name = "ngaylayxeDataGridViewTextBoxColumn";
+            this.ngaylayxeDataGridViewTextBoxColumn.Width = 132;
+            // 
+            // giolayxeDataGridViewTextBoxColumn
+            // 
+            this.giolayxeDataGridViewTextBoxColumn.DataPropertyName = "giolayxe";
+            this.giolayxeDataGridViewTextBoxColumn.HeaderText = "Giờ lấy";
+            this.giolayxeDataGridViewTextBoxColumn.Name = "giolayxeDataGridViewTextBoxColumn";
+            this.giolayxeDataGridViewTextBoxColumn.Width = 117;
+            // 
+            // tongTimeDataGridViewTextBoxColumn
+            // 
+            this.tongTimeDataGridViewTextBoxColumn.DataPropertyName = "tongTime";
+            this.tongTimeDataGridViewTextBoxColumn.HeaderText = "Tổng giờ thực";
+            this.tongTimeDataGridViewTextBoxColumn.Name = "tongTimeDataGridViewTextBoxColumn";
+            this.tongTimeDataGridViewTextBoxColumn.Width = 189;
+            // 
+            // timeyeucauDataGridViewTextBoxColumn
+            // 
+            this.timeyeucauDataGridViewTextBoxColumn.DataPropertyName = "timeyeucau";
+            this.timeyeucauDataGridViewTextBoxColumn.HeaderText = "Yêu cầu theo";
+            this.timeyeucauDataGridViewTextBoxColumn.Name = "timeyeucauDataGridViewTextBoxColumn";
+            this.timeyeucauDataGridViewTextBoxColumn.Width = 178;
+            // 
+            // tongtienDataGridViewTextBoxColumn
+            // 
+            this.tongtienDataGridViewTextBoxColumn.DataPropertyName = "tongtien";
+            this.tongtienDataGridViewTextBoxColumn.HeaderText = "Thành tiền";
+            this.tongtienDataGridViewTextBoxColumn.Name = "tongtienDataGridViewTextBoxColumn";
+            this.tongtienDataGridViewTextBoxColumn.Width = 160;
+            // 
             // QuanLiTatCaXe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -374,7 +374,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.PictureBox pictureBoxRefresh;
         private System.Windows.Forms.Label labelQuaGioGui;
         private System.Windows.Forms.Label labelDauSaiViTri;
@@ -386,6 +385,9 @@
         private System.Windows.Forms.PictureBox pictureBoxOto;
         private System.Windows.Forms.PictureBox pictureBoxXeDap;
         private System.Windows.Forms.Button btSua;
+        private System.Windows.Forms.Button btSearch;
+        private System.Windows.Forms.Button btXoa;
+        public System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn loaixeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vitriDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewImageColumn avaDataGridViewImageColumn;
@@ -397,7 +399,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tongTimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn timeyeucauDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tongtienDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button btSearch;
-        private System.Windows.Forms.Button btXoa;
     }
 }

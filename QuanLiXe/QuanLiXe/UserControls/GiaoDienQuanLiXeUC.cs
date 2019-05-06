@@ -51,6 +51,7 @@ namespace QuanLiXe.UserControls
             Oto.Checked = true;
             XeMay.Checked = false;
             XeDap.Checked = false;
+            txtGioGui.Text = DateTime.Now.ToString("HH:mm:ss");
             if (txtOtoTrong.Text != "0")
             {
                 MY_DB db = new MY_DB();
@@ -97,7 +98,6 @@ namespace QuanLiXe.UserControls
             else MessageBox.Show("Đã hết chỗ trống");
             //kh.updateBaiXe()
         }
-
         private void btXeMay_Click(object sender, EventArgs e)
         {
             pictureBoxVienOto.Visible = false;
@@ -106,6 +106,7 @@ namespace QuanLiXe.UserControls
             Oto.Checked = false;
             XeMay.Checked = true;
             XeDap.Checked = false;
+            txtGioGui.Text = DateTime.Now.ToString("HH:mm:ss");
             if (btXeMayTrong.Text != "0")
             {
                 MY_DB db = new MY_DB();
@@ -154,7 +155,6 @@ namespace QuanLiXe.UserControls
             }
             else MessageBox.Show("Đã hết chỗ trống");
         }
-
         private void btXeDap_Click(object sender, EventArgs e)
         {
             pictureBoxVienOto.Visible = false;
@@ -163,6 +163,7 @@ namespace QuanLiXe.UserControls
             Oto.Checked = false;
             XeMay.Checked = false;
             XeDap.Checked = true;
+            txtGioGui.Text = DateTime.Now.ToString("HH:mm:ss");
             if (btXeDapTrong.Text != "0")
             {
                 MY_DB db = new MY_DB();
@@ -246,38 +247,39 @@ namespace QuanLiXe.UserControls
         //Nút lưu xe (Lưu vào database rồi đổ lên Form Quản Lí Tất Cả Xe)
         private void btMoiXeVao_Click(object sender, EventArgs e)
         {
-            string vitri = btKhuVuc.Text.ToString().Replace(".", "");
+            string vitri = btKhuVuc.Text.Replace(".", "").Trim();
             string loaixe;
             if (Oto.Checked == true)
             {
-                loaixe = btOto.Text.ToString();
+                loaixe = btOto.Text;
             }
             else if (XeMay.Checked == true)
             {
-                loaixe = btXeMay.Text.ToString();
+                loaixe = btXeMay.Text;
             }
             else
             {
-                loaixe = btXeDap.Text.ToString();
+                loaixe = btXeDap.Text;
             }
             string yeucau;
             if (Month.Checked == true)
             {
-                yeucau = Month.Text.ToString();
+                yeucau = Month.Text;
             }
             else if (Day.Checked == true)
             {
-                yeucau = Day.Text.ToString();
+                yeucau = Day.Text;
             }
             else
             {
-                yeucau = Hour.Text.ToString();
+                yeucau = Hour.Text;
             }
 
             MemoryStream nguoigui = new MemoryStream();
             MemoryStream bienso = new MemoryStream();
             DateTime ngaygui = DTPNgayGui.Value;
-            TimeSpan giogui = DTPGioGui.Value.TimeOfDay;
+            TimeSpan giogui = Convert.ToDateTime(txtGioGui.Text).TimeOfDay;
+
             pictureBoxBienSoXe.Image.Save(bienso, pictureBoxBienSoXe.Image.RawFormat);
             pictureBoxNguoiGui.Image.Save(nguoigui, pictureBoxNguoiGui.Image.RawFormat);
 
@@ -324,6 +326,7 @@ namespace QuanLiXe.UserControls
             }
             BaiXeForm baiXe = new BaiXeForm();
             baiXe.BaiXeForm_Load(sender, e);
+            txtGioGui.Text = DateTime.Now.ToString("HH:mm:ss"); 
         }
         // Tao su kien khi Luu hinh anh
         private void pictureBoxNguoiGui_Click(object sender, EventArgs e)
@@ -344,6 +347,7 @@ namespace QuanLiXe.UserControls
 
         private void GiaoDienQuanLiXeUC_Load(object sender, EventArgs e)
         {
+            txtGioGui.Text = DateTime.Now.ToString("HH:mm:ss");
             pictureBoxVienOto.Location = new Point(51, -10);
             pictureBoxVienOto.SendToBack();
             pictureBoxVienXeMay.Location = new Point(51, -10);

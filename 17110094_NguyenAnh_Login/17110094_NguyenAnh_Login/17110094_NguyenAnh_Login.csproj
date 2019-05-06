@@ -86,6 +86,12 @@
     <Compile Include="AdvancedSearch.Designer.cs">
       <DependentUpon>AdvancedSearch.cs</DependentUpon>
     </Compile>
+    <Compile Include="AVGResultByScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AVGResultByScore.Designer.cs">
+      <DependentUpon>AVGResultByScore.cs</DependentUpon>
+    </Compile>
     <Compile Include="AVGScoreByCourseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,12 @@
     <Compile Include="ManageCoursesForm.Designer.cs">
       <DependentUpon>ManageCoursesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageScoreForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageScoreForm.Designer.cs">
+      <DependentUpon>ManageScoreForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManageStudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +165,12 @@
     </Compile>
     <Compile Include="RemoveCourseForm.Designer.cs">
       <DependentUpon>RemoveCourseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResultForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResultForm.Designer.cs">
+      <DependentUpon>ResultForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SCORE.cs" />
     <Compile Include="StaticForm.cs">
@@ -220,6 +238,9 @@
     <EmbeddedResource Include="AdvancedSearch.resx">
       <DependentUpon>AdvancedSearch.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AVGResultByScore.resx">
+      <DependentUpon>AVGResultByScore.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AVGScoreByCourseForm.resx">
       <DependentUpon>AVGScoreByCourseForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -232,6 +253,9 @@
     <EmbeddedResource Include="ManageCoursesForm.resx">
       <DependentUpon>ManageCoursesForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManageScoreForm.resx">
+      <DependentUpon>ManageScoreForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManageStudentForm.resx">
       <DependentUpon>ManageStudentForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -243,6 +267,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RemoveCourseForm.resx">
       <DependentUpon>RemoveCourseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResultForm.resx">
+      <DependentUpon>ResultForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StaticForm.resx">
       <DependentUpon>StaticForm.cs</DependentUpon>

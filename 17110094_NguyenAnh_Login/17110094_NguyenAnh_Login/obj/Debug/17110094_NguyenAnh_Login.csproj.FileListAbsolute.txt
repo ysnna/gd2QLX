@@ -124,3 +124,6 @@ E:\LTWindows\WindowsQLXe\QLXe\gd2QLX\17110094_NguyenAnh_Login\17110094_NguyenAnh
 E:\LTWindows\WindowsQLXe\QLXe\gd2QLX\17110094_NguyenAnh_Login\17110094_NguyenAnh_Login\obj\Debug\17110094_NguyenAnh_Login.pdb
 E:\LTWindows\WindowsQLXe\QLXe\gd2QLX\17110094_NguyenAnh_Login\17110094_NguyenAnh_Login\obj\Debug\_17110094_NguyenAnh_Login.AddScoreForm.resources
 E:\LTWindows\WindowsQLXe\QLXe\gd2QLX\17110094_NguyenAnh_Login\17110094_NguyenAnh_Login\obj\Debug\_17110094_NguyenAnh_Login.AVGScoreByCourseForm.resources
+E:\LTWindows\WindowsQLXe\QLXe\gd2QLX\17110094_NguyenAnh_Login\17110094_NguyenAnh_Login\obj\Debug\_17110094_NguyenAnh_Login.AVGResultByScore.resources
+E:\LTWindows\WindowsQLXe\QLXe\gd2QLX\17110094_NguyenAnh_Login\17110094_NguyenAnh_Login\obj\Debug\_17110094_NguyenAnh_Login.RemoveForm.resources
+E:\LTWindows\WindowsQLXe\QLXe\gd2QLX\17110094_NguyenAnh_Login\17110094_NguyenAnh_Login\obj\Debug\_17110094_NguyenAnh_Login.ManageScoreForm.resources

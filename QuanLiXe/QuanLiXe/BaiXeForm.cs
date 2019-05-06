@@ -21,23 +21,19 @@ namespace QuanLiXe
         KhachHang kh = new KhachHang();
         public void BaiXeForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the '_DESKTOP_RRRHOP4DataSet1.BAIXE' table. You can move, or remove it, as needed.
-            this.bAIXETableAdapter.Fill(this._DESKTOP_RRRHOP4DataSet1.BAIXE);
-
+            // TODO: This line of code loads data into the '_DESKTOP_BAIXE.BAIXE' table. You can move, or remove it, as needed.
+            this.bAIXETableAdapter.Fill(this._DESKTOP_BAIXE.BAIXE);
             connectionBaiXe();
         }
         void connectionBaiXe()
         {
-            
-            SqlCommand cmd = new SqlCommand("select * from BAIXE", db.getConnection);
-            dgvBaiXe.DataSource = kh.getCus(cmd);
+            dgvBaiXe.DataSource = kh.getCus();
         }
         private void btBackThoat_Click(object sender, EventArgs e)
         {
             db.closeConnection();
             this.Close();
         }
-
         private void btRefresh_Click(object sender, EventArgs e)
         {
             connectionBaiXe();

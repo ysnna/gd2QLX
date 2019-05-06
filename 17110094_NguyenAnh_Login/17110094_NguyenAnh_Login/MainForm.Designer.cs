@@ -199,12 +199,14 @@
             this.removeScoreToolStripMenuItem.Name = "removeScoreToolStripMenuItem";
             this.removeScoreToolStripMenuItem.Size = new System.Drawing.Size(224, 24);
             this.removeScoreToolStripMenuItem.Text = "Remove Score";
+            this.removeScoreToolStripMenuItem.Click += new System.EventHandler(this.removeScoreToolStripMenuItem_Click);
             // 
             // manageScoreToolStripMenuItem
             // 
             this.manageScoreToolStripMenuItem.Name = "manageScoreToolStripMenuItem";
             this.manageScoreToolStripMenuItem.Size = new System.Drawing.Size(224, 24);
             this.manageScoreToolStripMenuItem.Text = "Manage Score";
+            this.manageScoreToolStripMenuItem.Click += new System.EventHandler(this.manageScoreToolStripMenuItem_Click);
             // 
             // avgScoreByCourseToolStripMenuItem
             // 
@@ -224,6 +226,7 @@
             this.resultToolStripMenuItem.Name = "resultToolStripMenuItem";
             this.resultToolStripMenuItem.Size = new System.Drawing.Size(224, 24);
             this.resultToolStripMenuItem.Text = "Result";
+            this.resultToolStripMenuItem.Click += new System.EventHandler(this.resultToolStripMenuItem_Click);
             // 
             // MainForm
             // 
