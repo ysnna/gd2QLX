@@ -16,5 +16,10 @@ namespace QuanLiXe.UserControls
         {
             InitializeComponent();
         }
+
+        private void GioiThieuUC_Load(object sender, EventArgs e)
+        {
+            pictureBox1.Location = new Point(120, -78);
+        }
     }
 }
