@@ -39,15 +39,6 @@
             this.labelQuaGioGui = new System.Windows.Forms.Label();
             this.labelDauSaiViTri = new System.Windows.Forms.Label();
             this.dgvQuanLiAllXe = new System.Windows.Forms.DataGridView();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this._DESKTOP_RRRHOP4DataSet = new QuanLiXe._DESKTOP_RRRHOP4DataSet();
-            this.qUANLIXERAVAOTableAdapter = new QuanLiXe._DESKTOP_RRRHOP4DataSetTableAdapters.QUANLIXERAVAOTableAdapter();
-            this.pictureBoxXeMay = new System.Windows.Forms.PictureBox();
-            this.pictureBoxOto = new System.Windows.Forms.PictureBox();
-            this.pictureBoxXeDap = new System.Windows.Forms.PictureBox();
-            this.btSua = new System.Windows.Forms.Button();
-            this.btSearch = new System.Windows.Forms.Button();
-            this.btXoa = new System.Windows.Forms.Button();
             this.loaixeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vitriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.avaDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
@@ -59,6 +50,15 @@
             this.tongTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timeyeucauDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tongtienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this._DESKTOP_RRRHOP4DataSet = new QuanLiXe._DESKTOP_RRRHOP4DataSet();
+            this.qUANLIXERAVAOTableAdapter = new QuanLiXe._DESKTOP_RRRHOP4DataSetTableAdapters.QUANLIXERAVAOTableAdapter();
+            this.pictureBoxXeMay = new System.Windows.Forms.PictureBox();
+            this.pictureBoxOto = new System.Windows.Forms.PictureBox();
+            this.pictureBoxXeDap = new System.Windows.Forms.PictureBox();
+            this.btSua = new System.Windows.Forms.Button();
+            this.btSearch = new System.Windows.Forms.Button();
+            this.btXoa = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRefresh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuanLiAllXe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
@@ -173,98 +173,6 @@
             this.dgvQuanLiAllXe.Size = new System.Drawing.Size(1080, 660);
             this.dgvQuanLiAllXe.TabIndex = 60;
             // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataMember = "QUANLIXERAVAO";
-            this.bindingSource1.DataSource = this._DESKTOP_RRRHOP4DataSet;
-            // 
-            // _DESKTOP_RRRHOP4DataSet
-            // 
-            this._DESKTOP_RRRHOP4DataSet.DataSetName = "_DESKTOP_RRRHOP4DataSet";
-            this._DESKTOP_RRRHOP4DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // qUANLIXERAVAOTableAdapter
-            // 
-            this.qUANLIXERAVAOTableAdapter.ClearBeforeFill = true;
-            // 
-            // pictureBoxXeMay
-            // 
-            this.pictureBoxXeMay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxXeMay.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxXeMay.BackgroundImage")));
-            this.pictureBoxXeMay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxXeMay.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxXeMay.Location = new System.Drawing.Point(779, 3);
-            this.pictureBoxXeMay.Name = "pictureBoxXeMay";
-            this.pictureBoxXeMay.Size = new System.Drawing.Size(101, 83);
-            this.pictureBoxXeMay.TabIndex = 61;
-            this.pictureBoxXeMay.TabStop = false;
-            this.pictureBoxXeMay.Click += new System.EventHandler(this.pictureBoxXeMay_Click);
-            // 
-            // pictureBoxOto
-            // 
-            this.pictureBoxOto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxOto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxOto.BackgroundImage")));
-            this.pictureBoxOto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxOto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxOto.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxOto.Image")));
-            this.pictureBoxOto.Location = new System.Drawing.Point(878, 3);
-            this.pictureBoxOto.Name = "pictureBoxOto";
-            this.pictureBoxOto.Size = new System.Drawing.Size(99, 83);
-            this.pictureBoxOto.TabIndex = 62;
-            this.pictureBoxOto.TabStop = false;
-            this.pictureBoxOto.Click += new System.EventHandler(this.pictureBoxOto_Click);
-            // 
-            // pictureBoxXeDap
-            // 
-            this.pictureBoxXeDap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxXeDap.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxXeDap.BackgroundImage")));
-            this.pictureBoxXeDap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxXeDap.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxXeDap.Location = new System.Drawing.Point(972, 3);
-            this.pictureBoxXeDap.Name = "pictureBoxXeDap";
-            this.pictureBoxXeDap.Size = new System.Drawing.Size(101, 83);
-            this.pictureBoxXeDap.TabIndex = 63;
-            this.pictureBoxXeDap.TabStop = false;
-            this.pictureBoxXeDap.Click += new System.EventHandler(this.pictureBoxXeDap_Click);
-            // 
-            // btSua
-            // 
-            this.btSua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btSua.BackColor = System.Drawing.Color.LightCoral;
-            this.btSua.Font = new System.Drawing.Font("UTM Centur", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSua.Location = new System.Drawing.Point(951, 749);
-            this.btSua.Name = "btSua";
-            this.btSua.Size = new System.Drawing.Size(126, 46);
-            this.btSua.TabIndex = 64;
-            this.btSua.Text = "Sửa";
-            this.btSua.UseVisualStyleBackColor = false;
-            this.btSua.Click += new System.EventHandler(this.btSua_Click_1);
-            // 
-            // btSearch
-            // 
-            this.btSearch.BackColor = System.Drawing.Color.Transparent;
-            this.btSearch.ForeColor = System.Drawing.Color.Transparent;
-            this.btSearch.Location = new System.Drawing.Point(467, 27);
-            this.btSearch.Name = "btSearch";
-            this.btSearch.Size = new System.Drawing.Size(85, 40);
-            this.btSearch.TabIndex = 65;
-            this.btSearch.Text = "OK";
-            this.btSearch.UseVisualStyleBackColor = false;
-            this.btSearch.Click += new System.EventHandler(this.btSearch_Click);
-            // 
-            // btXoa
-            // 
-            this.btXoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btXoa.BackColor = System.Drawing.Color.LightCoral;
-            this.btXoa.Font = new System.Drawing.Font("UTM Centur", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btXoa.Location = new System.Drawing.Point(3, 749);
-            this.btXoa.Name = "btXoa";
-            this.btXoa.Size = new System.Drawing.Size(182, 46);
-            this.btXoa.TabIndex = 66;
-            this.btXoa.Text = "Xóa tất cả";
-            this.btXoa.UseVisualStyleBackColor = false;
-            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
-            // 
             // loaixeDataGridViewTextBoxColumn
             // 
             this.loaixeDataGridViewTextBoxColumn.DataPropertyName = "loaixe";
@@ -341,6 +249,99 @@
             this.tongtienDataGridViewTextBoxColumn.HeaderText = "Thành tiền";
             this.tongtienDataGridViewTextBoxColumn.Name = "tongtienDataGridViewTextBoxColumn";
             this.tongtienDataGridViewTextBoxColumn.Width = 160;
+            // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataMember = "QUANLIXERAVAO";
+            this.bindingSource1.DataSource = this._DESKTOP_RRRHOP4DataSet;
+            // 
+            // _DESKTOP_RRRHOP4DataSet
+            // 
+            this._DESKTOP_RRRHOP4DataSet.DataSetName = "_DESKTOP_RRRHOP4DataSet";
+            this._DESKTOP_RRRHOP4DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // qUANLIXERAVAOTableAdapter
+            // 
+            this.qUANLIXERAVAOTableAdapter.ClearBeforeFill = true;
+            // 
+            // pictureBoxXeMay
+            // 
+            this.pictureBoxXeMay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxXeMay.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxXeMay.BackgroundImage")));
+            this.pictureBoxXeMay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxXeMay.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxXeMay.Location = new System.Drawing.Point(779, 3);
+            this.pictureBoxXeMay.Name = "pictureBoxXeMay";
+            this.pictureBoxXeMay.Size = new System.Drawing.Size(101, 83);
+            this.pictureBoxXeMay.TabIndex = 61;
+            this.pictureBoxXeMay.TabStop = false;
+            this.pictureBoxXeMay.Click += new System.EventHandler(this.pictureBoxXeMay_Click);
+            // 
+            // pictureBoxOto
+            // 
+            this.pictureBoxOto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxOto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxOto.BackgroundImage")));
+            this.pictureBoxOto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxOto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxOto.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxOto.Image")));
+            this.pictureBoxOto.Location = new System.Drawing.Point(878, 3);
+            this.pictureBoxOto.Name = "pictureBoxOto";
+            this.pictureBoxOto.Size = new System.Drawing.Size(99, 83);
+            this.pictureBoxOto.TabIndex = 62;
+            this.pictureBoxOto.TabStop = false;
+            this.pictureBoxOto.Click += new System.EventHandler(this.pictureBoxOto_Click);
+            // 
+            // pictureBoxXeDap
+            // 
+            this.pictureBoxXeDap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxXeDap.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxXeDap.BackgroundImage")));
+            this.pictureBoxXeDap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxXeDap.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxXeDap.Location = new System.Drawing.Point(972, 3);
+            this.pictureBoxXeDap.Name = "pictureBoxXeDap";
+            this.pictureBoxXeDap.Size = new System.Drawing.Size(101, 83);
+            this.pictureBoxXeDap.TabIndex = 63;
+            this.pictureBoxXeDap.TabStop = false;
+            this.pictureBoxXeDap.Click += new System.EventHandler(this.pictureBoxXeDap_Click);
+            // 
+            // btSua
+            // 
+            this.btSua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btSua.BackColor = System.Drawing.Color.LightCoral;
+            this.btSua.Font = new System.Drawing.Font("UTM Centur", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSua.Location = new System.Drawing.Point(951, 749);
+            this.btSua.Name = "btSua";
+            this.btSua.Size = new System.Drawing.Size(126, 46);
+            this.btSua.TabIndex = 64;
+            this.btSua.Text = "Sửa";
+            this.btSua.UseVisualStyleBackColor = false;
+            this.btSua.Click += new System.EventHandler(this.btSua_Click_1);
+            // 
+            // btSearch
+            // 
+            this.btSearch.BackColor = System.Drawing.Color.Transparent;
+            this.btSearch.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSearch.ForeColor = System.Drawing.Color.Transparent;
+            this.btSearch.Location = new System.Drawing.Point(467, 27);
+            this.btSearch.Name = "btSearch";
+            this.btSearch.Size = new System.Drawing.Size(85, 40);
+            this.btSearch.TabIndex = 65;
+            this.btSearch.Text = "OK";
+            this.btSearch.UseVisualStyleBackColor = false;
+            this.btSearch.Click += new System.EventHandler(this.btSearch_Click);
+            // 
+            // btXoa
+            // 
+            this.btXoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btXoa.BackColor = System.Drawing.Color.LightCoral;
+            this.btXoa.Font = new System.Drawing.Font("UTM Centur", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btXoa.Location = new System.Drawing.Point(3, 749);
+            this.btXoa.Name = "btXoa";
+            this.btXoa.Size = new System.Drawing.Size(182, 46);
+            this.btXoa.TabIndex = 66;
+            this.btXoa.Text = "Xóa tất cả";
+            this.btXoa.UseVisualStyleBackColor = false;
+            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
             // 
             // QuanLiTatCaXe
             // 

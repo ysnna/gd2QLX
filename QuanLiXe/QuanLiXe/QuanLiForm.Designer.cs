@@ -44,8 +44,8 @@
             this.pictureBoxBack = new System.Windows.Forms.PictureBox();
             this.quanLiTatCaXe = new QuanLiXe.UserControls.QuanLiTatCaXe();
             this.giaoDienQuanLiXeUC = new QuanLiXe.UserControls.GiaoDienQuanLiXeUC();
-            this.gioiThieuUC = new QuanLiXe.UserControls.GioiThieuUC();
             this.tongDoanThuUC = new QuanLiXe.UserControls.TongDoanThuUC();
+            this.gioiThieuUC = new QuanLiXe.UserControls.GioiThieuUC();
             this.panelForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip.SuspendLayout();
@@ -239,17 +239,6 @@
             this.giaoDienQuanLiXeUC.Size = new System.Drawing.Size(1620, 1169);
             this.giaoDienQuanLiXeUC.TabIndex = 2;
             // 
-            // gioiThieuUC
-            // 
-            this.gioiThieuUC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.gioiThieuUC.BackColor = System.Drawing.Color.LightBlue;
-            this.gioiThieuUC.Location = new System.Drawing.Point(350, 0);
-            this.gioiThieuUC.Name = "gioiThieuUC";
-            this.gioiThieuUC.Size = new System.Drawing.Size(1080, 800);
-            this.gioiThieuUC.TabIndex = 1;
-            // 
             // tongDoanThuUC
             // 
             this.tongDoanThuUC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -261,19 +250,32 @@
             this.tongDoanThuUC.Size = new System.Drawing.Size(1080, 800);
             this.tongDoanThuUC.TabIndex = 58;
             // 
+            // gioiThieuUC
+            // 
+            this.gioiThieuUC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gioiThieuUC.BackColor = System.Drawing.Color.LightBlue;
+            this.gioiThieuUC.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gioiThieuUC.BackgroundImage")));
+            this.gioiThieuUC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.gioiThieuUC.Location = new System.Drawing.Point(350, 0);
+            this.gioiThieuUC.Name = "gioiThieuUC";
+            this.gioiThieuUC.Size = new System.Drawing.Size(1080, 800);
+            this.gioiThieuUC.TabIndex = 59;
+            // 
             // QuanLiForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(1426, 798);
+            this.Controls.Add(this.gioiThieuUC);
+            this.Controls.Add(this.panelForm);
+            this.Controls.Add(this.tongDoanThuUC);
+            this.Controls.Add(this.quanLiTatCaXe);
             this.Controls.Add(this.pictureBoxBack);
             this.Controls.Add(this.menuStrip);
-            this.Controls.Add(this.panelForm);
-            this.Controls.Add(this.quanLiTatCaXe);
             this.Controls.Add(this.giaoDienQuanLiXeUC);
-            this.Controls.Add(this.gioiThieuUC);
-            this.Controls.Add(this.tongDoanThuUC);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "QuanLiForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -294,7 +296,6 @@
 
         private System.Windows.Forms.Panel panelForm;
         private System.Windows.Forms.Button btGioiThieu;
-        private UserControls.GioiThieuUC gioiThieuUC;
         private System.Windows.Forms.Panel panelClick;
         private System.Windows.Forms.Button btThongTinKhachHang;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -309,5 +310,6 @@
         private System.Windows.Forms.PictureBox pictureBoxBack;
         private System.Windows.Forms.Button btTongDoanThu;
         private UserControls.TongDoanThuUC tongDoanThuUC;
+        private UserControls.GioiThieuUC gioiThieuUC;
     }
 }

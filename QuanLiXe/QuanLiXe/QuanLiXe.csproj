@@ -72,6 +72,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dataSetBaiXe.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FormChinhGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChinhGia.Designer.cs">
+      <DependentUpon>FormChinhGia.cs</DependentUpon>
+    </Compile>
     <Compile Include="KhachHang.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -131,6 +137,9 @@
     </Compile>
     <EmbeddedResource Include="BaiXeForm.resx">
       <DependentUpon>BaiXeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChinhGia.resx">
+      <DependentUpon>FormChinhGia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

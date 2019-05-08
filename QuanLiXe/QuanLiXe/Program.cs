@@ -16,7 +16,8 @@ namespace QuanLiXe
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            LoginForm f = new LoginForm();
+            QuanLiForm f = new QuanLiForm();
+            //LoginForm f = new LoginForm();
             if (f.ShowDialog() == DialogResult.OK)
                 Application.Run(new QuanLiForm());
             else Application.Exit();

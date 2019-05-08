@@ -107,3 +107,4 @@ E:\LTWindows\WindowsQLXe\QLXe\gd2QLX\QuanLiXe\QuanLiXe\obj\Debug\QuanLiXe.csproj
 E:\LTWindows\WindowsQLXe\QLXe\gd2QLX\QuanLiXe\QuanLiXe\obj\Debug\QuanLiXe.csproj.CoreCompileInputs.cache
 E:\LTWindows\WindowsQLXe\QLXe\gd2QLX\QuanLiXe\QuanLiXe\obj\Debug\QuanLiXe.exe
 E:\LTWindows\WindowsQLXe\QLXe\gd2QLX\QuanLiXe\QuanLiXe\obj\Debug\QuanLiXe.pdb
+E:\LTWindows\WindowsQLXe\QLXe\gd2QLX\QuanLiXe\QuanLiXe\obj\Debug\QuanLiXe.FormChinhGia.resources
