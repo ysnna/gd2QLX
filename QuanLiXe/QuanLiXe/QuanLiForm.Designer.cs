@@ -42,10 +42,10 @@
             this.baiXeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quanLiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBoxBack = new System.Windows.Forms.PictureBox();
+            this.gioiThieuUC = new QuanLiXe.UserControls.GioiThieuUC();
+            this.tongDoanThuUC = new QuanLiXe.UserControls.TongDoanThuUC();
             this.quanLiTatCaXe = new QuanLiXe.UserControls.QuanLiTatCaXe();
             this.giaoDienQuanLiXeUC = new QuanLiXe.UserControls.GiaoDienQuanLiXeUC();
-            this.tongDoanThuUC = new QuanLiXe.UserControls.TongDoanThuUC();
-            this.gioiThieuUC = new QuanLiXe.UserControls.GioiThieuUC();
             this.panelForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip.SuspendLayout();
@@ -57,13 +57,13 @@
             this.panelForm.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panelForm.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panelForm.Controls.Add(this.pictureBox1);
             this.panelForm.Controls.Add(this.btTongDoanThu);
             this.panelForm.Controls.Add(this.btQuanLiXe);
             this.panelForm.Controls.Add(this.btThongTinTho);
             this.panelForm.Controls.Add(this.btThongTinKhachHang);
             this.panelForm.Controls.Add(this.panelClick);
             this.panelForm.Controls.Add(this.btGioiThieu);
-            this.panelForm.Controls.Add(this.pictureBox1);
             this.panelForm.Location = new System.Drawing.Point(-3, 0);
             this.panelForm.Name = "panelForm";
             this.panelForm.Size = new System.Drawing.Size(355, 797);
@@ -77,7 +77,7 @@
             this.btTongDoanThu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btTongDoanThu.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btTongDoanThu.ForeColor = System.Drawing.Color.Transparent;
-            this.btTongDoanThu.Location = new System.Drawing.Point(3, 473);
+            this.btTongDoanThu.Location = new System.Drawing.Point(3, 493);
             this.btTongDoanThu.Name = "btTongDoanThu";
             this.btTongDoanThu.Size = new System.Drawing.Size(349, 80);
             this.btTongDoanThu.TabIndex = 6;
@@ -93,7 +93,7 @@
             this.btQuanLiXe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btQuanLiXe.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btQuanLiXe.ForeColor = System.Drawing.Color.Transparent;
-            this.btQuanLiXe.Location = new System.Drawing.Point(6, 387);
+            this.btQuanLiXe.Location = new System.Drawing.Point(0, 407);
             this.btQuanLiXe.Name = "btQuanLiXe";
             this.btQuanLiXe.Size = new System.Drawing.Size(349, 80);
             this.btQuanLiXe.TabIndex = 5;
@@ -109,7 +109,7 @@
             this.btThongTinTho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btThongTinTho.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThongTinTho.ForeColor = System.Drawing.Color.Transparent;
-            this.btThongTinTho.Location = new System.Drawing.Point(3, 301);
+            this.btThongTinTho.Location = new System.Drawing.Point(3, 321);
             this.btThongTinTho.Name = "btThongTinTho";
             this.btThongTinTho.Size = new System.Drawing.Size(349, 80);
             this.btThongTinTho.TabIndex = 4;
@@ -125,7 +125,7 @@
             this.btThongTinKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btThongTinKhachHang.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThongTinKhachHang.ForeColor = System.Drawing.Color.Transparent;
-            this.btThongTinKhachHang.Location = new System.Drawing.Point(3, 215);
+            this.btThongTinKhachHang.Location = new System.Drawing.Point(3, 235);
             this.btThongTinKhachHang.Name = "btThongTinKhachHang";
             this.btThongTinKhachHang.Size = new System.Drawing.Size(349, 80);
             this.btThongTinKhachHang.TabIndex = 2;
@@ -136,7 +136,7 @@
             // panelClick
             // 
             this.panelClick.BackColor = System.Drawing.Color.AliceBlue;
-            this.panelClick.Location = new System.Drawing.Point(3, 129);
+            this.panelClick.Location = new System.Drawing.Point(3, 149);
             this.panelClick.Name = "panelClick";
             this.panelClick.Size = new System.Drawing.Size(23, 80);
             this.panelClick.TabIndex = 1;
@@ -149,7 +149,7 @@
             this.btGioiThieu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btGioiThieu.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btGioiThieu.ForeColor = System.Drawing.Color.Transparent;
-            this.btGioiThieu.Location = new System.Drawing.Point(3, 129);
+            this.btGioiThieu.Location = new System.Drawing.Point(3, 149);
             this.btGioiThieu.Name = "btGioiThieu";
             this.btGioiThieu.Size = new System.Drawing.Size(349, 80);
             this.btGioiThieu.TabIndex = 0;
@@ -161,9 +161,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(32, -11);
+            this.pictureBox1.Location = new System.Drawing.Point(32, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(274, 168);
+            this.pictureBox1.Size = new System.Drawing.Size(282, 147);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -217,6 +217,30 @@
             this.pictureBoxBack.TabStop = false;
             this.pictureBoxBack.Click += new System.EventHandler(this.pictureBoxBack_Click);
             // 
+            // gioiThieuUC
+            // 
+            this.gioiThieuUC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gioiThieuUC.BackColor = System.Drawing.Color.LightBlue;
+            this.gioiThieuUC.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gioiThieuUC.BackgroundImage")));
+            this.gioiThieuUC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.gioiThieuUC.Location = new System.Drawing.Point(350, 0);
+            this.gioiThieuUC.Name = "gioiThieuUC";
+            this.gioiThieuUC.Size = new System.Drawing.Size(1080, 800);
+            this.gioiThieuUC.TabIndex = 59;
+            // 
+            // tongDoanThuUC
+            // 
+            this.tongDoanThuUC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tongDoanThuUC.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.tongDoanThuUC.Location = new System.Drawing.Point(350, 0);
+            this.tongDoanThuUC.Name = "tongDoanThuUC";
+            this.tongDoanThuUC.Size = new System.Drawing.Size(1080, 800);
+            this.tongDoanThuUC.TabIndex = 58;
+            // 
             // quanLiTatCaXe
             // 
             this.quanLiTatCaXe.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -238,30 +262,6 @@
             this.giaoDienQuanLiXeUC.Name = "giaoDienQuanLiXeUC";
             this.giaoDienQuanLiXeUC.Size = new System.Drawing.Size(1620, 1169);
             this.giaoDienQuanLiXeUC.TabIndex = 2;
-            // 
-            // tongDoanThuUC
-            // 
-            this.tongDoanThuUC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tongDoanThuUC.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.tongDoanThuUC.Location = new System.Drawing.Point(350, 0);
-            this.tongDoanThuUC.Name = "tongDoanThuUC";
-            this.tongDoanThuUC.Size = new System.Drawing.Size(1080, 800);
-            this.tongDoanThuUC.TabIndex = 58;
-            // 
-            // gioiThieuUC
-            // 
-            this.gioiThieuUC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.gioiThieuUC.BackColor = System.Drawing.Color.LightBlue;
-            this.gioiThieuUC.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gioiThieuUC.BackgroundImage")));
-            this.gioiThieuUC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.gioiThieuUC.Location = new System.Drawing.Point(350, 0);
-            this.gioiThieuUC.Name = "gioiThieuUC";
-            this.gioiThieuUC.Size = new System.Drawing.Size(1080, 800);
-            this.gioiThieuUC.TabIndex = 59;
             // 
             // QuanLiForm
             // 

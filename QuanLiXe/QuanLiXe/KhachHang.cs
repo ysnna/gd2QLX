@@ -11,25 +11,17 @@ namespace QuanLiXe
 {
     class KhachHang
     {
-        MY_DB mydb = new MY_DB();//, int khud, int khue, int khuf, int khug, int khuh, int khuk
-        //public bool updateBaiXe(int vitrixe, int khu)
-        //{
-        //    SqlCommand cmd = new SqlCommand("update BAIXE set vitrixe = @vt, khua = @a where vitrixe = @vt", mydb.getConnection);
-        //    cmd.Parameters.Add("@vt", SqlDbType.Int).Value = vitrixe;
-        //    cmd.Parameters.Add("@a", SqlDbType.TinyInt).Value = khu;
+        MY_DB mydb = new MY_DB();
 
-        //    mydb.openConnection();
-        //    if (cmd.ExecuteNonQuery() == 1)
-        //    {
-        //        mydb.closeConnection();
-        //        return true;
-        //    }
-        //    else
-        //    {
-        //        mydb.closeConnection();
-        //        return false;
-        //    }
-        //}
+        public DataTable getPhiGuiXe()
+        {
+            SqlCommand cmd = new SqlCommand("select * from GIAGUIXE", mydb.getConnection);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable table = new DataTable();
+            da.Fill(table);
+            return table;
+        }
+        //public bool updatePhiGuiXe(string xedap, string xemay, string oto)
         public bool updateBaiXe(string num, string vitri)
         {
             SqlCommand cmd = new SqlCommand("update BAIXE set khuA=@num where vitriXe=@vitri ", mydb.getConnection);

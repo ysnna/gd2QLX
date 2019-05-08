@@ -27,7 +27,6 @@ namespace QuanLiXe.UserControls
             labelQuaGioGui.Visible = false;
             dgvQuanLiAllXe.ReadOnly = true;
             refreshData();
-            refreshData();
         }
 
         private void pictureBoxXeMay_Click(object sender, EventArgs e)

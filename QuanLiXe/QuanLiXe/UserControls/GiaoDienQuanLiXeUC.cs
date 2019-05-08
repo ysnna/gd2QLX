@@ -20,29 +20,6 @@ namespace QuanLiXe.UserControls
         {
             InitializeComponent();
         }
-
-        //Check xem xe gửi theo ngày tháng hay giờ
-        private void btGuiTheoThang_Click(object sender, EventArgs e)
-        {
-            Month.Checked = true;
-            Day.Checked = false;
-            Hour.Checked = false;
-        }
-
-        private void btGuiTheoNgay_Click(object sender, EventArgs e)
-        {
-            Month.Checked = false;
-            Day.Checked = true;
-            Hour.Checked = false;
-        }
-
-        private void btGuiTheoGio_Click(object sender, EventArgs e)
-        {
-            Month.Checked = false;
-            Day.Checked = false;
-            Hour.Checked = true;
-        }
-        //Check xem xe gửi Loại Gì
         private void btOto_Click(object sender, EventArgs e)
         {
             pictureBoxVienOto.Visible = true;
@@ -86,9 +63,6 @@ namespace QuanLiXe.UserControls
                                     break;
 
                             }
-                            //dt.Rows[i][j] = 1;
-                            //vtriI = i;
-                            //vtriJ = j;
                         }
                         i++;
                     }
@@ -144,9 +118,6 @@ namespace QuanLiXe.UserControls
                                     kt = true;
                                     break;
                             }
-                            //dt.Rows[i][j] = 1;
-                            //vtriI = i;
-                            //vtriJ = j;
                         }
                         i++;
                     }
@@ -193,9 +164,6 @@ namespace QuanLiXe.UserControls
                                     kt = true;
                                     break;
                             }
-                            //dt.Rows[i][j] = 1;
-                            //vtriI = i;
-                            //vtriJ = j;
                         }
                         i++;
                     }
@@ -262,18 +230,19 @@ namespace QuanLiXe.UserControls
                 loaixe = btXeDap.Text;
             }
             string yeucau;
-            if (Month.Checked == true)
+            if (radHour.Checked == true)
             {
-                yeucau = Month.Text;
+                yeucau = "Hour";
             }
-            else if (Day.Checked == true)
+            else if (radDay.Checked == true)
             {
-                yeucau = Day.Text;
+                yeucau = "Day";
             }
-            else
+            else if (radWeek.Checked == true)
             {
-                yeucau = Hour.Text;
+                yeucau = "Week";
             }
+            else yeucau = "Month";
 
             MemoryStream nguoigui = new MemoryStream();
             MemoryStream bienso = new MemoryStream();
@@ -324,11 +293,13 @@ namespace QuanLiXe.UserControls
                     kh.updateBaiXe9("1", sp[1]);
                     break;
             }
+            pictureBoxBienSoXe.Image = pictureBoxBienSoXe.BackgroundImage;
+            pictureBoxNguoiGui.Image = pictureBoxNguoiGui.BackgroundImage;
+            btKhuVuc.Text = "";
             BaiXeForm baiXe = new BaiXeForm();
             baiXe.BaiXeForm_Load(sender, e);
             txtGioGui.Text = DateTime.Now.ToString("HH:mm:ss"); 
         }
-        // Tao su kien khi Luu hinh anh
         private void pictureBoxNguoiGui_Click(object sender, EventArgs e)
         {
             OpenFileDialog open = new OpenFileDialog();
@@ -336,7 +307,6 @@ namespace QuanLiXe.UserControls
             if (open.ShowDialog() == DialogResult.OK)
                 pictureBoxNguoiGui.Image = Image.FromFile(open.FileName);
         }
-
         private void pictureBoxBienSoXe_Click(object sender, EventArgs e)
         {
             OpenFileDialog open = new OpenFileDialog();
@@ -344,10 +314,10 @@ namespace QuanLiXe.UserControls
             if (open.ShowDialog() == DialogResult.OK)
                 pictureBoxBienSoXe.Image = Image.FromFile(open.FileName);
         }
-
         private void GiaoDienQuanLiXeUC_Load(object sender, EventArgs e)
         {
             txtGioGui.Text = DateTime.Now.ToString("HH:mm:ss");
+            radHour.Checked = true;
             pictureBoxVienOto.Location = new Point(51, -10);
             pictureBoxVienOto.SendToBack();
             pictureBoxVienXeMay.Location = new Point(51, -10);
@@ -356,7 +326,6 @@ namespace QuanLiXe.UserControls
             pictureBoxVienXeDap.SendToBack();
             KTChoTrong();
         }
-
         private void btLayXe_Click(object sender, EventArgs e)
         {
             DateTime ngaylay = DateTime.Now;

@@ -45,12 +45,6 @@
             this.txtOtoTrong = new System.Windows.Forms.Button();
             this.btXeMayTrong = new System.Windows.Forms.Button();
             this.btXeDapTrong = new System.Windows.Forms.Button();
-            this.Month = new System.Windows.Forms.CheckBox();
-            this.btGuiTheoThang = new System.Windows.Forms.Button();
-            this.btGuiTheoNgay = new System.Windows.Forms.Button();
-            this.btGuiTheoGio = new System.Windows.Forms.Button();
-            this.Day = new System.Windows.Forms.CheckBox();
-            this.Hour = new System.Windows.Forms.CheckBox();
             this.Oto = new System.Windows.Forms.CheckBox();
             this.XeMay = new System.Windows.Forms.CheckBox();
             this.XeDap = new System.Windows.Forms.CheckBox();
@@ -62,16 +56,23 @@
             this.txtLayXe = new System.Windows.Forms.TextBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.txtGioGui = new System.Windows.Forms.TextBox();
+            this.radHour = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radMonth = new System.Windows.Forms.RadioButton();
+            this.radWeek = new System.Windows.Forms.RadioButton();
+            this.radDay = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNguoiGui)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBienSoXe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVienXeDap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVienXeMay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVienOto)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBoxNguoiGui
             // 
             this.pictureBoxNguoiGui.BackColor = System.Drawing.Color.LightBlue;
+            this.pictureBoxNguoiGui.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxNguoiGui.BackgroundImage")));
             this.pictureBoxNguoiGui.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBoxNguoiGui.Location = new System.Drawing.Point(114, 481);
             this.pictureBoxNguoiGui.Name = "pictureBoxNguoiGui";
@@ -111,6 +112,7 @@
             // pictureBoxBienSoXe
             // 
             this.pictureBoxBienSoXe.BackColor = System.Drawing.Color.LightBlue;
+            this.pictureBoxBienSoXe.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxBienSoXe.BackgroundImage")));
             this.pictureBoxBienSoXe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBoxBienSoXe.Location = new System.Drawing.Point(582, 481);
             this.pictureBoxBienSoXe.Name = "pictureBoxBienSoXe";
@@ -282,78 +284,6 @@
             this.btXeDapTrong.Text = "60";
             this.btXeDapTrong.UseVisualStyleBackColor = false;
             // 
-            // Month
-            // 
-            this.Month.AutoSize = true;
-            this.Month.Location = new System.Drawing.Point(1025, 501);
-            this.Month.Name = "Month";
-            this.Month.Size = new System.Drawing.Size(56, 17);
-            this.Month.TabIndex = 80;
-            this.Month.Text = "Month";
-            this.Month.UseVisualStyleBackColor = true;
-            this.Month.Visible = false;
-            // 
-            // btGuiTheoThang
-            // 
-            this.btGuiTheoThang.BackColor = System.Drawing.Color.Orange;
-            this.btGuiTheoThang.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btGuiTheoThang.ForeColor = System.Drawing.Color.Snow;
-            this.btGuiTheoThang.Location = new System.Drawing.Point(1053, 506);
-            this.btGuiTheoThang.Name = "btGuiTheoThang";
-            this.btGuiTheoThang.Size = new System.Drawing.Size(176, 55);
-            this.btGuiTheoThang.TabIndex = 18;
-            this.btGuiTheoThang.Text = "Theo tháng";
-            this.btGuiTheoThang.UseVisualStyleBackColor = false;
-            this.btGuiTheoThang.Click += new System.EventHandler(this.btGuiTheoThang_Click);
-            // 
-            // btGuiTheoNgay
-            // 
-            this.btGuiTheoNgay.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btGuiTheoNgay.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btGuiTheoNgay.ForeColor = System.Drawing.Color.Snow;
-            this.btGuiTheoNgay.Location = new System.Drawing.Point(1053, 567);
-            this.btGuiTheoNgay.Name = "btGuiTheoNgay";
-            this.btGuiTheoNgay.Size = new System.Drawing.Size(176, 55);
-            this.btGuiTheoNgay.TabIndex = 19;
-            this.btGuiTheoNgay.Text = "Theo ngày";
-            this.btGuiTheoNgay.UseVisualStyleBackColor = false;
-            this.btGuiTheoNgay.Click += new System.EventHandler(this.btGuiTheoNgay_Click);
-            // 
-            // btGuiTheoGio
-            // 
-            this.btGuiTheoGio.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btGuiTheoGio.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btGuiTheoGio.ForeColor = System.Drawing.Color.Snow;
-            this.btGuiTheoGio.Location = new System.Drawing.Point(1053, 628);
-            this.btGuiTheoGio.Name = "btGuiTheoGio";
-            this.btGuiTheoGio.Size = new System.Drawing.Size(176, 55);
-            this.btGuiTheoGio.TabIndex = 20;
-            this.btGuiTheoGio.Text = "Lấy liền";
-            this.btGuiTheoGio.UseVisualStyleBackColor = false;
-            this.btGuiTheoGio.Click += new System.EventHandler(this.btGuiTheoGio_Click);
-            // 
-            // Day
-            // 
-            this.Day.AutoSize = true;
-            this.Day.Location = new System.Drawing.Point(1025, 557);
-            this.Day.Name = "Day";
-            this.Day.Size = new System.Drawing.Size(45, 17);
-            this.Day.TabIndex = 80;
-            this.Day.Text = "Day";
-            this.Day.UseVisualStyleBackColor = true;
-            this.Day.Visible = false;
-            // 
-            // Hour
-            // 
-            this.Hour.AutoSize = true;
-            this.Hour.Location = new System.Drawing.Point(1025, 617);
-            this.Hour.Name = "Hour";
-            this.Hour.Size = new System.Drawing.Size(49, 17);
-            this.Hour.TabIndex = 80;
-            this.Hour.Text = "Hour";
-            this.Hour.UseVisualStyleBackColor = true;
-            this.Hour.Visible = false;
-            // 
             // Oto
             // 
             this.Oto.AutoSize = true;
@@ -468,22 +398,82 @@
             this.txtGioGui.Size = new System.Drawing.Size(137, 39);
             this.txtGioGui.TabIndex = 90;
             // 
+            // radHour
+            // 
+            this.radHour.AutoSize = true;
+            this.radHour.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radHour.Location = new System.Drawing.Point(28, 34);
+            this.radHour.Name = "radHour";
+            this.radHour.Size = new System.Drawing.Size(66, 31);
+            this.radHour.TabIndex = 91;
+            this.radHour.TabStop = true;
+            this.radHour.Text = "Giờ";
+            this.radHour.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radMonth);
+            this.groupBox1.Controls.Add(this.radWeek);
+            this.groupBox1.Controls.Add(this.radDay);
+            this.groupBox1.Controls.Add(this.radHour);
+            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(1063, 508);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(163, 187);
+            this.groupBox1.TabIndex = 92;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Gửi xe theo";
+            // 
+            // radMonth
+            // 
+            this.radMonth.AutoSize = true;
+            this.radMonth.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radMonth.Location = new System.Drawing.Point(28, 145);
+            this.radMonth.Name = "radMonth";
+            this.radMonth.Size = new System.Drawing.Size(90, 31);
+            this.radMonth.TabIndex = 94;
+            this.radMonth.TabStop = true;
+            this.radMonth.Text = "Tháng";
+            this.radMonth.UseVisualStyleBackColor = true;
+            // 
+            // radWeek
+            // 
+            this.radWeek.AutoSize = true;
+            this.radWeek.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radWeek.Location = new System.Drawing.Point(28, 108);
+            this.radWeek.Name = "radWeek";
+            this.radWeek.Size = new System.Drawing.Size(78, 31);
+            this.radWeek.TabIndex = 93;
+            this.radWeek.TabStop = true;
+            this.radWeek.Text = "Tuần";
+            this.radWeek.UseVisualStyleBackColor = true;
+            // 
+            // radDay
+            // 
+            this.radDay.AutoSize = true;
+            this.radDay.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radDay.Location = new System.Drawing.Point(28, 71);
+            this.radDay.Name = "radDay";
+            this.radDay.Size = new System.Drawing.Size(81, 31);
+            this.radDay.TabIndex = 92;
+            this.radDay.TabStop = true;
+            this.radDay.Text = "Ngày";
+            this.radDay.UseVisualStyleBackColor = true;
+            // 
             // GiaoDienQuanLiXeUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtGioGui);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.txtLayXe);
             this.Controls.Add(this.btLayXe);
             this.Controls.Add(this.DTPNgayGui);
-            this.Controls.Add(this.Hour);
-            this.Controls.Add(this.Day);
             this.Controls.Add(this.XeDap);
             this.Controls.Add(this.XeMay);
             this.Controls.Add(this.Oto);
-            this.Controls.Add(this.Month);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
@@ -493,9 +483,6 @@
             this.Controls.Add(this.txtOtoTrong);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btGuiTheoGio);
-            this.Controls.Add(this.btGuiTheoNgay);
-            this.Controls.Add(this.btGuiTheoThang);
             this.Controls.Add(this.pictureBoxBienSoXe);
             this.Controls.Add(this.btMoiXeVao);
             this.Controls.Add(this.btKhuVuc);
@@ -516,6 +503,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVienXeDap)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVienXeMay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVienOto)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -537,12 +526,6 @@
         private System.Windows.Forms.Button txtOtoTrong;
         private System.Windows.Forms.Button btXeMayTrong;
         private System.Windows.Forms.Button btXeDapTrong;
-        public System.Windows.Forms.CheckBox Month;
-        private System.Windows.Forms.Button btGuiTheoThang;
-        private System.Windows.Forms.Button btGuiTheoNgay;
-        private System.Windows.Forms.Button btGuiTheoGio;
-        public System.Windows.Forms.CheckBox Day;
-        public System.Windows.Forms.CheckBox Hour;
         public System.Windows.Forms.Button btKhuVuc;
         public System.Windows.Forms.CheckBox Oto;
         public System.Windows.Forms.CheckBox XeMay;
@@ -555,5 +538,10 @@
         private System.Windows.Forms.TextBox txtLayXe;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.TextBox txtGioGui;
+        private System.Windows.Forms.RadioButton radHour;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radMonth;
+        private System.Windows.Forms.RadioButton radWeek;
+        private System.Windows.Forms.RadioButton radDay;
     }
 }

@@ -35,13 +35,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BaiXeForm));
             this.dgvBaiXe = new System.Windows.Forms.DataGridView();
+            this.bAIXEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._DESKTOP_BAIXE = new QuanLiXe._DESKTOP_BAIXE();
             this.btBaiOto = new System.Windows.Forms.Button();
             this.btBaiXeMay = new System.Windows.Forms.Button();
             this.btBaiXeDap = new System.Windows.Forms.Button();
             this.btBackThoat = new System.Windows.Forms.Button();
-            this.btRefresh = new System.Windows.Forms.Button();
-            this._DESKTOP_BAIXE = new QuanLiXe._DESKTOP_BAIXE();
-            this.bAIXEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bAIXETableAdapter = new QuanLiXe._DESKTOP_BAIXETableAdapters.BAIXETableAdapter();
             this.vitriXeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.khuADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,8 +53,8 @@
             this.khuHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.khuKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBaiXe)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._DESKTOP_BAIXE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bAIXEBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._DESKTOP_BAIXE)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvBaiXe
@@ -120,6 +119,16 @@
             this.dgvBaiXe.Size = new System.Drawing.Size(1187, 662);
             this.dgvBaiXe.TabIndex = 0;
             // 
+            // bAIXEBindingSource
+            // 
+            this.bAIXEBindingSource.DataMember = "BAIXE";
+            this.bAIXEBindingSource.DataSource = this._DESKTOP_BAIXE;
+            // 
+            // _DESKTOP_BAIXE
+            // 
+            this._DESKTOP_BAIXE.DataSetName = "_DESKTOP_BAIXE";
+            this._DESKTOP_BAIXE.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // btBaiOto
             // 
             this.btBaiOto.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -172,35 +181,10 @@
             this.btBackThoat.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btBackThoat.Location = new System.Drawing.Point(10, 8);
             this.btBackThoat.Name = "btBackThoat";
-            this.btBackThoat.Size = new System.Drawing.Size(80, 63);
+            this.btBackThoat.Size = new System.Drawing.Size(141, 61);
             this.btBackThoat.TabIndex = 4;
             this.btBackThoat.UseVisualStyleBackColor = false;
             this.btBackThoat.Click += new System.EventHandler(this.btBackThoat_Click);
-            // 
-            // btRefresh
-            // 
-            this.btRefresh.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btRefresh.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.btRefresh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btRefresh.BackgroundImage")));
-            this.btRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btRefresh.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btRefresh.Location = new System.Drawing.Point(85, 8);
-            this.btRefresh.Name = "btRefresh";
-            this.btRefresh.Size = new System.Drawing.Size(62, 61);
-            this.btRefresh.TabIndex = 5;
-            this.btRefresh.UseVisualStyleBackColor = false;
-            this.btRefresh.Click += new System.EventHandler(this.btRefresh_Click);
-            // 
-            // _DESKTOP_BAIXE
-            // 
-            this._DESKTOP_BAIXE.DataSetName = "_DESKTOP_BAIXE";
-            this._DESKTOP_BAIXE.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bAIXEBindingSource
-            // 
-            this.bAIXEBindingSource.DataMember = "BAIXE";
-            this.bAIXEBindingSource.DataSource = this._DESKTOP_BAIXE;
             // 
             // bAIXETableAdapter
             // 
@@ -220,6 +204,7 @@
             this.khuADataGridViewTextBoxColumn.HeaderText = "Khu A";
             this.khuADataGridViewTextBoxColumn.Name = "khuADataGridViewTextBoxColumn";
             this.khuADataGridViewTextBoxColumn.ReadOnly = true;
+            this.khuADataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.khuADataGridViewTextBoxColumn.Width = 115;
             // 
             // khuBDataGridViewTextBoxColumn
@@ -293,7 +278,6 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1206, 740);
-            this.Controls.Add(this.btRefresh);
             this.Controls.Add(this.btBaiXeDap);
             this.Controls.Add(this.btBaiXeMay);
             this.Controls.Add(this.btBaiOto);
@@ -307,8 +291,8 @@
             this.Text = "BaiXeForm";
             this.Load += new System.EventHandler(this.BaiXeForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBaiXe)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._DESKTOP_BAIXE)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bAIXEBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._DESKTOP_BAIXE)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -320,7 +304,6 @@
         private System.Windows.Forms.Button btBaiXeMay;
         private System.Windows.Forms.Button btBaiXeDap;
         private System.Windows.Forms.Button btBackThoat;
-        private System.Windows.Forms.Button btRefresh;
         private _DESKTOP_BAIXE _DESKTOP_BAIXE;
         private System.Windows.Forms.BindingSource bAIXEBindingSource;
         private _DESKTOP_BAIXETableAdapters.BAIXETableAdapter bAIXETableAdapter;

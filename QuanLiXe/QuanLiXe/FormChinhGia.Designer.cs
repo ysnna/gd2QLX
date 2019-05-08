@@ -31,15 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormChinhGia));
             this.pictureBoxClose = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtXedap = new System.Windows.Forms.TextBox();
-            this.txtXemay = new System.Windows.Forms.TextBox();
-            this.txtOto = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtOto = new System.Windows.Forms.TextBox();
+            this.txtXemay = new System.Windows.Forms.TextBox();
+            this.txtXedap = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -81,69 +81,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Phí gửi xe (theo giờ)";
             // 
-            // label1
+            // label6
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(38, 56);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 27);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Xe đạp";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(38, 118);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 27);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Xe máy";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(38, 181);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 27);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Ô tô";
-            // 
-            // txtXedap
-            // 
-            this.txtXedap.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtXedap.Location = new System.Drawing.Point(139, 53);
-            this.txtXedap.Name = "txtXedap";
-            this.txtXedap.Size = new System.Drawing.Size(161, 35);
-            this.txtXedap.TabIndex = 3;
-            // 
-            // txtXemay
-            // 
-            this.txtXemay.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtXemay.Location = new System.Drawing.Point(139, 115);
-            this.txtXemay.Name = "txtXemay";
-            this.txtXemay.Size = new System.Drawing.Size(161, 35);
-            this.txtXemay.TabIndex = 4;
-            // 
-            // txtOto
-            // 
-            this.txtOto.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOto.Location = new System.Drawing.Point(139, 178);
-            this.txtOto.Name = "txtOto";
-            this.txtOto.Size = new System.Drawing.Size(161, 35);
-            this.txtOto.TabIndex = 5;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(306, 56);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 31);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "VND";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(306, 182);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(71, 31);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "VND";
             // 
             // label5
             // 
@@ -155,15 +101,69 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "VND";
             // 
-            // label6
+            // label4
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(306, 182);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 31);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "VND";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(306, 56);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(71, 31);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "VND";
+            // 
+            // txtOto
+            // 
+            this.txtOto.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOto.Location = new System.Drawing.Point(139, 178);
+            this.txtOto.Name = "txtOto";
+            this.txtOto.Size = new System.Drawing.Size(161, 35);
+            this.txtOto.TabIndex = 5;
+            // 
+            // txtXemay
+            // 
+            this.txtXemay.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtXemay.Location = new System.Drawing.Point(139, 115);
+            this.txtXemay.Name = "txtXemay";
+            this.txtXemay.Size = new System.Drawing.Size(161, 35);
+            this.txtXemay.TabIndex = 4;
+            // 
+            // txtXedap
+            // 
+            this.txtXedap.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtXedap.Location = new System.Drawing.Point(139, 53);
+            this.txtXedap.Name = "txtXedap";
+            this.txtXedap.Size = new System.Drawing.Size(161, 35);
+            this.txtXedap.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(38, 181);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 27);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Ô tô";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(38, 118);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 27);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Xe máy";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(38, 56);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 27);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Xe đạp";
             // 
             // btSave
             // 
@@ -180,6 +180,7 @@
             // 
             // FormChinhGia
             // 
+            this.AcceptButton = this.btSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
@@ -192,6 +193,7 @@
             this.Name = "FormChinhGia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "000000000000000";
+            this.Load += new System.EventHandler(this.FormChinhGia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

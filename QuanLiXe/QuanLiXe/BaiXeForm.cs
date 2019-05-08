@@ -28,15 +28,12 @@ namespace QuanLiXe
         void connectionBaiXe()
         {
             dgvBaiXe.DataSource = kh.getCus();
+            //foreach ()
         }
         private void btBackThoat_Click(object sender, EventArgs e)
         {
             db.closeConnection();
             this.Close();
-        }
-        private void btRefresh_Click(object sender, EventArgs e)
-        {
-            connectionBaiXe();
         }
     }
 }
