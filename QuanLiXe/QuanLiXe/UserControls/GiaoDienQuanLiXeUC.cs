@@ -388,12 +388,12 @@ namespace QuanLiXe.UserControls
 
         private void btRefreshGuiXe_Click(object sender, EventArgs e)
         {
+            panelThanhToan.Visible = false;
+            btMoiXeVao.Visible = true;
             pictureBoxNguoiGui.Image = pictureBoxNguoiGui.BackgroundImage;
             pictureBoxBienSoXe.Image = pictureBoxBienSoXe.BackgroundImage;
             radHour.Checked = true;
             txtSearch.Text = "";
-            panelThanhToan.Visible = false;
-            btMoiXeVao.Visible = true;
             btKhuVuc.Text = "";
             pictureBoxVienXeDap.SendToBack();
             pictureBoxVienXeMay.SendToBack();
@@ -402,12 +402,12 @@ namespace QuanLiXe.UserControls
 
         private void btRefreshLayXe_Click(object sender, EventArgs e)
         {
+            panelThanhToan.Visible = true;
+            btMoiXeVao.Visible = false;
             pictureBoxNguoiGui.Image = pictureBoxNguoiGui.BackgroundImage;
             pictureBoxBienSoXe.Image = pictureBoxBienSoXe.BackgroundImage;
             radHour.Checked = true;
             txtSearch.Text = "";
-            panelThanhToan.Visible = true;
-            btMoiXeVao.Visible = false;
             btKhuVuc.Text = "";
             pictureBoxVienXeDap.SendToBack();
             pictureBoxVienXeMay.SendToBack();

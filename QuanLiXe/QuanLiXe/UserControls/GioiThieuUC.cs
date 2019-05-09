@@ -23,16 +23,16 @@ namespace QuanLiXe.UserControls
             pictureBox1.Location = new Point(120, -78);
             lbxedapHour.Location = new Point(921, 486);
             lbxemayHour.Location = new Point(1110, 486);
-            lbotoHour.Location = new Point(1302, 486);
+            lbotoHour.Location = new Point(1295, 486);
             lbxedapDay.Location = new Point(921, 560);
             lbxemayDay.Location = new Point(1110, 560);
-            lbotoDay.Location = new Point(1302, 560);
+            lbotoDay.Location = new Point(1295, 560);
             lbxedapWeek.Location = new Point(921, 634);
             lbxemayWeek.Location = new Point(1110, 634);
-            lbotoWeek.Location = new Point(1302, 634);
+            lbotoWeek.Location = new Point(1295, 634);
             lbXedapMonth.Location = new Point(921, 708);
             lbxemayMonth.Location = new Point(1110, 708);
-            lbotoMonth.Location = new Point(1302, 708);
+            lbotoMonth.Location = new Point(1295, 708);
             showData();
         }
         void showData()

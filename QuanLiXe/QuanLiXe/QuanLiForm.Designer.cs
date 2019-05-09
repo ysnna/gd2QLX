@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLiForm));
             this.panelForm = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btTongDoanThu = new System.Windows.Forms.Button();
             this.btQuanLiXe = new System.Windows.Forms.Button();
             this.btThongTinTho = new System.Windows.Forms.Button();
             this.btThongTinKhachHang = new System.Windows.Forms.Button();
             this.panelClick = new System.Windows.Forms.Panel();
             this.btGioiThieu = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.menuTuyChon = new System.Windows.Forms.ToolStripMenuItem();
             this.baiXeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,8 +44,8 @@
             this.pictureBoxBack = new System.Windows.Forms.PictureBox();
             this.gioiThieuUC = new QuanLiXe.UserControls.GioiThieuUC();
             this.tongDoanThuUC = new QuanLiXe.UserControls.TongDoanThuUC();
-            this.quanLiTatCaXe = new QuanLiXe.UserControls.QuanLiTatCaXe();
             this.giaoDienQuanLiXeUC = new QuanLiXe.UserControls.GiaoDienQuanLiXeUC();
+            this.quanLiTatCaXe = new QuanLiXe.UserControls.QuanLiTatCaXe();
             this.panelForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip.SuspendLayout();
@@ -68,6 +68,17 @@
             this.panelForm.Name = "panelForm";
             this.panelForm.Size = new System.Drawing.Size(355, 797);
             this.panelForm.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(32, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(282, 147);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // btTongDoanThu
             // 
@@ -157,17 +168,6 @@
             this.btGioiThieu.UseVisualStyleBackColor = true;
             this.btGioiThieu.Click += new System.EventHandler(this.btGioiThieu_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(32, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(282, 147);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
             // menuStrip
             // 
             this.menuStrip.BackColor = System.Drawing.Color.DeepSkyBlue;
@@ -241,17 +241,6 @@
             this.tongDoanThuUC.Size = new System.Drawing.Size(1080, 800);
             this.tongDoanThuUC.TabIndex = 58;
             // 
-            // quanLiTatCaXe
-            // 
-            this.quanLiTatCaXe.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.quanLiTatCaXe.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.quanLiTatCaXe.Location = new System.Drawing.Point(350, 0);
-            this.quanLiTatCaXe.Name = "quanLiTatCaXe";
-            this.quanLiTatCaXe.Size = new System.Drawing.Size(1080, 800);
-            this.quanLiTatCaXe.TabIndex = 3;
-            // 
             // giaoDienQuanLiXeUC
             // 
             this.giaoDienQuanLiXeUC.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
@@ -263,18 +252,29 @@
             this.giaoDienQuanLiXeUC.Size = new System.Drawing.Size(1620, 1169);
             this.giaoDienQuanLiXeUC.TabIndex = 2;
             // 
+            // quanLiTatCaXe
+            // 
+            this.quanLiTatCaXe.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.quanLiTatCaXe.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.quanLiTatCaXe.Location = new System.Drawing.Point(350, 0);
+            this.quanLiTatCaXe.Name = "quanLiTatCaXe";
+            this.quanLiTatCaXe.Size = new System.Drawing.Size(1080, 800);
+            this.quanLiTatCaXe.TabIndex = 60;
+            // 
             // QuanLiForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(1426, 798);
-            this.Controls.Add(this.gioiThieuUC);
             this.Controls.Add(this.panelForm);
-            this.Controls.Add(this.tongDoanThuUC);
-            this.Controls.Add(this.quanLiTatCaXe);
             this.Controls.Add(this.pictureBoxBack);
             this.Controls.Add(this.menuStrip);
+            this.Controls.Add(this.gioiThieuUC);
+            this.Controls.Add(this.tongDoanThuUC);
+            this.Controls.Add(this.quanLiTatCaXe);
             this.Controls.Add(this.giaoDienQuanLiXeUC);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "QuanLiForm";
@@ -302,7 +302,6 @@
         private System.Windows.Forms.Button btThongTinTho;
         private System.Windows.Forms.Button btQuanLiXe;
         private UserControls.GiaoDienQuanLiXeUC giaoDienQuanLiXeUC;
-        public UserControls.QuanLiTatCaXe quanLiTatCaXe;
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem menuTuyChon;
         private System.Windows.Forms.ToolStripMenuItem baiXeToolStripMenuItem;
@@ -311,5 +310,6 @@
         private System.Windows.Forms.Button btTongDoanThu;
         private UserControls.TongDoanThuUC tongDoanThuUC;
         private UserControls.GioiThieuUC gioiThieuUC;
+        private UserControls.QuanLiTatCaXe quanLiTatCaXe;
     }
 }
