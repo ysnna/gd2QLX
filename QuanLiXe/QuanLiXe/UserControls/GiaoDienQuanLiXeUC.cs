@@ -217,41 +217,21 @@ namespace QuanLiXe.UserControls
         {
             string vitri = btKhuVuc.Text.Replace(".", "").Trim();
             string loaixe;
-            if (Oto.Checked == true)
-            {
-                loaixe = btOto.Text;
-            }
-            else if (XeMay.Checked == true)
-            {
-                loaixe = btXeMay.Text;
-            }
-            else
-            {
-                loaixe = btXeDap.Text;
-            }
-            string yeucau;
-            if (radHour.Checked == true)
-            {
-                yeucau = "Hour";
-            }
-            else if (radDay.Checked == true)
-            {
-                yeucau = "Day";
-            }
-            else if (radWeek.Checked == true)
-            {
-                yeucau = "Week";
-            }
-            else yeucau = "Month";
+            if (Oto.Checked == true) loaixe = btOto.Text;
+            else if (XeMay.Checked == true) loaixe = btXeMay.Text;
+            else loaixe = btXeDap.Text;
 
+            string yeucau;
+            if (radHour.Checked == true) yeucau = "Hour";
+            else if (radDay.Checked == true) yeucau = "Day";
+            else if (radWeek.Checked == true) yeucau = "Week";
+            else yeucau = "Month";
             MemoryStream nguoigui = new MemoryStream();
             MemoryStream bienso = new MemoryStream();
             DateTime ngaygui = DTPNgayGui.Value;
             TimeSpan giogui = Convert.ToDateTime(txtGioGui.Text).TimeOfDay;
-
             pictureBoxBienSoXe.Image.Save(bienso, pictureBoxBienSoXe.Image.RawFormat);
             pictureBoxNguoiGui.Image.Save(nguoigui, pictureBoxNguoiGui.Image.RawFormat);
-
             if (kh.insertCus(vitri, loaixe, bienso, nguoigui, ngaygui, giogui, yeucau))
             {
                 MessageBox.Show("Xe Đã Nhận Vào Bãi", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -298,7 +278,7 @@ namespace QuanLiXe.UserControls
             btKhuVuc.Text = "";
             BaiXeForm baiXe = new BaiXeForm();
             baiXe.BaiXeForm_Load(sender, e);
-            txtGioGui.Text = DateTime.Now.ToString("HH:mm:ss"); 
+            txtGioGui.Text = DateTime.Now.ToString("HH:mm:ss");
         }
         private void pictureBoxNguoiGui_Click(object sender, EventArgs e)
         {
@@ -317,6 +297,11 @@ namespace QuanLiXe.UserControls
         private void GiaoDienQuanLiXeUC_Load(object sender, EventArgs e)
         {
             txtGioGui.Text = DateTime.Now.ToString("HH:mm:ss");
+            panelThanhToan.Location = new Point(1215, 728);
+            panelThanhToan.Visible = false;
+            dtpNgayLay.Hide();
+            txtGioLay.Hide();
+            btMoiXeVao.Location = new Point(1249, 739);
             radHour.Checked = true;
             pictureBoxVienOto.Location = new Point(51, -10);
             pictureBoxVienOto.SendToBack();
@@ -328,13 +313,105 @@ namespace QuanLiXe.UserControls
         }
         private void btLayXe_Click(object sender, EventArgs e)
         {
-            DateTime ngaylay = DateTime.Now;
-            string.Format("{0:dd/MM/yyyy}", ngaylay);
-            TimeSpan giolay = new TimeSpan();
-            giolay = ngaylay.TimeOfDay;
-            kh.updateLayXe(txtLayXe.Text.ToString(), ngaylay, giolay);
+            btMoiXeVao.Visible = false;
+            panelThanhToan.Visible = true;
+            string tong = tongtime.Days + " Ngày " + tongtime.Hours + " Giờ " + tongtime.Minutes + " Phút";
+            kh.updateLayXe(txtSearch.Text.ToUpper().Trim(), ngaylay, giolay, tong);
             MessageBox.Show("Mời xe ra");
-            SqlCommand cmd = new SqlCommand("select * ", mydb.getConnection);
+            btMoiXeVao.Visible = true;
+            panelThanhToan.Visible = false;
+        }
+        DateTime ngaylay;
+        TimeSpan giolay;
+        DateTime timeguithuc, timelaythuc;
+        TimeSpan tongtime;
+        private void btSearch_Click(object sender, EventArgs e)
+        {
+            btMoiXeVao.Visible = false;
+            panelThanhToan.Visible = true;
+            DataTable dt = kh.getQLXRV();
+            int countRow = dt.Rows.Count;
+            int i = 0;
+            string search = txtSearch.Text.Trim().ToUpper();
+            while (i < countRow)
+            {
+                if (dt.Rows[i][0].ToString().Trim() == search)
+                {
+                    btKhuVuc.Text = dt.Rows[i][0].ToString();
+                    string xe = dt.Rows[i][1].ToString().Trim();
+                    if (xe == "Ô tô")
+                    {
+                        pictureBoxVienXeDap.SendToBack();
+                        pictureBoxVienXeMay.SendToBack();
+                    }
+                    else if (xe == "Xe máy")
+                    {
+                        pictureBoxVienXeDap.SendToBack();
+                        pictureBoxVienOto.SendToBack();
+                    }
+                    else
+                    {
+                        pictureBoxVienOto.SendToBack();
+                        pictureBoxVienXeMay.SendToBack();
+                    }
+                    byte[] pic = (byte[])dt.Rows[i][3];
+                    MemoryStream picture = new MemoryStream(pic);
+                    pictureBoxNguoiGui.Image = Image.FromStream(picture);
+                    byte[] picbienso = (byte[])dt.Rows[i][2];
+                    MemoryStream pictureBienso = new MemoryStream(picbienso);
+                    pictureBoxBienSoXe.Image = Image.FromStream(pictureBienso);
+                    DTPNgayGui.Text = dt.Rows[i][4].ToString().Trim();
+                    txtGioGui.Text = dt.Rows[i][5].ToString().Trim();
+                    string guitheo = dt.Rows[i][9].ToString().Trim();
+                    if (guitheo == "Hour") radHour.Checked = true;
+                    else if (guitheo == "Day") radDay.Checked = true;
+                    else if (guitheo == "Week") radWeek.Checked = true;
+                    else radMonth.Checked = true;
+
+                    ngaylay = dtpNgayLay.Value;
+                    giolay = Convert.ToDateTime(DateTime.Now.ToString("HH:mm:ss")).TimeOfDay;
+                    txtGioLay.Text = giolay.ToString();
+                    timeguithuc = Convert.ToDateTime(Convert.ToDateTime(DTPNgayGui.Text) + Convert.ToDateTime(txtGioGui.Text).TimeOfDay);
+                    timelaythuc = Convert.ToDateTime(Convert.ToDateTime(dtpNgayLay.Text) + Convert.ToDateTime(txtGioLay.Text).TimeOfDay);
+                    tongtime = timelaythuc.Subtract(timeguithuc);
+                    txtNgay.Text = tongtime.Days.ToString();
+                    txtGio.Text = tongtime.Hours.ToString();
+                    txtPhut.Text = tongtime.Minutes.ToString();
+                    
+                    break;
+                }
+                i++;
+            }
+            if (i >= countRow) MessageBox.Show("Không tìm thấy", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            mydb.closeConnection();
+        }
+
+        private void btRefreshGuiXe_Click(object sender, EventArgs e)
+        {
+            pictureBoxNguoiGui.Image = pictureBoxNguoiGui.BackgroundImage;
+            pictureBoxBienSoXe.Image = pictureBoxBienSoXe.BackgroundImage;
+            radHour.Checked = true;
+            txtSearch.Text = "";
+            panelThanhToan.Visible = false;
+            btMoiXeVao.Visible = true;
+            btKhuVuc.Text = "";
+            pictureBoxVienXeDap.SendToBack();
+            pictureBoxVienXeMay.SendToBack();
+            txtGioGui.Text = DateTime.Now.ToString("HH:mm:ss");
+        }
+
+        private void btRefreshLayXe_Click(object sender, EventArgs e)
+        {
+            pictureBoxNguoiGui.Image = pictureBoxNguoiGui.BackgroundImage;
+            pictureBoxBienSoXe.Image = pictureBoxBienSoXe.BackgroundImage;
+            radHour.Checked = true;
+            txtSearch.Text = "";
+            panelThanhToan.Visible = true;
+            btMoiXeVao.Visible = false;
+            btKhuVuc.Text = "";
+            pictureBoxVienXeDap.SendToBack();
+            pictureBoxVienXeMay.SendToBack();
+            txtGioGui.Text = DateTime.Now.ToString("HH:mm:ss");
         }
     }
 }

@@ -130,11 +130,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_DESKTOP_BAIXE.xsd</DependentUpon>
     </Compile>
-    <Compile Include="_DESKTOP_RRRHOP4DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_DESKTOP_RRRHOP4DataSet.xsd</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="BaiXeForm.resx">
       <DependentUpon>BaiXeForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -201,17 +196,6 @@
     </None>
     <None Include="_DESKTOP_BAIXE.xss">
       <DependentUpon>_DESKTOP_BAIXE.xsd</DependentUpon>
-    </None>
-    <None Include="_DESKTOP_RRRHOP4DataSet.xsc">
-      <DependentUpon>_DESKTOP_RRRHOP4DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="_DESKTOP_RRRHOP4DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_DESKTOP_RRRHOP4DataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="_DESKTOP_RRRHOP4DataSet.xss">
-      <DependentUpon>_DESKTOP_RRRHOP4DataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

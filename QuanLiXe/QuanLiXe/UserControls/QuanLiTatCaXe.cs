@@ -64,7 +64,7 @@ namespace QuanLiXe.UserControls
             btSearch_Click(sender, e);
         }
 
-        void refreshData()
+        public void refreshData()
         {
             txtSearch.Text = "";
             DataGridViewImageColumn picCol = new DataGridViewImageColumn();

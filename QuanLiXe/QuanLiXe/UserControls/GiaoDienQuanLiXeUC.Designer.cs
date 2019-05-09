@@ -53,7 +53,7 @@
             this.pictureBoxVienXeMay = new System.Windows.Forms.PictureBox();
             this.pictureBoxVienOto = new System.Windows.Forms.PictureBox();
             this.btLayXe = new System.Windows.Forms.Button();
-            this.txtLayXe = new System.Windows.Forms.TextBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.txtGioGui = new System.Windows.Forms.TextBox();
             this.radHour = new System.Windows.Forms.RadioButton();
@@ -61,12 +61,26 @@
             this.radMonth = new System.Windows.Forms.RadioButton();
             this.radWeek = new System.Windows.Forms.RadioButton();
             this.radDay = new System.Windows.Forms.RadioButton();
+            this.txtNgay = new System.Windows.Forms.TextBox();
+            this.btSearch = new System.Windows.Forms.Button();
+            this.lbThanhTien = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtGio = new System.Windows.Forms.TextBox();
+            this.txtPhut = new System.Windows.Forms.TextBox();
+            this.panelThanhToan = new System.Windows.Forms.Panel();
+            this.btRefreshGuiXe = new System.Windows.Forms.Button();
+            this.btRefreshLayXe = new System.Windows.Forms.Button();
+            this.dtpNgayLay = new System.Windows.Forms.DateTimePicker();
+            this.txtGioLay = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNguoiGui)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBienSoXe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVienXeDap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVienXeMay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVienOto)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.panelThanhToan.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBoxNguoiGui
@@ -89,7 +103,7 @@
             this.btKhuVuc.Cursor = System.Windows.Forms.Cursors.Default;
             this.btKhuVuc.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btKhuVuc.ForeColor = System.Drawing.Color.Snow;
-            this.btKhuVuc.Location = new System.Drawing.Point(1266, 538);
+            this.btKhuVuc.Location = new System.Drawing.Point(1249, 531);
             this.btKhuVuc.Name = "btKhuVuc";
             this.btKhuVuc.Size = new System.Drawing.Size(177, 52);
             this.btKhuVuc.TabIndex = 8;
@@ -101,9 +115,9 @@
             this.btMoiXeVao.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btMoiXeVao.Font = new System.Drawing.Font("UTM Ambrose", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btMoiXeVao.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btMoiXeVao.Location = new System.Drawing.Point(1271, 751);
+            this.btMoiXeVao.Location = new System.Drawing.Point(1249, 739);
             this.btMoiXeVao.Name = "btMoiXeVao";
-            this.btMoiXeVao.Size = new System.Drawing.Size(179, 101);
+            this.btMoiXeVao.Size = new System.Drawing.Size(177, 112);
             this.btMoiXeVao.TabIndex = 9;
             this.btMoiXeVao.Text = "Mời xe vào";
             this.btMoiXeVao.UseVisualStyleBackColor = false;
@@ -178,7 +192,7 @@
             this.label3.AutoSize = true;
             this.label3.Cursor = System.Windows.Forms.Cursors.Default;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1271, 508);
+            this.label3.Location = new System.Drawing.Point(1254, 501);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 27);
             this.label3.TabIndex = 67;
@@ -189,7 +203,7 @@
             this.label4.AutoSize = true;
             this.label4.Cursor = System.Windows.Forms.Cursors.Default;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1271, 603);
+            this.label4.Location = new System.Drawing.Point(1254, 596);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(99, 27);
             this.label4.TabIndex = 68;
@@ -322,7 +336,7 @@
             this.DTPNgayGui.CustomFormat = "";
             this.DTPNgayGui.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DTPNgayGui.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DTPNgayGui.Location = new System.Drawing.Point(1271, 638);
+            this.DTPNgayGui.Location = new System.Drawing.Point(1254, 631);
             this.DTPNgayGui.Name = "DTPNgayGui";
             this.DTPNgayGui.Size = new System.Drawing.Size(137, 35);
             this.DTPNgayGui.TabIndex = 82;
@@ -363,21 +377,21 @@
             this.btLayXe.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btLayXe.Font = new System.Drawing.Font("UTM Ambrose", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btLayXe.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btLayXe.Location = new System.Drawing.Point(1050, 751);
+            this.btLayXe.Location = new System.Drawing.Point(1048, 739);
             this.btLayXe.Name = "btLayXe";
-            this.btLayXe.Size = new System.Drawing.Size(179, 101);
+            this.btLayXe.Size = new System.Drawing.Size(161, 113);
             this.btLayXe.TabIndex = 87;
             this.btLayXe.Text = "Mời xe ra";
             this.btLayXe.UseVisualStyleBackColor = false;
             this.btLayXe.Click += new System.EventHandler(this.btLayXe_Click);
             // 
-            // txtLayXe
+            // txtSearch
             // 
-            this.txtLayXe.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLayXe.Location = new System.Drawing.Point(1050, 706);
-            this.txtLayXe.Name = "txtLayXe";
-            this.txtLayXe.Size = new System.Drawing.Size(176, 39);
-            this.txtLayXe.TabIndex = 88;
+            this.txtSearch.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(1059, 694);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(94, 39);
+            this.txtSearch.TabIndex = 88;
             // 
             // radioButton1
             // 
@@ -393,7 +407,7 @@
             // txtGioGui
             // 
             this.txtGioGui.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGioGui.Location = new System.Drawing.Point(1271, 690);
+            this.txtGioGui.Location = new System.Drawing.Point(1254, 681);
             this.txtGioGui.Name = "txtGioGui";
             this.txtGioGui.Size = new System.Drawing.Size(137, 39);
             this.txtGioGui.TabIndex = 90;
@@ -417,7 +431,7 @@
             this.groupBox1.Controls.Add(this.radDay);
             this.groupBox1.Controls.Add(this.radHour);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(1063, 508);
+            this.groupBox1.Location = new System.Drawing.Point(1050, 501);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(163, 187);
             this.groupBox1.TabIndex = 92;
@@ -460,16 +474,174 @@
             this.radDay.Text = "Ngày";
             this.radDay.UseVisualStyleBackColor = true;
             // 
+            // txtNgay
+            // 
+            this.txtNgay.BackColor = System.Drawing.Color.RoyalBlue;
+            this.txtNgay.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNgay.ForeColor = System.Drawing.Color.White;
+            this.txtNgay.Location = new System.Drawing.Point(16, 35);
+            this.txtNgay.Name = "txtNgay";
+            this.txtNgay.Size = new System.Drawing.Size(65, 39);
+            this.txtNgay.TabIndex = 93;
+            // 
+            // btSearch
+            // 
+            this.btSearch.BackColor = System.Drawing.Color.Silver;
+            this.btSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btSearch.BackgroundImage")));
+            this.btSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btSearch.Font = new System.Drawing.Font("UTM Ambrose", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSearch.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btSearch.Location = new System.Drawing.Point(1161, 694);
+            this.btSearch.Name = "btSearch";
+            this.btSearch.Size = new System.Drawing.Size(39, 39);
+            this.btSearch.TabIndex = 94;
+            this.btSearch.UseVisualStyleBackColor = false;
+            this.btSearch.Click += new System.EventHandler(this.btSearch_Click);
+            // 
+            // lbThanhTien
+            // 
+            this.lbThanhTien.AutoSize = true;
+            this.lbThanhTien.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lbThanhTien.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbThanhTien.Location = new System.Drawing.Point(10, 81);
+            this.lbThanhTien.Name = "lbThanhTien";
+            this.lbThanhTien.Size = new System.Drawing.Size(213, 36);
+            this.lbThanhTien.TabIndex = 95;
+            this.lbThanhTien.Text = "= 500000 VND";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(17, 5);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(63, 27);
+            this.label7.TabIndex = 98;
+            this.label7.Text = "Ngày";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(92, 5);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(48, 27);
+            this.label8.TabIndex = 99;
+            this.label8.Text = "Giờ";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(158, 5);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(57, 27);
+            this.label9.TabIndex = 100;
+            this.label9.Text = "Phút";
+            // 
+            // txtGio
+            // 
+            this.txtGio.BackColor = System.Drawing.Color.RoyalBlue;
+            this.txtGio.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGio.ForeColor = System.Drawing.Color.White;
+            this.txtGio.Location = new System.Drawing.Point(87, 35);
+            this.txtGio.Name = "txtGio";
+            this.txtGio.Size = new System.Drawing.Size(65, 39);
+            this.txtGio.TabIndex = 101;
+            // 
+            // txtPhut
+            // 
+            this.txtPhut.BackColor = System.Drawing.Color.RoyalBlue;
+            this.txtPhut.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhut.ForeColor = System.Drawing.Color.White;
+            this.txtPhut.Location = new System.Drawing.Point(158, 35);
+            this.txtPhut.Name = "txtPhut";
+            this.txtPhut.Size = new System.Drawing.Size(65, 39);
+            this.txtPhut.TabIndex = 102;
+            // 
+            // panelThanhToan
+            // 
+            this.panelThanhToan.Controls.Add(this.label8);
+            this.panelThanhToan.Controls.Add(this.txtPhut);
+            this.panelThanhToan.Controls.Add(this.txtNgay);
+            this.panelThanhToan.Controls.Add(this.txtGio);
+            this.panelThanhToan.Controls.Add(this.lbThanhTien);
+            this.panelThanhToan.Controls.Add(this.label9);
+            this.panelThanhToan.Controls.Add(this.label7);
+            this.panelThanhToan.Location = new System.Drawing.Point(929, 856);
+            this.panelThanhToan.Name = "panelThanhToan";
+            this.panelThanhToan.Size = new System.Drawing.Size(230, 126);
+            this.panelThanhToan.TabIndex = 103;
+            // 
+            // btRefreshGuiXe
+            // 
+            this.btRefreshGuiXe.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btRefreshGuiXe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btRefreshGuiXe.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btRefreshGuiXe.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btRefreshGuiXe.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.btRefreshGuiXe.Location = new System.Drawing.Point(86, 885);
+            this.btRefreshGuiXe.Name = "btRefreshGuiXe";
+            this.btRefreshGuiXe.Size = new System.Drawing.Size(141, 52);
+            this.btRefreshGuiXe.TabIndex = 104;
+            this.btRefreshGuiXe.Text = "Gửi xe";
+            this.btRefreshGuiXe.UseVisualStyleBackColor = false;
+            this.btRefreshGuiXe.Click += new System.EventHandler(this.btRefreshGuiXe_Click);
+            // 
+            // btRefreshLayXe
+            // 
+            this.btRefreshLayXe.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btRefreshLayXe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btRefreshLayXe.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btRefreshLayXe.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btRefreshLayXe.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.btRefreshLayXe.Location = new System.Drawing.Point(233, 886);
+            this.btRefreshLayXe.Name = "btRefreshLayXe";
+            this.btRefreshLayXe.Size = new System.Drawing.Size(141, 52);
+            this.btRefreshLayXe.TabIndex = 105;
+            this.btRefreshLayXe.Text = "Lấy xe";
+            this.btRefreshLayXe.UseVisualStyleBackColor = false;
+            this.btRefreshLayXe.Click += new System.EventHandler(this.btRefreshLayXe_Click);
+            // 
+            // dtpNgayLay
+            // 
+            this.dtpNgayLay.CustomFormat = "";
+            this.dtpNgayLay.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNgayLay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgayLay.Location = new System.Drawing.Point(786, 891);
+            this.dtpNgayLay.Name = "dtpNgayLay";
+            this.dtpNgayLay.Size = new System.Drawing.Size(137, 35);
+            this.dtpNgayLay.TabIndex = 106;
+            // 
+            // txtGioLay
+            // 
+            this.txtGioLay.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGioLay.Location = new System.Drawing.Point(786, 923);
+            this.txtGioLay.Name = "txtGioLay";
+            this.txtGioLay.Size = new System.Drawing.Size(137, 39);
+            this.txtGioLay.TabIndex = 107;
+            // 
             // GiaoDienQuanLiXeUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Controls.Add(this.txtGioLay);
+            this.Controls.Add(this.dtpNgayLay);
+            this.Controls.Add(this.btRefreshLayXe);
+            this.Controls.Add(this.btRefreshGuiXe);
+            this.Controls.Add(this.btMoiXeVao);
+            this.Controls.Add(this.btLayXe);
+            this.Controls.Add(this.panelThanhToan);
+            this.Controls.Add(this.btSearch);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtGioGui);
             this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.txtLayXe);
-            this.Controls.Add(this.btLayXe);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.DTPNgayGui);
             this.Controls.Add(this.XeDap);
             this.Controls.Add(this.XeMay);
@@ -484,7 +656,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBoxBienSoXe);
-            this.Controls.Add(this.btMoiXeVao);
             this.Controls.Add(this.btKhuVuc);
             this.Controls.Add(this.pictureBoxNguoiGui);
             this.Controls.Add(this.btXeMay);
@@ -505,6 +676,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVienOto)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panelThanhToan.ResumeLayout(false);
+            this.panelThanhToan.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -535,7 +708,7 @@
         private System.Windows.Forms.PictureBox pictureBoxVienXeMay;
         private System.Windows.Forms.PictureBox pictureBoxVienOto;
         private System.Windows.Forms.Button btLayXe;
-        private System.Windows.Forms.TextBox txtLayXe;
+        private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.TextBox txtGioGui;
         private System.Windows.Forms.RadioButton radHour;
@@ -543,5 +716,18 @@
         private System.Windows.Forms.RadioButton radMonth;
         private System.Windows.Forms.RadioButton radWeek;
         private System.Windows.Forms.RadioButton radDay;
+        private System.Windows.Forms.TextBox txtNgay;
+        private System.Windows.Forms.Button btSearch;
+        private System.Windows.Forms.Label lbThanhTien;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtGio;
+        private System.Windows.Forms.TextBox txtPhut;
+        private System.Windows.Forms.Panel panelThanhToan;
+        public System.Windows.Forms.Button btRefreshGuiXe;
+        public System.Windows.Forms.Button btRefreshLayXe;
+        private System.Windows.Forms.DateTimePicker dtpNgayLay;
+        private System.Windows.Forms.TextBox txtGioLay;
     }
 }

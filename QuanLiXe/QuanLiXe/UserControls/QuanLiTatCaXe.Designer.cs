@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLiTatCaXe));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -39,20 +38,6 @@
             this.labelQuaGioGui = new System.Windows.Forms.Label();
             this.labelDauSaiViTri = new System.Windows.Forms.Label();
             this.dgvQuanLiAllXe = new System.Windows.Forms.DataGridView();
-            this.loaixeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vitriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.avaDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.biensoDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.ngayguixeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gioguixeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngaylayxeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giolayxeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tongTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timeyeucauDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tongtienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this._DESKTOP_RRRHOP4DataSet = new QuanLiXe._DESKTOP_RRRHOP4DataSet();
-            this.qUANLIXERAVAOTableAdapter = new QuanLiXe._DESKTOP_RRRHOP4DataSetTableAdapters.QUANLIXERAVAOTableAdapter();
             this.pictureBoxXeMay = new System.Windows.Forms.PictureBox();
             this.pictureBoxOto = new System.Windows.Forms.PictureBox();
             this.pictureBoxXeDap = new System.Windows.Forms.PictureBox();
@@ -61,8 +46,6 @@
             this.btXoa = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRefresh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuanLiAllXe)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._DESKTOP_RRRHOP4DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxXeMay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxXeDap)).BeginInit();
@@ -121,7 +104,6 @@
             this.dgvQuanLiAllXe.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvQuanLiAllXe.AutoGenerateColumns = false;
             this.dgvQuanLiAllXe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvQuanLiAllXe.BackgroundColor = System.Drawing.Color.LightSteelBlue;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -133,19 +115,6 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvQuanLiAllXe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvQuanLiAllXe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvQuanLiAllXe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.loaixeDataGridViewTextBoxColumn,
-            this.vitriDataGridViewTextBoxColumn,
-            this.avaDataGridViewImageColumn,
-            this.biensoDataGridViewImageColumn,
-            this.ngayguixeDataGridViewTextBoxColumn,
-            this.gioguixeDataGridViewTextBoxColumn,
-            this.ngaylayxeDataGridViewTextBoxColumn,
-            this.giolayxeDataGridViewTextBoxColumn,
-            this.tongTimeDataGridViewTextBoxColumn,
-            this.timeyeucauDataGridViewTextBoxColumn,
-            this.tongtienDataGridViewTextBoxColumn});
-            this.dgvQuanLiAllXe.DataSource = this.bindingSource1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -172,97 +141,6 @@
             this.dgvQuanLiAllXe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvQuanLiAllXe.Size = new System.Drawing.Size(1080, 660);
             this.dgvQuanLiAllXe.TabIndex = 60;
-            // 
-            // loaixeDataGridViewTextBoxColumn
-            // 
-            this.loaixeDataGridViewTextBoxColumn.DataPropertyName = "loaixe";
-            this.loaixeDataGridViewTextBoxColumn.HeaderText = "Loại xe";
-            this.loaixeDataGridViewTextBoxColumn.Name = "loaixeDataGridViewTextBoxColumn";
-            this.loaixeDataGridViewTextBoxColumn.Width = 119;
-            // 
-            // vitriDataGridViewTextBoxColumn
-            // 
-            this.vitriDataGridViewTextBoxColumn.DataPropertyName = "vitri";
-            this.vitriDataGridViewTextBoxColumn.HeaderText = "Vị trí";
-            this.vitriDataGridViewTextBoxColumn.Name = "vitriDataGridViewTextBoxColumn";
-            this.vitriDataGridViewTextBoxColumn.Width = 94;
-            // 
-            // avaDataGridViewImageColumn
-            // 
-            this.avaDataGridViewImageColumn.DataPropertyName = "ava";
-            this.avaDataGridViewImageColumn.HeaderText = "Người gửi";
-            this.avaDataGridViewImageColumn.Name = "avaDataGridViewImageColumn";
-            this.avaDataGridViewImageColumn.Width = 123;
-            // 
-            // biensoDataGridViewImageColumn
-            // 
-            this.biensoDataGridViewImageColumn.DataPropertyName = "bienso";
-            this.biensoDataGridViewImageColumn.HeaderText = "Biển số";
-            this.biensoDataGridViewImageColumn.Name = "biensoDataGridViewImageColumn";
-            this.biensoDataGridViewImageColumn.Width = 101;
-            // 
-            // ngayguixeDataGridViewTextBoxColumn
-            // 
-            this.ngayguixeDataGridViewTextBoxColumn.DataPropertyName = "ngayguixe";
-            this.ngayguixeDataGridViewTextBoxColumn.HeaderText = "Ngày gửi";
-            this.ngayguixeDataGridViewTextBoxColumn.Name = "ngayguixeDataGridViewTextBoxColumn";
-            this.ngayguixeDataGridViewTextBoxColumn.Width = 133;
-            // 
-            // gioguixeDataGridViewTextBoxColumn
-            // 
-            this.gioguixeDataGridViewTextBoxColumn.DataPropertyName = "gioguixe";
-            this.gioguixeDataGridViewTextBoxColumn.HeaderText = "Giờ gửi";
-            this.gioguixeDataGridViewTextBoxColumn.Name = "gioguixeDataGridViewTextBoxColumn";
-            this.gioguixeDataGridViewTextBoxColumn.Width = 118;
-            // 
-            // ngaylayxeDataGridViewTextBoxColumn
-            // 
-            this.ngaylayxeDataGridViewTextBoxColumn.DataPropertyName = "ngaylayxe";
-            this.ngaylayxeDataGridViewTextBoxColumn.HeaderText = "Ngày lấy";
-            this.ngaylayxeDataGridViewTextBoxColumn.Name = "ngaylayxeDataGridViewTextBoxColumn";
-            this.ngaylayxeDataGridViewTextBoxColumn.Width = 132;
-            // 
-            // giolayxeDataGridViewTextBoxColumn
-            // 
-            this.giolayxeDataGridViewTextBoxColumn.DataPropertyName = "giolayxe";
-            this.giolayxeDataGridViewTextBoxColumn.HeaderText = "Giờ lấy";
-            this.giolayxeDataGridViewTextBoxColumn.Name = "giolayxeDataGridViewTextBoxColumn";
-            this.giolayxeDataGridViewTextBoxColumn.Width = 117;
-            // 
-            // tongTimeDataGridViewTextBoxColumn
-            // 
-            this.tongTimeDataGridViewTextBoxColumn.DataPropertyName = "tongTime";
-            this.tongTimeDataGridViewTextBoxColumn.HeaderText = "Tổng giờ thực";
-            this.tongTimeDataGridViewTextBoxColumn.Name = "tongTimeDataGridViewTextBoxColumn";
-            this.tongTimeDataGridViewTextBoxColumn.Width = 189;
-            // 
-            // timeyeucauDataGridViewTextBoxColumn
-            // 
-            this.timeyeucauDataGridViewTextBoxColumn.DataPropertyName = "timeyeucau";
-            this.timeyeucauDataGridViewTextBoxColumn.HeaderText = "Yêu cầu theo";
-            this.timeyeucauDataGridViewTextBoxColumn.Name = "timeyeucauDataGridViewTextBoxColumn";
-            this.timeyeucauDataGridViewTextBoxColumn.Width = 178;
-            // 
-            // tongtienDataGridViewTextBoxColumn
-            // 
-            this.tongtienDataGridViewTextBoxColumn.DataPropertyName = "tongtien";
-            this.tongtienDataGridViewTextBoxColumn.HeaderText = "Thành tiền";
-            this.tongtienDataGridViewTextBoxColumn.Name = "tongtienDataGridViewTextBoxColumn";
-            this.tongtienDataGridViewTextBoxColumn.Width = 160;
-            // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataMember = "QUANLIXERAVAO";
-            this.bindingSource1.DataSource = this._DESKTOP_RRRHOP4DataSet;
-            // 
-            // _DESKTOP_RRRHOP4DataSet
-            // 
-            this._DESKTOP_RRRHOP4DataSet.DataSetName = "_DESKTOP_RRRHOP4DataSet";
-            this._DESKTOP_RRRHOP4DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // qUANLIXERAVAOTableAdapter
-            // 
-            this.qUANLIXERAVAOTableAdapter.ClearBeforeFill = true;
             // 
             // pictureBoxXeMay
             // 
@@ -364,8 +242,6 @@
             this.Load += new System.EventHandler(this.QuanLiTatCaXe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRefresh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuanLiAllXe)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._DESKTOP_RRRHOP4DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxXeMay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxXeDap)).EndInit();
@@ -379,9 +255,6 @@
         private System.Windows.Forms.Label labelQuaGioGui;
         private System.Windows.Forms.Label labelDauSaiViTri;
         private System.Windows.Forms.DataGridView dgvQuanLiAllXe;
-        private System.Windows.Forms.BindingSource bindingSource1;
-        private _DESKTOP_RRRHOP4DataSet _DESKTOP_RRRHOP4DataSet;
-        private _DESKTOP_RRRHOP4DataSetTableAdapters.QUANLIXERAVAOTableAdapter qUANLIXERAVAOTableAdapter;
         private System.Windows.Forms.PictureBox pictureBoxXeMay;
         private System.Windows.Forms.PictureBox pictureBoxOto;
         private System.Windows.Forms.PictureBox pictureBoxXeDap;

@@ -194,8 +194,7 @@ namespace QuanLiXe
 
         }
         //Them Khach Hang,cần bổ sung biến
-        public bool insertCus(string vitri, string loaixe, MemoryStream anhbienso, MemoryStream anhxe,
-            DateTime ngaygui, TimeSpan giogui, string yeucau)// Cần thêm các biến
+        public bool insertCus(string vitri, string loaixe, MemoryStream anhbienso, MemoryStream anhxe, DateTime ngaygui, TimeSpan giogui, string yeucau)// Cần thêm các biến
 
         {
             SqlCommand cmd = new SqlCommand("insert into QUANLIXERAVAO (vitri, loaixe, bienso, ava, ngayguixe, gioguixe, timeyeucau)" +
@@ -226,6 +225,7 @@ namespace QuanLiXe
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable table = new DataTable();
             da.Fill(table);
+            mydb.closeConnection();
             return table;
         }
         public DataTable search(SqlCommand cmd)
@@ -262,11 +262,9 @@ namespace QuanLiXe
                 return false;
             }
         }
-        public bool updateCus(string vitri, string loaixe, MemoryStream anhbienso, MemoryStream anhxe,
-            DateTime ngaygui, TimeSpan giogui, string yeucau)
+        public bool updateCus(string vitri, string loaixe, MemoryStream anhbienso, MemoryStream anhxe, DateTime ngaygui, TimeSpan giogui, string yeucau)
         {
-            SqlCommand cmd = new SqlCommand("update QUANLIXERAVAO set vitri=@vitri, loaixe=@loaixe, bienso=@anhbienso" +
-                ", ava=@anhxe, ngayguixe=@ngaygui, gioguixe=@giogui, timeyeucau=@yeucau ", mydb.getConnection);
+            SqlCommand cmd = new SqlCommand("update QUANLIXERAVAO set vitri=@vitri, loaixe=@loaixe, bienso=@anhbienso, ava=@anhxe, ngayguixe=@ngaygui, gioguixe=@giogui, timeyeucau=@yeucau ", mydb.getConnection);
             cmd.Parameters.Add("@vitri", SqlDbType.VarChar).Value = vitri;
             cmd.Parameters.Add("@loaixe", SqlDbType.VarChar).Value = loaixe;
             cmd.Parameters.Add("@pic", SqlDbType.Image).Value = anhbienso.ToArray();
@@ -274,8 +272,6 @@ namespace QuanLiXe
             cmd.Parameters.Add("@ngaygui", SqlDbType.DateTime).Value = ngaygui;
             cmd.Parameters.Add("@giogui", SqlDbType.Time).Value = giogui;
             cmd.Parameters.Add("@yeucau", SqlDbType.VarChar).Value = yeucau;
-
-
             mydb.openConnection();
             if (cmd.ExecuteNonQuery() == 1)
             {
@@ -287,14 +283,14 @@ namespace QuanLiXe
                 mydb.closeConnection();
                 return false;
             }
-
         }
-        public bool updateLayXe(string vitri, DateTime ngaylay, TimeSpan giolay)
+        public bool updateLayXe(string vitri, DateTime ngaylay, TimeSpan giolay, string tongtime)
         {
-            SqlCommand cmd = new SqlCommand("update QUANLIXERAVAO set  ngaylayxe=@ngaylay, giolayxe=@giolay where vitri=@vitri", mydb.getConnection);
-            cmd.Parameters.Add("@vitri", SqlDbType.VarChar).Value = vitri;
-            cmd.Parameters.Add("@ngaylay", SqlDbType.DateTime).Value = ngaylay;
-            cmd.Parameters.Add("@giolay", SqlDbType.Time).Value = giolay;
+            SqlCommand cmd = new SqlCommand("update QUANLIXERAVAO set ngaylayxe=@ngay, giolayxe=@gio, tongtime=@tong where vitri=@vt ", mydb.getConnection);
+            cmd.Parameters.Add("@ngay", SqlDbType.DateTime).Value = ngaylay;
+            cmd.Parameters.Add("@gio", SqlDbType.Time).Value = giolay;
+            cmd.Parameters.Add("@tong", SqlDbType.NVarChar).Value = tongtime;
+            cmd.Parameters.Add("@vt", SqlDbType.VarChar).Value = vitri;
             mydb.openConnection();
             if (cmd.ExecuteNonQuery() == 1)
             {
