@@ -33,7 +33,6 @@
             this.ButtonUploadImage = new System.Windows.Forms.Button();
             this.PictureBoxStudentImage = new System.Windows.Forms.PictureBox();
             this.TextBoxAddress = new System.Windows.Forms.TextBox();
-            this.txtGroupID = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.TextBoxPhone = new System.Windows.Forms.TextBox();
             this.TextBoxLname = new System.Windows.Forms.TextBox();
@@ -48,6 +47,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btSelectContact = new System.Windows.Forms.Button();
+            this.comboGroup = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxStudentImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,15 +108,6 @@
             this.TextBoxAddress.Name = "TextBoxAddress";
             this.TextBoxAddress.Size = new System.Drawing.Size(174, 125);
             this.TextBoxAddress.TabIndex = 130;
-            // 
-            // txtGroupID
-            // 
-            this.txtGroupID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGroupID.Location = new System.Drawing.Point(111, 108);
-            this.txtGroupID.Multiline = true;
-            this.txtGroupID.Name = "txtGroupID";
-            this.txtGroupID.Size = new System.Drawing.Size(174, 32);
-            this.txtGroupID.TabIndex = 128;
             // 
             // txtEmail
             // 
@@ -256,18 +247,29 @@
             this.btSelectContact.UseVisualStyleBackColor = false;
             this.btSelectContact.Click += new System.EventHandler(this.btSelectContact_Click);
             // 
+            // comboGroup
+            // 
+            this.comboGroup.DisplayMember = "Id";
+            this.comboGroup.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboGroup.FormattingEnabled = true;
+            this.comboGroup.Location = new System.Drawing.Point(109, 111);
+            this.comboGroup.Name = "comboGroup";
+            this.comboGroup.Size = new System.Drawing.Size(176, 35);
+            this.comboGroup.TabIndex = 136;
+            this.comboGroup.ValueMember = "Id";
+            // 
             // Edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(604, 503);
+            this.Controls.Add(this.comboGroup);
             this.Controls.Add(this.btSelectContact);
             this.Controls.Add(this.ButtonEditStudent);
             this.Controls.Add(this.ButtonCancel);
             this.Controls.Add(this.ButtonUploadImage);
             this.Controls.Add(this.PictureBoxStudentImage);
             this.Controls.Add(this.TextBoxAddress);
-            this.Controls.Add(this.txtGroupID);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.TextBoxPhone);
             this.Controls.Add(this.TextBoxLname);
@@ -296,7 +298,6 @@
         private System.Windows.Forms.Button ButtonUploadImage;
         private System.Windows.Forms.PictureBox PictureBoxStudentImage;
         private System.Windows.Forms.TextBox TextBoxAddress;
-        private System.Windows.Forms.TextBox txtGroupID;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox TextBoxPhone;
         private System.Windows.Forms.TextBox TextBoxLname;
@@ -311,5 +312,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btSelectContact;
+        private System.Windows.Forms.ComboBox comboGroup;
     }
 }

@@ -62,6 +62,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassCode\CONTACT.cs" />
+    <Compile Include="DatasetShowAll.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatasetShowAll.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FormStd\EditRemoveForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,10 +100,10 @@
     <Compile Include="HumanResource\HumanResource.Designer.cs">
       <DependentUpon>HumanResource.cs</DependentUpon>
     </Compile>
-    <Compile Include="Register.cs">
+    <Compile Include="HumanResource\Register.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Register.Designer.cs">
+    <Compile Include="HumanResource\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
     <Compile Include="Score\AddScoreForm.cs">
@@ -261,6 +267,18 @@
     <Compile Include="HumanResource\SelectContactForm.Designer.cs">
       <DependentUpon>SelectContactForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="HumanResource\ShowFullList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HumanResource\ShowFullList.Designer.cs">
+      <DependentUpon>ShowFullList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Result\StaticResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Result\StaticResult.Designer.cs">
+      <DependentUpon>StaticResult.cs</DependentUpon>
+    </Compile>
     <Compile Include="_DESKTOP_RRRHOP4SelectContact.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -281,7 +299,7 @@
     <EmbeddedResource Include="HumanResource\HumanResource.resx">
       <DependentUpon>HumanResource.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Register.resx">
+    <EmbeddedResource Include="HumanResource\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Score\AddScoreForm.resx">
@@ -292,6 +310,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HumanResource\SelectContactForm.resx">
       <DependentUpon>SelectContactForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HumanResource\ShowFullList.resx">
+      <DependentUpon>ShowFullList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Result\StaticResult.resx">
+      <DependentUpon>StaticResult.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram.cd" />
     <None Include="DataClassesSV.dbml.layout">
@@ -346,6 +370,17 @@
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>DataClassesSV.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+    </None>
+    <None Include="DatasetShowAll.xsc">
+      <DependentUpon>DatasetShowAll.xsd</DependentUpon>
+    </None>
+    <None Include="DatasetShowAll.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatasetShowAll.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DatasetShowAll.xss">
+      <DependentUpon>DatasetShowAll.xsd</DependentUpon>
     </None>
     <None Include="LinQQLSV.dbml.layout">
       <DependentUpon>LinQQLSV.dbml</DependentUpon>

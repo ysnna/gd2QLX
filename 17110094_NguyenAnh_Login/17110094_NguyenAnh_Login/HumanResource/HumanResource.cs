@@ -51,5 +51,17 @@ namespace _17110094_NguyenAnh_Login
             Edit edit = new Edit();
             edit.ShowDialog();
         }
+
+        private void btnShowList_Click(object sender, EventArgs e)
+        {
+            ShowFullList show = new ShowFullList();
+            show.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SelectContactForm sl = new SelectContactForm();
+            sl.ShowDialog();
+        }
     }
 }

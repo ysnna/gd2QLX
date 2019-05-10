@@ -133,3 +133,5 @@ E:\LTWindows\WindowsQLXe\QLXe\gd2QLX\17110094_NguyenAnh_Login\17110094_NguyenAnh
 E:\LTWindows\WindowsQLXe\QLXe\gd2QLX\17110094_NguyenAnh_Login\17110094_NguyenAnh_Login\obj\Debug\_17110094_NguyenAnh_Login.Edit.resources
 E:\LTWindows\WindowsQLXe\QLXe\gd2QLX\17110094_NguyenAnh_Login\17110094_NguyenAnh_Login\obj\Debug\_17110094_NguyenAnh_Login.EditRemoveForm.resources
 E:\LTWindows\WindowsQLXe\QLXe\gd2QLX\17110094_NguyenAnh_Login\17110094_NguyenAnh_Login\obj\Debug\_17110094_NguyenAnh_Login.SelectContactForm.resources
+E:\LTWindows\WindowsQLXe\QLXe\gd2QLX\17110094_NguyenAnh_Login\17110094_NguyenAnh_Login\obj\Debug\_17110094_NguyenAnh_Login.ShowFullList.resources
+E:\LTWindows\WindowsQLXe\QLXe\gd2QLX\17110094_NguyenAnh_Login\17110094_NguyenAnh_Login\obj\Debug\_17110094_NguyenAnh_Login.StaticResult.resources

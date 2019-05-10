@@ -104,5 +104,13 @@ namespace _17110094_NguyenAnh_Login
             adapter.Fill(dt);
             return dt;
         }
+        public DataTable getScoreById(int id)
+        {
+            SqlCommand command = new SqlCommand("select Course.Label,Score.Student_Score from Score join Course on Score.Course_ID = Course.ID where Student_ID = " + "'" + id + "'" + " order by Label", mydb.getConnection);
+            SqlDataAdapter adap = new SqlDataAdapter(command);
+            DataTable table = new DataTable();
+            adap.Fill(table);
+            return table;
+        }
     }
 }

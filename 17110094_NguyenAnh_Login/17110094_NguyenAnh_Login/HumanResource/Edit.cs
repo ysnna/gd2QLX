@@ -24,8 +24,8 @@ namespace _17110094_NguyenAnh_Login
             int id = Convert.ToInt32(txtStudentID.Text);
             string fname = TextBoxFname.Text;
             string lname = TextBoxLname.Text;
-
-            int groupid = Convert.ToInt32(txtGroupID.Text);
+            int uid = GlobalID.IDGlobal;
+            int groupid = (int)comboGroup.SelectedValue;
             string phone = TextBoxPhone.Text;
             string address = TextBoxAddress.Text;
             string email = txtEmail.Text;

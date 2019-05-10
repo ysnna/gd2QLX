@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menu = new System.Windows.Forms.MenuStrip();
             this.menuStudent = new System.Windows.Forms.ToolStripMenuItem();
             this.menuAddNewStudent = new System.Windows.Forms.ToolStripMenuItem();
@@ -254,14 +255,17 @@
             this.staticResultToolStripMenuItem.Name = "staticResultToolStripMenuItem";
             this.staticResultToolStripMenuItem.Size = new System.Drawing.Size(218, 24);
             this.staticResultToolStripMenuItem.Text = "Static Result";
+            this.staticResultToolStripMenuItem.Click += new System.EventHandler(this.staticResultToolStripMenuItem_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(622, 423);
             this.Controls.Add(this.menu);
-            this.IsMdiContainer = true;
+            this.DoubleBuffered = true;
             this.MainMenuStrip = this.menu;
             this.Name = "MainForm";
             this.Text = "MainForm";

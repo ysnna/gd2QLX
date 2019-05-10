@@ -118,5 +118,11 @@ namespace _17110094_NguyenAnh_Login
             EditRemoveForm edit = new EditRemoveForm();
             edit.ShowDialog();
         }
+
+        private void staticResultToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StaticResult st = new StaticResult();
+            st.ShowDialog();
+        }
     }
 }

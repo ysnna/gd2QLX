@@ -18,25 +18,25 @@ namespace _17110094_NguyenAnh_Login
         {
             InitializeComponent();
         }
-
+        UserRegister user = new UserRegister();
+        HMR hm = new HMR();
         private void ButtonAddStudent_Click(object sender, EventArgs e)
         {
-            UserRegister user = new UserRegister();
-            HMR hm = new HMR();
             int id = Convert.ToInt32(txtStudentID.Text);
             string fname = TextBoxFname.Text;
             string lname = TextBoxLname.Text;
-            int groupid = Convert.ToInt32(txtGroupID.Text);
+            int groupid = Convert.ToInt32(comboGroup.Text);
             string phone = TextBoxPhone.Text;
             string address = TextBoxAddress.Text;
             string email = txtEmail.Text;
+            //int 
             MemoryStream pic = new MemoryStream();
             PictureBoxStudentImage.Image.Save(pic, PictureBoxStudentImage.Image.RawFormat);
             if (hm.insertContact(fname, lname, groupid, phone, email, address, pic, id))
             {
-                MessageBox.Show("New student added", "Add student", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("New contact added", "Add contact", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else MessageBox.Show("Error", "Add student", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else MessageBox.Show("Error", "Add contact", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void ButtonUploadImage_Click(object sender, EventArgs e)
