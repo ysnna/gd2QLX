@@ -106,5 +106,17 @@ namespace _17110094_NguyenAnh_Login
             ManageScoreForm m = new ManageScoreForm();
             m.ShowDialog(this);
         }
+
+        private void aVGResultByScoreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AVGResultByScore f = new AVGResultByScore();
+            f.ShowDialog();
+        }
+
+        private void editRemoveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditRemoveForm edit = new EditRemoveForm();
+            edit.ShowDialog();
+        }
     }
 }

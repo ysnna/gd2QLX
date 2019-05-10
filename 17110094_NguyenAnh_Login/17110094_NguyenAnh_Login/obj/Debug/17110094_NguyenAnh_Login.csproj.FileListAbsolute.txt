@@ -127,3 +127,9 @@ E:\LTWindows\WindowsQLXe\QLXe\gd2QLX\17110094_NguyenAnh_Login\17110094_NguyenAnh
 E:\LTWindows\WindowsQLXe\QLXe\gd2QLX\17110094_NguyenAnh_Login\17110094_NguyenAnh_Login\obj\Debug\_17110094_NguyenAnh_Login.AVGResultByScore.resources
 E:\LTWindows\WindowsQLXe\QLXe\gd2QLX\17110094_NguyenAnh_Login\17110094_NguyenAnh_Login\obj\Debug\_17110094_NguyenAnh_Login.RemoveForm.resources
 E:\LTWindows\WindowsQLXe\QLXe\gd2QLX\17110094_NguyenAnh_Login\17110094_NguyenAnh_Login\obj\Debug\_17110094_NguyenAnh_Login.ManageScoreForm.resources
+E:\LTWindows\WindowsQLXe\QLXe\gd2QLX\17110094_NguyenAnh_Login\17110094_NguyenAnh_Login\obj\Debug\_17110094_NguyenAnh_Login.HumanResource.resources
+E:\LTWindows\WindowsQLXe\QLXe\gd2QLX\17110094_NguyenAnh_Login\17110094_NguyenAnh_Login\obj\Debug\_17110094_NguyenAnh_Login.Register.resources
+E:\LTWindows\WindowsQLXe\QLXe\gd2QLX\17110094_NguyenAnh_Login\17110094_NguyenAnh_Login\obj\Debug\_17110094_NguyenAnh_Login.AddContact.resources
+E:\LTWindows\WindowsQLXe\QLXe\gd2QLX\17110094_NguyenAnh_Login\17110094_NguyenAnh_Login\obj\Debug\_17110094_NguyenAnh_Login.Edit.resources
+E:\LTWindows\WindowsQLXe\QLXe\gd2QLX\17110094_NguyenAnh_Login\17110094_NguyenAnh_Login\obj\Debug\_17110094_NguyenAnh_Login.EditRemoveForm.resources
+E:\LTWindows\WindowsQLXe\QLXe\gd2QLX\17110094_NguyenAnh_Login\17110094_NguyenAnh_Login\obj\Debug\_17110094_NguyenAnh_Login.SelectContactForm.resources

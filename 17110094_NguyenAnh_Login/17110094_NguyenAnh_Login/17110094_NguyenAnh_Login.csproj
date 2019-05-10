@@ -62,52 +62,85 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddCourse.cs">
+    <Compile Include="FormStd\EditRemoveForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddCourse.Designer.cs">
+    <Compile Include="FormStd\EditRemoveForm.Designer.cs">
+      <DependentUpon>EditRemoveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HumanResource\AddContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HumanResource\AddContact.Designer.cs">
+      <DependentUpon>AddContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Course\AddCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Course\AddCourse.Designer.cs">
       <DependentUpon>AddCourse.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddScoreForm.cs">
+    <Compile Include="ClassCode\GlobalID.cs" />
+    <Compile Include="ClassCode\HMR.cs" />
+    <Compile Include="HumanResource\Edit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddScoreForm.Designer.cs">
+    <Compile Include="HumanResource\Edit.Designer.cs">
+      <DependentUpon>Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HumanResource\HumanResource.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HumanResource\HumanResource.Designer.cs">
+      <DependentUpon>HumanResource.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Score\AddScoreForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Score\AddScoreForm.Designer.cs">
       <DependentUpon>AddScoreForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddStudentForm.cs">
+    <Compile Include="FormStd\AddStudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddStudentForm.Designer.cs">
+    <Compile Include="FormStd\AddStudentForm.Designer.cs">
       <DependentUpon>AddStudentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdvancedSearch.cs">
+    <Compile Include="FormStd\AdvancedSearch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdvancedSearch.Designer.cs">
+    <Compile Include="FormStd\AdvancedSearch.Designer.cs">
       <DependentUpon>AdvancedSearch.cs</DependentUpon>
     </Compile>
-    <Compile Include="AVGResultByScore.cs">
+    <Compile Include="Result\AVGResultByScore.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AVGResultByScore.Designer.cs">
+    <Compile Include="Result\AVGResultByScore.Designer.cs">
       <DependentUpon>AVGResultByScore.cs</DependentUpon>
     </Compile>
-    <Compile Include="AVGScoreByCourseForm.cs">
+    <Compile Include="Score\AVGScoreByCourseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AVGScoreByCourseForm.Designer.cs">
+    <Compile Include="Score\AVGScoreByCourseForm.Designer.cs">
       <DependentUpon>AVGScoreByCourseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="COURSE.cs" />
+    <Compile Include="ClassCode\COURSE.cs" />
+    <Compile Include="ClassCode\UserRegister.cs" />
     <Compile Include="DataClassesSV.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClassesSV.dbml</DependentUpon>
     </Compile>
-    <Compile Include="EditCourseForm.cs">
+    <Compile Include="Course\EditCourseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditCourseForm.Designer.cs">
+    <Compile Include="Course\EditCourseForm.Designer.cs">
       <DependentUpon>EditCourseForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Log_in.cs">
@@ -127,157 +160,186 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageCoursesForm.cs">
+    <Compile Include="Course\ManageCoursesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageCoursesForm.Designer.cs">
+    <Compile Include="Course\ManageCoursesForm.Designer.cs">
       <DependentUpon>ManageCoursesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageScoreForm.cs">
+    <Compile Include="Score\ManageScoreForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageScoreForm.Designer.cs">
+    <Compile Include="Score\ManageScoreForm.Designer.cs">
       <DependentUpon>ManageScoreForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageStudentForm.cs">
+    <Compile Include="FormStd\ManageStudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageStudentForm.Designer.cs">
+    <Compile Include="FormStd\ManageStudentForm.Designer.cs">
       <DependentUpon>ManageStudentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MY_DB.cs" />
-    <Compile Include="Print.cs">
+    <Compile Include="ClassCode\MY_DB.cs" />
+    <Compile Include="FormStd\Print.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Print.Designer.cs">
+    <Compile Include="FormStd\Print.Designer.cs">
       <DependentUpon>Print.cs</DependentUpon>
     </Compile>
-    <Compile Include="PrintCourseForm.cs">
+    <Compile Include="Course\PrintCourseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PrintCourseForm.Designer.cs">
+    <Compile Include="Course\PrintCourseForm.Designer.cs">
       <DependentUpon>PrintCourseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="ClassCode\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RemoveCourseForm.cs">
+    <Compile Include="Course\RemoveCourseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RemoveCourseForm.Designer.cs">
+    <Compile Include="Course\RemoveCourseForm.Designer.cs">
       <DependentUpon>RemoveCourseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ResultForm.cs">
+    <Compile Include="Score\RemoveForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ResultForm.Designer.cs">
-      <DependentUpon>ResultForm.cs</DependentUpon>
+    <Compile Include="Score\RemoveForm.Designer.cs">
+      <DependentUpon>RemoveForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SCORE.cs" />
-    <Compile Include="StaticForm.cs">
+    <Compile Include="ClassCode\SCORE.cs" />
+    <Compile Include="FormStd\StaticForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StaticForm.Designer.cs">
+    <Compile Include="FormStd\StaticForm.Designer.cs">
       <DependentUpon>StaticForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Student.cs" />
-    <Compile Include="StudentsListForm.cs">
+    <Compile Include="ClassCode\Student.cs" />
+    <Compile Include="FormStd\StudentsListForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StudentsListForm.Designer.cs">
+    <Compile Include="FormStd\StudentsListForm.Designer.cs">
       <DependentUpon>StudentsListForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UpdateDeleteStudentForm.cs">
+    <Compile Include="FormStd\UpdateDeleteStudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdateDeleteStudentForm.Designer.cs">
+    <Compile Include="FormStd\UpdateDeleteStudentForm.Designer.cs">
       <DependentUpon>UpdateDeleteStudentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="_DESKTOP_RRRHOP4DataSet.Designer.cs">
+    <Compile Include="DataSet\_DESKTOP_RRRHOP4DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>_DESKTOP_RRRHOP4DataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="_DESKTOP_RRRHOP4DataSet1.Designer.cs">
+    <Compile Include="DataSet\_DESKTOP_RRRHOP4DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>_DESKTOP_RRRHOP4DataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="_DESKTOP_RRRHOP4DataSet2.Designer.cs">
+    <Compile Include="DataSet\_DESKTOP_RRRHOP4DataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>_DESKTOP_RRRHOP4DataSet2.xsd</DependentUpon>
     </Compile>
-    <Compile Include="_DESKTOP_RRRHOP4DataSet3.Designer.cs">
+    <Compile Include="DataSet\_DESKTOP_RRRHOP4DataSet3.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>_DESKTOP_RRRHOP4DataSet3.xsd</DependentUpon>
     </Compile>
-    <Compile Include="_DESKTOP_RRRHOP4DataSet4.Designer.cs">
+    <Compile Include="DataSet\_DESKTOP_RRRHOP4DataSet4.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>_DESKTOP_RRRHOP4DataSet4.xsd</DependentUpon>
     </Compile>
-    <Compile Include="_DESKTOP_RRRHOP4DataSetCoursePrint.Designer.cs">
+    <Compile Include="DataSet\_DESKTOP_RRRHOP4DataSetCoursePrint.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>_DESKTOP_RRRHOP4DataSetCoursePrint.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddCourse.resx">
+    <Compile Include="HumanResource\SelectContactForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HumanResource\SelectContactForm.Designer.cs">
+      <DependentUpon>SelectContactForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_DESKTOP_RRRHOP4SelectContact.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_DESKTOP_RRRHOP4SelectContact.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormStd\EditRemoveForm.resx">
+      <DependentUpon>EditRemoveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HumanResource\AddContact.resx">
+      <DependentUpon>AddContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Course\AddCourse.resx">
       <DependentUpon>AddCourse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddScoreForm.resx">
+    <EmbeddedResource Include="HumanResource\Edit.resx">
+      <DependentUpon>Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HumanResource\HumanResource.resx">
+      <DependentUpon>HumanResource.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Score\AddScoreForm.resx">
       <DependentUpon>AddScoreForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddStudentForm.resx">
+    <EmbeddedResource Include="FormStd\AddStudentForm.resx">
       <DependentUpon>AddStudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HumanResource\SelectContactForm.resx">
+      <DependentUpon>SelectContactForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram.cd" />
     <None Include="DataClassesSV.dbml.layout">
       <DependentUpon>DataClassesSV.dbml</DependentUpon>
     </None>
-    <EmbeddedResource Include="AdvancedSearch.resx">
+    <EmbeddedResource Include="FormStd\AdvancedSearch.resx">
       <DependentUpon>AdvancedSearch.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AVGResultByScore.resx">
+    <EmbeddedResource Include="Result\AVGResultByScore.resx">
       <DependentUpon>AVGResultByScore.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AVGScoreByCourseForm.resx">
+    <EmbeddedResource Include="Score\AVGScoreByCourseForm.resx">
       <DependentUpon>AVGScoreByCourseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditCourseForm.resx">
+    <EmbeddedResource Include="Course\EditCourseForm.resx">
       <DependentUpon>EditCourseForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Log_in.resx">
       <DependentUpon>Log_in.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageCoursesForm.resx">
+    <EmbeddedResource Include="Course\ManageCoursesForm.resx">
       <DependentUpon>ManageCoursesForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageScoreForm.resx">
+    <EmbeddedResource Include="Score\ManageScoreForm.resx">
       <DependentUpon>ManageScoreForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageStudentForm.resx">
+    <EmbeddedResource Include="FormStd\ManageStudentForm.resx">
       <DependentUpon>ManageStudentForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Print.resx">
+    <EmbeddedResource Include="FormStd\Print.resx">
       <DependentUpon>Print.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PrintCourseForm.resx">
+    <EmbeddedResource Include="Course\PrintCourseForm.resx">
       <DependentUpon>PrintCourseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RemoveCourseForm.resx">
+    <EmbeddedResource Include="Course\RemoveCourseForm.resx">
       <DependentUpon>RemoveCourseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ResultForm.resx">
-      <DependentUpon>ResultForm.cs</DependentUpon>
+    <EmbeddedResource Include="Score\RemoveForm.resx">
+      <DependentUpon>RemoveForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StaticForm.resx">
+    <EmbeddedResource Include="FormStd\StaticForm.resx">
       <DependentUpon>StaticForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StudentsListForm.resx">
+    <EmbeddedResource Include="FormStd\StudentsListForm.resx">
       <DependentUpon>StudentsListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdateDeleteStudentForm.resx">
+    <EmbeddedResource Include="FormStd\UpdateDeleteStudentForm.resx">
       <DependentUpon>UpdateDeleteStudentForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DataClassesSV.dbml">
@@ -314,71 +376,82 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="_DESKTOP_RRRHOP4DataSet.xsc">
+    <None Include="DataSet\_DESKTOP_RRRHOP4DataSet.xsc">
       <DependentUpon>_DESKTOP_RRRHOP4DataSet.xsd</DependentUpon>
     </None>
-    <None Include="_DESKTOP_RRRHOP4DataSet.xsd">
+    <None Include="DataSet\_DESKTOP_RRRHOP4DataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>_DESKTOP_RRRHOP4DataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="_DESKTOP_RRRHOP4DataSet.xss">
+    <None Include="DataSet\_DESKTOP_RRRHOP4DataSet.xss">
       <DependentUpon>_DESKTOP_RRRHOP4DataSet.xsd</DependentUpon>
     </None>
-    <None Include="_DESKTOP_RRRHOP4DataSet1.xsc">
+    <None Include="DataSet\_DESKTOP_RRRHOP4DataSet1.xsc">
       <DependentUpon>_DESKTOP_RRRHOP4DataSet1.xsd</DependentUpon>
     </None>
-    <None Include="_DESKTOP_RRRHOP4DataSet1.xsd">
+    <None Include="DataSet\_DESKTOP_RRRHOP4DataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>_DESKTOP_RRRHOP4DataSet1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="_DESKTOP_RRRHOP4DataSet1.xss">
+    <None Include="DataSet\_DESKTOP_RRRHOP4DataSet1.xss">
       <DependentUpon>_DESKTOP_RRRHOP4DataSet1.xsd</DependentUpon>
     </None>
-    <None Include="_DESKTOP_RRRHOP4DataSet2.xsc">
+    <None Include="DataSet\_DESKTOP_RRRHOP4DataSet2.xsc">
       <DependentUpon>_DESKTOP_RRRHOP4DataSet2.xsd</DependentUpon>
     </None>
-    <None Include="_DESKTOP_RRRHOP4DataSet2.xsd">
+    <None Include="DataSet\_DESKTOP_RRRHOP4DataSet2.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>_DESKTOP_RRRHOP4DataSet2.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="_DESKTOP_RRRHOP4DataSet2.xss">
+    <None Include="DataSet\_DESKTOP_RRRHOP4DataSet2.xss">
       <DependentUpon>_DESKTOP_RRRHOP4DataSet2.xsd</DependentUpon>
     </None>
-    <None Include="_DESKTOP_RRRHOP4DataSet3.xsc">
+    <None Include="DataSet\_DESKTOP_RRRHOP4DataSet3.xsc">
       <DependentUpon>_DESKTOP_RRRHOP4DataSet3.xsd</DependentUpon>
     </None>
-    <None Include="_DESKTOP_RRRHOP4DataSet3.xsd">
+    <None Include="DataSet\_DESKTOP_RRRHOP4DataSet3.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>_DESKTOP_RRRHOP4DataSet3.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="_DESKTOP_RRRHOP4DataSet3.xss">
+    <None Include="DataSet\_DESKTOP_RRRHOP4DataSet3.xss">
       <DependentUpon>_DESKTOP_RRRHOP4DataSet3.xsd</DependentUpon>
     </None>
-    <None Include="_DESKTOP_RRRHOP4DataSet4.xsc">
+    <None Include="DataSet\_DESKTOP_RRRHOP4DataSet4.xsc">
       <DependentUpon>_DESKTOP_RRRHOP4DataSet4.xsd</DependentUpon>
     </None>
-    <None Include="_DESKTOP_RRRHOP4DataSet4.xsd">
+    <None Include="DataSet\_DESKTOP_RRRHOP4DataSet4.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>_DESKTOP_RRRHOP4DataSet4.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="_DESKTOP_RRRHOP4DataSet4.xss">
+    <None Include="DataSet\_DESKTOP_RRRHOP4DataSet4.xss">
       <DependentUpon>_DESKTOP_RRRHOP4DataSet4.xsd</DependentUpon>
     </None>
-    <None Include="_DESKTOP_RRRHOP4DataSetCoursePrint.xsc">
+    <None Include="DataSet\_DESKTOP_RRRHOP4DataSetCoursePrint.xsc">
       <DependentUpon>_DESKTOP_RRRHOP4DataSetCoursePrint.xsd</DependentUpon>
     </None>
-    <None Include="_DESKTOP_RRRHOP4DataSetCoursePrint.xsd">
+    <None Include="DataSet\_DESKTOP_RRRHOP4DataSetCoursePrint.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>_DESKTOP_RRRHOP4DataSetCoursePrint.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="_DESKTOP_RRRHOP4DataSetCoursePrint.xss">
+    <None Include="DataSet\_DESKTOP_RRRHOP4DataSetCoursePrint.xss">
       <DependentUpon>_DESKTOP_RRRHOP4DataSetCoursePrint.xsd</DependentUpon>
+    </None>
+    <None Include="_DESKTOP_RRRHOP4SelectContact.xsc">
+      <DependentUpon>_DESKTOP_RRRHOP4SelectContact.xsd</DependentUpon>
+    </None>
+    <None Include="_DESKTOP_RRRHOP4SelectContact.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_DESKTOP_RRRHOP4SelectContact.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_DESKTOP_RRRHOP4SelectContact.xss">
+      <DependentUpon>_DESKTOP_RRRHOP4SelectContact.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -408,5 +481,6 @@
       <DependentUpon>DESKTOP-RRRHOP4.mdf</DependentUpon>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

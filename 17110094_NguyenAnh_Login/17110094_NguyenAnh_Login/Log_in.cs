@@ -23,28 +23,21 @@ namespace _17110094_NguyenAnh_Login
         }
         private void button_LOGIN_Click(object sender, EventArgs e)
         {
-            MY_DB db = new MY_DB();
-            STUDENT student = new STUDENT();
-            SqlDataAdapter da = new SqlDataAdapter();
-            DataTable dt = new DataTable();
-            SqlCommand cmd = new SqlCommand("select * from Login", db.getConnection);
-            //cmd.Parameters.Add("@username", SqlDbType.VarChar).Value = txtUsername.Text;
-            //cmd.Parameters.Add("@password", SqlDbType.VarChar).Value = txtPassword.Text;
-            da.SelectCommand = cmd;
-            da.Fill(dt);
-            int count = dt.Rows.Count;
-            if (count > 0)
+            if (login() == 1)
             {
-                for (int i = 0; i < count; i++)
+                if (chkUser.Checked == true)
                 {
-                    if (txtUsername.Text == dt.Rows[i]["username"].ToString() && txtPassword.Text == dt.Rows[i]["password"].ToString())
-                        this.DialogResult = DialogResult.OK;
+                    MainForm mf = new MainForm();
+                    mf.ShowDialog();
                 }
-                if (this.DialogResult != DialogResult.OK)
+                else if (chkAdmin.Checked == true)
                 {
-                    MessageBox.Show("Invalid Username or Password", "Login error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    HumanResource hm = new HumanResource();
+                    hm.ShowDialog();
                 }
+                else MessageBox.Show("Please chose Who You Are to login", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            else  MessageBox.Show("Invalid Username or Password", "Login error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -53,34 +46,8 @@ namespace _17110094_NguyenAnh_Login
         }
         private void ButtonRegister_Click(object sender, EventArgs e)
         {
-            if (chkAdmin.Checked == true)
-            {
-                MY_DB db = new MY_DB();
-                SqlCommand cmm = new SqlCommand("select * from Login", db.getConnection);
-                SqlDataAdapter da = new SqlDataAdapter();
-                DataTable dt = new DataTable();
-                da.SelectCommand = cmm;
-                da.Fill(dt);
-                int countRow = dt.Rows.Count;
-                SqlCommand cmd = new SqlCommand("insert into Login (id, username, password)" +
-                    " values (@id, @user, @pass)", db.getConnection);
-                cmd.Parameters.Add("@id", SqlDbType.Int).Value = countRow;
-                cmd.Parameters.Add("@user", SqlDbType.VarChar).Value = txtUsername.Text;
-                cmd.Parameters.Add("@pass", SqlDbType.VarChar).Value = txtPassword.Text;
-
-                db.openConnection();
-                if (cmd.ExecuteNonQuery() == 1)
-                {
-                    db.closeConnection();
-                }
-                else
-                {
-                    db.closeConnection();
-                }
-                da.InsertCommand = cmd;
-                da.Update(dt);
-                MessageBox.Show("Sign up successful", "Adding...", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            Register rgis = new Register();
+            rgis.ShowDialog();
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -119,6 +86,49 @@ namespace _17110094_NguyenAnh_Login
             {
                 errorProvider.SetError(this.txtUsername, "Password is required");
             }
+        }
+        public int login()
+        {
+            int id = 0;
+            if (IsNumber(txtUsername.Text))
+            {
+                id = int.Parse(txtUsername.Text);
+            }
+            int flag = 0;
+            MY_DB db = new MY_DB();
+            SqlDataAdapter da = new SqlDataAdapter();
+            DataTable dt = new DataTable();
+            SqlCommand cmd = new SqlCommand("select * from Login where (Id=@id and password=@pass) or (username=@user and password=@pass)", db.getConnection);
+            cmd.Parameters.Add("@user", SqlDbType.VarChar).Value = txtUsername.Text;
+            cmd.Parameters.Add("@pass", SqlDbType.VarChar).Value = txtPassword.Text;
+            cmd.Parameters.Add("@id", SqlDbType.Int).Value = id;
+            da.SelectCommand = cmd;
+            da.Fill(dt);
+            int count = dt.Rows.Count;
+            if (count > 0)
+            {
+                int userid = Convert.ToInt16(dt.Rows[0][0].ToString());
+                GlobalID.SetGlobalUserID(userid);
+                flag = 1;
+            }
+            return flag;
+        }
+        public bool IsNumber(string pValue)
+        {
+            foreach (Char c in pValue)
+            {
+                if (!Char.IsDigit(c))
+                    return false;
+            }
+            return true;
+        }
+        private void chkAdmin_CheckedChanged(object sender, EventArgs e)
+        {
+            chkUser.Checked = false;
+        }
+        private void chkUser_CheckedChanged(object sender, EventArgs e)
+        {
+            chkAdmin.Checked = false;
         }
     }
 }

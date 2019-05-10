@@ -158,6 +158,7 @@
             this.chkAdmin.TabIndex = 9;
             this.chkAdmin.Text = "Admin";
             this.chkAdmin.UseVisualStyleBackColor = true;
+            this.chkAdmin.CheckedChanged += new System.EventHandler(this.chkAdmin_CheckedChanged);
             // 
             // chkUser
             // 
@@ -169,6 +170,7 @@
             this.chkUser.TabIndex = 10;
             this.chkUser.Text = "User";
             this.chkUser.UseVisualStyleBackColor = true;
+            this.chkUser.CheckedChanged += new System.EventHandler(this.chkUser_CheckedChanged);
             // 
             // Form1
             // 
@@ -206,14 +208,14 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button_CANCEL;
         private System.Windows.Forms.Button button_LOGIN;
         private System.Windows.Forms.Button ButtonRegister;
         private System.Windows.Forms.CheckBox chkAdmin;
         private System.Windows.Forms.CheckBox chkUser;
+        public System.Windows.Forms.TextBox txtUsername;
+        public System.Windows.Forms.TextBox txtPassword;
     }
 }
 
