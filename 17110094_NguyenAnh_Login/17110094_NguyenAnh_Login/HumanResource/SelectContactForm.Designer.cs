@@ -36,10 +36,10 @@
             this._DESKTOP_RRRHOP4SelectContact = new _17110094_NguyenAnh_Login._DESKTOP_RRRHOP4SelectContact();
             this.contactBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.contactTableAdapter = new _17110094_NguyenAnh_Login._DESKTOP_RRRHOP4SelectContactTableAdapters.ContactTableAdapter();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.useridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._DESKTOP_RRRHOP4SelectContact)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactBindingSource)).BeginInit();
@@ -66,10 +66,10 @@
             this.DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
             this.fnameDataGridViewTextBoxColumn,
             this.lnameDataGridViewTextBoxColumn,
-            this.groupidDataGridViewTextBoxColumn,
-            this.useridDataGridViewTextBoxColumn});
+            this.groupidDataGridViewTextBoxColumn});
             this.DataGridView1.Cursor = System.Windows.Forms.Cursors.Default;
             this.DataGridView1.DataSource = this.contactBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -105,19 +105,26 @@
             // 
             this.contactTableAdapter.ClearBeforeFill = true;
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Width = 57;
+            // 
             // fnameDataGridViewTextBoxColumn
             // 
-            this.fnameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.fnameDataGridViewTextBoxColumn.DataPropertyName = "fname";
             this.fnameDataGridViewTextBoxColumn.HeaderText = "fname";
             this.fnameDataGridViewTextBoxColumn.Name = "fnameDataGridViewTextBoxColumn";
+            this.fnameDataGridViewTextBoxColumn.Width = 94;
             // 
             // lnameDataGridViewTextBoxColumn
             // 
-            this.lnameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.lnameDataGridViewTextBoxColumn.DataPropertyName = "lname";
             this.lnameDataGridViewTextBoxColumn.HeaderText = "lname";
             this.lnameDataGridViewTextBoxColumn.Name = "lnameDataGridViewTextBoxColumn";
+            this.lnameDataGridViewTextBoxColumn.Width = 93;
             // 
             // groupidDataGridViewTextBoxColumn
             // 
@@ -125,13 +132,6 @@
             this.groupidDataGridViewTextBoxColumn.HeaderText = "group_id";
             this.groupidDataGridViewTextBoxColumn.Name = "groupidDataGridViewTextBoxColumn";
             this.groupidDataGridViewTextBoxColumn.Width = 124;
-            // 
-            // useridDataGridViewTextBoxColumn
-            // 
-            this.useridDataGridViewTextBoxColumn.DataPropertyName = "userid";
-            this.useridDataGridViewTextBoxColumn.HeaderText = "userid";
-            this.useridDataGridViewTextBoxColumn.Name = "useridDataGridViewTextBoxColumn";
-            this.useridDataGridViewTextBoxColumn.Width = 95;
             // 
             // SelectContactForm
             // 
@@ -157,9 +157,9 @@
         private _DESKTOP_RRRHOP4SelectContact _DESKTOP_RRRHOP4SelectContact;
         private System.Windows.Forms.BindingSource contactBindingSource;
         private _DESKTOP_RRRHOP4SelectContactTableAdapters.ContactTableAdapter contactTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn groupidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn useridDataGridViewTextBoxColumn;
     }
 }

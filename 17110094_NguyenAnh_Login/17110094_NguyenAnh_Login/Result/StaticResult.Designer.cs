@@ -51,7 +51,7 @@
             this.lbFail.AutoSize = true;
             this.lbFail.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbFail.ForeColor = System.Drawing.Color.White;
-            this.lbFail.Location = new System.Drawing.Point(406, 181);
+            this.lbFail.Location = new System.Drawing.Point(375, 181);
             this.lbFail.Name = "lbFail";
             this.lbFail.Size = new System.Drawing.Size(54, 27);
             this.lbFail.TabIndex = 11;
@@ -62,7 +62,7 @@
             this.lbPass.AutoSize = true;
             this.lbPass.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPass.ForeColor = System.Drawing.Color.White;
-            this.lbPass.Location = new System.Drawing.Point(406, 113);
+            this.lbPass.Location = new System.Drawing.Point(375, 113);
             this.lbPass.Name = "lbPass";
             this.lbPass.Size = new System.Drawing.Size(61, 27);
             this.lbPass.TabIndex = 10;
@@ -73,7 +73,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Snow;
-            this.label3.Location = new System.Drawing.Point(403, 11);
+            this.label3.Location = new System.Drawing.Point(372, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(250, 44);
             this.label3.TabIndex = 8;
@@ -90,7 +90,7 @@
             this.listViewAVG.GridLines = true;
             this.listViewAVG.Location = new System.Drawing.Point(21, 51);
             this.listViewAVG.Name = "listViewAVG";
-            this.listViewAVG.Size = new System.Drawing.Size(335, 325);
+            this.listViewAVG.Size = new System.Drawing.Size(327, 325);
             this.listViewAVG.TabIndex = 12;
             this.listViewAVG.UseCompatibleStateImageBehavior = false;
             // 
@@ -99,7 +99,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.ClientSize = new System.Drawing.Size(694, 388);
+            this.ClientSize = new System.Drawing.Size(661, 388);
             this.Controls.Add(this.listViewAVG);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbFail);

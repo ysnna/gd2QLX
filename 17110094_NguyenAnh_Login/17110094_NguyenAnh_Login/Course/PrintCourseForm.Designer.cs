@@ -35,12 +35,15 @@
             this.dgvManageCourse = new System.Windows.Forms.DataGridView();
             this.ButtonSaveFile = new System.Windows.Forms.Button();
             this.ButtonPrint = new System.Windows.Forms.Button();
+            this.printCourseDataSet = new _17110094_NguyenAnh_Login.PrintCourseDataSet();
             this.courseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.labelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.periodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.courseTableAdapter = new _17110094_NguyenAnh_Login.PrintCourseDataSetTableAdapters.CourseTableAdapter();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvManageCourse)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.printCourseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,10 +69,10 @@
             this.dgvManageCourse.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvManageCourse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvManageCourse.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.labelDataGridViewTextBoxColumn,
-            this.periodDataGridViewTextBoxColumn,
-            this.descriptionDataGridViewTextBoxColumn});
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4});
             this.dgvManageCourse.DataSource = this.courseBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
@@ -90,7 +93,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvManageCourse.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvManageCourse.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dgvManageCourse.Size = new System.Drawing.Size(638, 363);
+            this.dgvManageCourse.Size = new System.Drawing.Size(496, 265);
             this.dgvManageCourse.TabIndex = 0;
             // 
             // ButtonSaveFile
@@ -99,7 +102,7 @@
             this.ButtonSaveFile.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.ButtonSaveFile.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonSaveFile.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ButtonSaveFile.Location = new System.Drawing.Point(397, 369);
+            this.ButtonSaveFile.Location = new System.Drawing.Point(255, 271);
             this.ButtonSaveFile.Name = "ButtonSaveFile";
             this.ButtonSaveFile.Size = new System.Drawing.Size(112, 43);
             this.ButtonSaveFile.TabIndex = 15;
@@ -113,7 +116,7 @@
             this.ButtonPrint.BackColor = System.Drawing.Color.DodgerBlue;
             this.ButtonPrint.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonPrint.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ButtonPrint.Location = new System.Drawing.Point(515, 369);
+            this.ButtonPrint.Location = new System.Drawing.Point(373, 271);
             this.ButtonPrint.Name = "ButtonPrint";
             this.ButtonPrint.Size = new System.Drawing.Size(112, 43);
             this.ButtonPrint.TabIndex = 16;
@@ -121,46 +124,54 @@
             this.ButtonPrint.UseVisualStyleBackColor = false;
             this.ButtonPrint.Click += new System.EventHandler(this.ButtonPrint_Click);
             // 
+            // printCourseDataSet
+            // 
+            this.printCourseDataSet.DataSetName = "PrintCourseDataSet";
+            this.printCourseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // courseBindingSource
             // 
             this.courseBindingSource.DataMember = "Course";
+            this.courseBindingSource.DataSource = this.printCourseDataSet;
             // 
+            // courseTableAdapter
             // 
-            // idDataGridViewTextBoxColumn
+            this.courseTableAdapter.ClearBeforeFill = true;
             // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.Width = 57;
+            // dataGridViewTextBoxColumn1
             // 
-            // labelDataGridViewTextBoxColumn
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 57;
             // 
-            this.labelDataGridViewTextBoxColumn.DataPropertyName = "label";
-            this.labelDataGridViewTextBoxColumn.HeaderText = "Label";
-            this.labelDataGridViewTextBoxColumn.Name = "labelDataGridViewTextBoxColumn";
-            this.labelDataGridViewTextBoxColumn.Width = 86;
+            // dataGridViewTextBoxColumn2
             // 
-            // periodDataGridViewTextBoxColumn
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "label";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Label";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
-            this.periodDataGridViewTextBoxColumn.DataPropertyName = "period";
-            this.periodDataGridViewTextBoxColumn.HeaderText = "Period";
-            this.periodDataGridViewTextBoxColumn.Name = "periodDataGridViewTextBoxColumn";
-            this.periodDataGridViewTextBoxColumn.Width = 94;
+            // dataGridViewTextBoxColumn3
             // 
-            // descriptionDataGridViewTextBoxColumn
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "period";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Period";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 94;
             // 
-            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "description";
-            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
-            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
-            this.descriptionDataGridViewTextBoxColumn.Width = 136;
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "description";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Description";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
             // PrintCourseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(639, 419);
+            this.ClientSize = new System.Drawing.Size(497, 321);
             this.Controls.Add(this.ButtonPrint);
             this.Controls.Add(this.ButtonSaveFile);
             this.Controls.Add(this.dgvManageCourse);
@@ -168,6 +179,7 @@
             this.Text = "PrintCourseForm";
             this.Load += new System.EventHandler(this.PrintCourseForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvManageCourse)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.printCourseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -178,10 +190,16 @@
         private System.Windows.Forms.DataGridView dgvManageCourse;
         private System.Windows.Forms.Button ButtonSaveFile;
         private System.Windows.Forms.Button ButtonPrint;
-        private System.Windows.Forms.BindingSource courseBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn labelDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn periodDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
+        private PrintCourseDataSet printCourseDataSet;
+        private System.Windows.Forms.BindingSource courseBindingSource;
+        private PrintCourseDataSetTableAdapters.CourseTableAdapter courseTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
     }
 }

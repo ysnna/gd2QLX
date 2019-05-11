@@ -35,6 +35,8 @@ namespace _17110094_NguyenAnh_Login
 
         private void EditRemoveForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dataSetEditRemoveStudent.Std' table. You can move, or remove it, as needed.
+            this.stdTableAdapter.Fill(this.dataSetEditRemoveStudent.Std);
             this.Controls.Add(dgvStudent);
             dgvStudent.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Raised;
             dgvStudent.RowHeadersVisible = false;

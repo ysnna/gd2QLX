@@ -46,7 +46,7 @@ namespace _17110094_NguyenAnh_Login
             adap.Fill(table);
             int count = table.Rows.Count;
             int countPass = 0;
-            for (int j = 0; j < count; i++)
+            for (int j = 0; j < count; j++)
             {
                 if (table.Rows[j]["result"].ToString().Trim() == "Passed")
                     countPass++;

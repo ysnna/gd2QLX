@@ -19,31 +19,6 @@ namespace _17110094_NguyenAnh_Login
         SCORE score = new SCORE();
         private void ResultForm_Load(object sender, EventArgs e)
         {
-            //DataGridViewTextBoxColumn id = new DataGridViewTextBoxColumn();
-            //id.HeaderText = "Student ID";
-            //DataGridViewTextBoxColumn fn = new DataGridViewTextBoxColumn();
-            //fn.HeaderText = "First name";
-            //DataGridViewTextBoxColumn ln = new DataGridViewTextBoxColumn();
-            //ln.HeaderText = "Last name";
-            //DataGridViewTextBoxColumn cid = new DataGridViewTextBoxColumn();
-            //cid.HeaderText = "Course ID";
-            //DataGridViewTextBoxColumn lb = new DataGridViewTextBoxColumn();
-            //lb.HeaderText = "Label";
-            //DataGridViewTextBoxColumn sc = new DataGridViewTextBoxColumn();
-            //sc.HeaderText = "Student score";
-            //dgvRemove.Columns.Add(id);
-            //dgvRemove.Columns.Add(fn);
-            //dgvRemove.Columns.Add(ln);
-            //dgvRemove.Columns.Add(cid);
-            //dgvRemove.Columns.Add(lb);
-            //dgvRemove.Columns.Add(sc);
-            //DataTable dt = score.getRemove();
-            //int i = 0;
-            //foreach (DataRow row in dt.Rows)
-            //{
-            //    dgvRemove.Rows.Add(row[0], row[1], row[2], row[3], row[4], row[5]);
-            //    i++;
-            //}
             dgvRemove.DataSource = score.getRemove();
         }
 

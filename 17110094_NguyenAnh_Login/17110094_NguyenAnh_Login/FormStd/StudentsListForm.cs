@@ -22,6 +22,8 @@ namespace _17110094_NguyenAnh_Login
         MY_DB mydb = new MY_DB();
         private void studentsListForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the '_DESKTOP_RRRHOP4StudentList.Std' table. You can move, or remove it, as needed.
+            this.stdTableAdapter.Fill(this._DESKTOP_RRRHOP4StudentList.Std);
             SqlCommand cmd = new SqlCommand("select * from Std");
             DataGridView1.ReadOnly = true;
             //xử lí hình ảnh, code có tham khảo msdn

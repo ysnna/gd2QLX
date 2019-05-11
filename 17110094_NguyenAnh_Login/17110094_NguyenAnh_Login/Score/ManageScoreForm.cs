@@ -25,6 +25,7 @@ namespace _17110094_NguyenAnh_Login
             dgvManageScore.BringToFront();
             reloadDGVScoreData();
             dgvManageScore.DataSource = score.getRemove();
+            dgvManageScore.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
         void refreshDGV()
         {
@@ -96,12 +97,14 @@ namespace _17110094_NguyenAnh_Login
         {
             dgvShowStudent.BringToFront();
             dgvShowStudent.DataSource = score.getShowStudent();
+            dgvShowStudent.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
         private void showScore_Click(object sender, EventArgs e)
         {
             dgvManageScore.DataSource = score.getRemove();
             dgvManageScore.BringToFront();
+            dgvManageScore.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
     }
 }

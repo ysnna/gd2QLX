@@ -20,6 +20,8 @@ namespace _17110094_NguyenAnh_Login
 
         private void AddScoreForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'addScoreDataSet.Score' table. You can move, or remove it, as needed.
+            this.scoreTableAdapter.Fill(this.addScoreDataSet.Score);
             reloadDGVScoreData();
             SqlCommand cmds = new SqlCommand("select * from score");
             dgvScore.DataSource = score.getAllScore(cmds);

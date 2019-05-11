@@ -124,5 +124,11 @@ namespace _17110094_NguyenAnh_Login
             StaticResult st = new StaticResult();
             st.ShowDialog();
         }
+
+        private void printToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            PrintScore p = new PrintScore();
+            p.ShowDialog();
+        }
     }
 }

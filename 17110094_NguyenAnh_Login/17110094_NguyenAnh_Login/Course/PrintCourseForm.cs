@@ -22,6 +22,8 @@ namespace _17110094_NguyenAnh_Login
         Course course = new Course();
         private void PrintCourseForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'printCourseDataSet.Course' table. You can move, or remove it, as needed.
+            this.courseTableAdapter.Fill(this.printCourseDataSet.Course);
             SqlCommand cmd = new SqlCommand("select * from course");
             dgvManageCourse.DataSource = course.getAllCourse(cmd);
         }

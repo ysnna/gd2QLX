@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Data.SqlClient;
 
 namespace _17110094_NguyenAnh_Login
 {
@@ -20,7 +21,7 @@ namespace _17110094_NguyenAnh_Login
 
         private void ButtonEditStudent_Click(object sender, EventArgs e)
         {
-            HMR hm = new HMR();
+            CONTACT contact = new CONTACT();
             int id = Convert.ToInt32(txtStudentID.Text);
             string fname = TextBoxFname.Text;
             string lname = TextBoxLname.Text;
@@ -31,9 +32,8 @@ namespace _17110094_NguyenAnh_Login
             string email = txtEmail.Text;
             MemoryStream pic = new MemoryStream();
             PictureBoxStudentImage.Image.Save(pic, PictureBoxStudentImage.Image.RawFormat);
-            if (hm.updateContact(fname, lname, groupid, phone, email, address, pic, id))
+            if (contact.updateContact(id, fname, lname, phone, address, email, groupid, pic))
             {
-
                 MessageBox.Show("Student edited", "Edit student", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else MessageBox.Show("Error", "Edit student", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -56,6 +56,22 @@ namespace _17110094_NguyenAnh_Login
         {
             SelectContactForm sl = new SelectContactForm();
             sl.ShowDialog();
+        }
+        MY_DB mydb = new MY_DB();
+        void reloadDGVScoreData()
+        {
+            SqlCommand cmdc = new SqlCommand("select * from Grouptable", mydb.getConnection);
+            SqlDataAdapter da = new SqlDataAdapter(cmdc);
+            DataTable tb = new DataTable();
+            da.Fill(tb);
+            comboGroup.DataSource = tb;
+            comboGroup.DisplayMember = "name";
+            comboGroup.ValueMember = "id";
+            comboGroup.SelectedItem = null;
+        }
+        private void Edit_Load(object sender, EventArgs e)
+        {
+            reloadDGVScoreData();
         }
     }
 }

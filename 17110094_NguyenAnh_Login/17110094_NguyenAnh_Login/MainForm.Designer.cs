@@ -226,6 +226,7 @@
             this.printToolStripMenuItem2.Name = "printToolStripMenuItem2";
             this.printToolStripMenuItem2.Size = new System.Drawing.Size(224, 24);
             this.printToolStripMenuItem2.Text = "Print";
+            this.printToolStripMenuItem2.Click += new System.EventHandler(this.printToolStripMenuItem2_Click);
             // 
             // resultToolStripMenuItem
             // 

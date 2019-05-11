@@ -22,9 +22,12 @@ namespace _17110094_NguyenAnh_Login
         {
             // TODO: This line of code loads data into the '_DESKTOP_RRRHOP4SelectContact.Contact' table. You can move, or remove it, as needed.
             this.contactTableAdapter.Fill(this._DESKTOP_RRRHOP4SelectContact.Contact);
+            // TODO: This line of code loads data into the '_DESKTOP_RRRHOP4SelectContact.Contact' table. You can move, or remove it, as needed.
+            this.contactTableAdapter.Fill(this._DESKTOP_RRRHOP4SelectContact.Contact);
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
-            SqlCommand command = new SqlCommand("select fname, lname, group_id, userid from contact", mydb.getConnection);
+            SqlCommand command = new SqlCommand("select id, fname, lname, group_id from contact where userid=@id", mydb.getConnection);
+            command.Parameters.Add("@id", SqlDbType.Int).Value = GlobalID.IDGlobal;
             adapter.SelectCommand = command;
             adapter.Fill(table);
             DataGridView1.DataSource = table;

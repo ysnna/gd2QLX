@@ -23,6 +23,8 @@ namespace _17110094_NguyenAnh_Login
         MY_DB mydb = new MY_DB();
         private void Print_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the '_DESKTOP_RRRHOP4Print.Std' table. You can move, or remove it, as needed.
+            this.stdTableAdapter.Fill(this._DESKTOP_RRRHOP4Print.Std);
             DateTimePic1.CustomFormat = "yyyy-dd-MM";
             DateTimePic1.Format = DateTimePickerFormat.Custom;
             DateTimePick2.CustomFormat = "yyyy-dd-MM";
@@ -141,6 +143,11 @@ namespace _17110094_NguyenAnh_Login
         {
             DateTimePic1.Enabled = false;
             DateTimePick2.Enabled = false;
+        }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

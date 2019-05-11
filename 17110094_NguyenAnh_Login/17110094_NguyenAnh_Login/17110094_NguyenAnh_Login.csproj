@@ -62,7 +62,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddScoreDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AddScoreDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ClassCode\CONTACT.cs" />
+    <Compile Include="DataSetEditRemoveStudent.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetEditRemoveStudent.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DatasetShowAll.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -105,6 +115,18 @@
     </Compile>
     <Compile Include="HumanResource\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCode\MyGroup.cs" />
+    <Compile Include="PrintCourseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintCourseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Score\PrintScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Score\PrintScore.Designer.cs">
+      <DependentUpon>PrintScore.cs</DependentUpon>
     </Compile>
     <Compile Include="Score\AddScoreForm.cs">
       <SubType>Form</SubType>
@@ -279,10 +301,20 @@
     <Compile Include="Result\StaticResult.Designer.cs">
       <DependentUpon>StaticResult.cs</DependentUpon>
     </Compile>
+    <Compile Include="_DESKTOP_RRRHOP4Print.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_DESKTOP_RRRHOP4Print.xsd</DependentUpon>
+    </Compile>
     <Compile Include="_DESKTOP_RRRHOP4SelectContact.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>_DESKTOP_RRRHOP4SelectContact.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_DESKTOP_RRRHOP4StudentList.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_DESKTOP_RRRHOP4StudentList.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FormStd\EditRemoveForm.resx">
       <DependentUpon>EditRemoveForm.cs</DependentUpon>
@@ -302,6 +334,9 @@
     <EmbeddedResource Include="HumanResource\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Score\PrintScore.resx">
+      <DependentUpon>PrintScore.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Score\AddScoreForm.resx">
       <DependentUpon>AddScoreForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -317,6 +352,17 @@
     <EmbeddedResource Include="Result\StaticResult.resx">
       <DependentUpon>StaticResult.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="AddScoreDataSet.xsc">
+      <DependentUpon>AddScoreDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AddScoreDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AddScoreDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AddScoreDataSet.xss">
+      <DependentUpon>AddScoreDataSet.xsd</DependentUpon>
+    </None>
     <None Include="ClassDiagram.cd" />
     <None Include="DataClassesSV.dbml.layout">
       <DependentUpon>DataClassesSV.dbml</DependentUpon>
@@ -371,6 +417,17 @@
       <LastGenOutput>DataClassesSV.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
+    <None Include="DataSetEditRemoveStudent.xsc">
+      <DependentUpon>DataSetEditRemoveStudent.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetEditRemoveStudent.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetEditRemoveStudent.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetEditRemoveStudent.xss">
+      <DependentUpon>DataSetEditRemoveStudent.xsd</DependentUpon>
+    </None>
     <None Include="DatasetShowAll.xsc">
       <DependentUpon>DatasetShowAll.xsd</DependentUpon>
     </None>
@@ -401,6 +458,17 @@
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>LinQQLSV.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+    </None>
+    <None Include="PrintCourseDataSet.xsc">
+      <DependentUpon>PrintCourseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PrintCourseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PrintCourseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PrintCourseDataSet.xss">
+      <DependentUpon>PrintCourseDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -477,6 +545,17 @@
     <None Include="DataSet\_DESKTOP_RRRHOP4DataSetCoursePrint.xss">
       <DependentUpon>_DESKTOP_RRRHOP4DataSetCoursePrint.xsd</DependentUpon>
     </None>
+    <None Include="_DESKTOP_RRRHOP4Print.xsc">
+      <DependentUpon>_DESKTOP_RRRHOP4Print.xsd</DependentUpon>
+    </None>
+    <None Include="_DESKTOP_RRRHOP4Print.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_DESKTOP_RRRHOP4Print.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_DESKTOP_RRRHOP4Print.xss">
+      <DependentUpon>_DESKTOP_RRRHOP4Print.xsd</DependentUpon>
+    </None>
     <None Include="_DESKTOP_RRRHOP4SelectContact.xsc">
       <DependentUpon>_DESKTOP_RRRHOP4SelectContact.xsd</DependentUpon>
     </None>
@@ -487,6 +566,17 @@
     </None>
     <None Include="_DESKTOP_RRRHOP4SelectContact.xss">
       <DependentUpon>_DESKTOP_RRRHOP4SelectContact.xsd</DependentUpon>
+    </None>
+    <None Include="_DESKTOP_RRRHOP4StudentList.xsc">
+      <DependentUpon>_DESKTOP_RRRHOP4StudentList.xsd</DependentUpon>
+    </None>
+    <None Include="_DESKTOP_RRRHOP4StudentList.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_DESKTOP_RRRHOP4StudentList.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_DESKTOP_RRRHOP4StudentList.xss">
+      <DependentUpon>_DESKTOP_RRRHOP4StudentList.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

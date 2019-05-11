@@ -97,6 +97,8 @@ namespace _17110094_NguyenAnh_Login
             table4.Load(command4.ExecuteReader());
             dgvResult.DataSource = table4;
             mydb.closeConnection();
+            dgvResult.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgvResult.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             #region nháp
             //DataTable dt = score.getResultByScore();
             //DataGridViewTextBoxColumn id = new DataGridViewTextBoxColumn();

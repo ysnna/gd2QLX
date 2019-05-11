@@ -19,9 +19,26 @@ namespace _17110094_NguyenAnh_Login
             InitializeComponent();
         }
         MY_DB mydb = new MY_DB();
+        CONTACT contact = new CONTACT();
         private void HumanResource_Load(object sender, EventArgs e)
         {
             getImageAndUser();
+            reloadremoveGroup();
+        }
+        void reloadremoveGroup()
+        {
+            SqlCommand cmdc = new SqlCommand("select * from Grouptable", mydb.getConnection);
+            SqlDataAdapter da = new SqlDataAdapter(cmdc);
+            DataTable tb = new DataTable();
+            da.Fill(tb);
+            cbRemoveG.DataSource = tb;
+            cbRemoveG.DisplayMember = "name";
+            cbRemoveG.ValueMember = "id";
+            cbRemoveG.SelectedItem = null;
+            cbEditG.DataSource = tb;
+            cbEditG.DisplayMember = "name";
+            cbEditG.ValueMember = "id";
+            cbEditG.SelectedItem = null;
         }
         public void getImageAndUser()
         {
@@ -62,6 +79,45 @@ namespace _17110094_NguyenAnh_Login
         {
             SelectContactForm sl = new SelectContactForm();
             sl.ShowDialog();
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            contact.deleteContact(Convert.ToInt32(TextBoxID.Text));
+            MessageBox.Show("Deleted");
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        MyGroup myGroup = new MyGroup();
+        private void btnRemoveG_Click(object sender, EventArgs e)
+        {
+            int id = (int)cbRemoveG.SelectedValue;
+            myGroup.deleteGroup(id);
+            MessageBox.Show("Deleted");
+            reloadremoveGroup();
+        }
+
+        private void btnEditG_Click(object sender, EventArgs e)
+        {
+            int id = (int)cbEditG.SelectedValue;
+            myGroup.updateGroup(id, txtEditG.Text);
+            MessageBox.Show("Edited");
+            reloadremoveGroup();
+        }
+
+        private void btnAddG_Click(object sender, EventArgs e)
+        {
+            if (!myGroup.groupExist(txtAddG.Text, "add", GlobalID.IDGlobal))
+            {
+                myGroup.insertGroup(Convert.ToInt32(txtIDGroup.Text), txtAddG.Text, GlobalID.IDGlobal);
+
+                MessageBox.Show("Group Added");
+                reloadremoveGroup();
+            }
+            else MessageBox.Show("roor");
         }
     }
 }

@@ -42,7 +42,7 @@
             this.listViewAVG.GridLines = true;
             this.listViewAVG.Location = new System.Drawing.Point(12, 12);
             this.listViewAVG.Name = "listViewAVG";
-            this.listViewAVG.Size = new System.Drawing.Size(373, 325);
+            this.listViewAVG.Size = new System.Drawing.Size(326, 299);
             this.listViewAVG.TabIndex = 0;
             this.listViewAVG.UseCompatibleStateImageBehavior = false;
             // 
@@ -50,7 +50,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(397, 349);
+            this.ClientSize = new System.Drawing.Size(350, 323);
             this.Controls.Add(this.listViewAVG);
             this.Name = "AVGScoreByCourseForm";
             this.Text = "AVGScoreByCourseForm";
