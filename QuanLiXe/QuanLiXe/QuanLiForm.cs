@@ -54,11 +54,11 @@ namespace QuanLiXe
             menuStrip.BringToFront();
         }
 
-        private void btThongTinTho_Click(object sender, EventArgs e)
+        private void btQuanLiNhanVien_Click(object sender, EventArgs e)
         {
             panelClick.BringToFront();
-            panelClick.Height = btThongTinTho.Height;
-            panelClick.Top = btThongTinTho.Top;
+            panelClick.Height = btQuanLiNhanVien.Height;
+            panelClick.Top = btQuanLiNhanVien.Top;
         }
 
         private void quanLiToolStripMenuItem_Click(object sender, EventArgs e)
@@ -79,12 +79,26 @@ namespace QuanLiXe
             baiXe.ShowDialog();
         }
 
-        private void btTongDoanThu_Click(object sender, EventArgs e)
+        private void btThongKeDoanhThu_Click(object sender, EventArgs e)
         {
             panelClick.BringToFront();
-            panelClick.Height = btTongDoanThu.Height;
-            panelClick.Top = btTongDoanThu.Top;
+            panelClick.Height = btThongKeDoanhThu.Height;
+            panelClick.Top = btThongKeDoanhThu.Top;
             tongDoanThuUC.BringToFront();
+        }
+
+        private void btHopDongKhachHang_Click(object sender, EventArgs e)
+        {
+            panelClick.BringToFront();
+            panelClick.Height = btThongKeDoanhThu.Height;
+            panelClick.Top = btHopDongKhachHang.Top;
+        }
+
+        private void btHopDongCongTy_Click(object sender, EventArgs e)
+        {
+            panelClick.BringToFront();
+            panelClick.Height = btThongKeDoanhThu.Height;
+            panelClick.Top = btHopDongCongTy.Top;
         }
     }
 }

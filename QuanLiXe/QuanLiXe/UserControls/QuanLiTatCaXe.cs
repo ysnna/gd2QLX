@@ -16,6 +16,7 @@ namespace QuanLiXe.UserControls
     {
         MY_DB mydb = new MY_DB();
         KhachHang kh = new KhachHang();
+        LayXeClass layxe = new LayXeClass();
         public QuanLiTatCaXe()
         {
             InitializeComponent();
@@ -23,10 +24,17 @@ namespace QuanLiXe.UserControls
 
         private void QuanLiTatCaXe_Load(object sender, EventArgs e)
         {
+            dgvQuanLiAllXe.DataSource = kh.getQLXRV();
+            refreshData();
             labelDauSaiViTri.Visible = false;
             labelQuaGioGui.Visible = false;
+            btXoa.Visible = false;
+            dgvQuanLiAllXe.BringToFront();
             dgvQuanLiAllXe.ReadOnly = true;
-            refreshData();
+            dgvLuuTruXeDaLay.ReadOnly = true;
+            
+            dgvLuuTruXeDaLay.DataSource = layxe.getLayXe();
+            
         }
 
         private void pictureBoxXeMay_Click(object sender, EventArgs e)
@@ -132,13 +140,30 @@ namespace QuanLiXe.UserControls
         {
             if (MessageBox.Show("Bạn chắc chắn muốn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                for (int i = 0; i < dgvQuanLiAllXe.Rows.Count; i++)
+                for (int i = 0; i < dgvLuuTruXeDaLay.Rows.Count; i++)
                 {
-                    string sID = dgvQuanLiAllXe.Rows[i].Cells[1].Value.ToString().Trim();
-                    kh.deleteCus(sID);
+                    string sID = dgvLuuTruXeDaLay.Rows[i].Cells[1].Value.ToString().Trim();
+                    layxe.deleteCus(sID);
                 }
-                pictureBoxRefresh_Click(sender, e);
+                //pictureBoxRefresh_Click(sender, e);
             }
+        }
+
+        private void btGiaoDienChinh_Click(object sender, EventArgs e)
+        {
+            dgvQuanLiAllXe.BringToFront();
+            btXoa.Visible = false;
+        }
+
+        private void btXeDaLay_Click(object sender, EventArgs e)
+        {
+            dgvLuuTruXeDaLay.BringToFront();
+            btXoa.Visible = true;
+        }
+
+        private void dgvQuanLiAllXe_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

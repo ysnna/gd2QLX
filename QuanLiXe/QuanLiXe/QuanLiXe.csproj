@@ -79,6 +79,7 @@
       <DependentUpon>FormChinhGia.cs</DependentUpon>
     </Compile>
     <Compile Include="KhachHang.cs" />
+    <Compile Include="LayXeClass.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +135,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>_DESKTOP_RRRHOP4DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_DESKTOP_RRRHOP4QLLayXe.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_DESKTOP_RRRHOP4QLLayXe.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="BaiXeForm.resx">
       <DependentUpon>BaiXeForm.cs</DependentUpon>
@@ -212,6 +218,17 @@
     </None>
     <None Include="_DESKTOP_RRRHOP4DataSet.xss">
       <DependentUpon>_DESKTOP_RRRHOP4DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_DESKTOP_RRRHOP4QLLayXe.xsc">
+      <DependentUpon>_DESKTOP_RRRHOP4QLLayXe.xsd</DependentUpon>
+    </None>
+    <None Include="_DESKTOP_RRRHOP4QLLayXe.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_DESKTOP_RRRHOP4QLLayXe.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_DESKTOP_RRRHOP4QLLayXe.xss">
+      <DependentUpon>_DESKTOP_RRRHOP4QLLayXe.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

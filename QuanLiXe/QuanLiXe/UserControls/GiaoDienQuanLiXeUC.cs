@@ -16,6 +16,7 @@ namespace QuanLiXe.UserControls
     {
         MY_DB mydb = new MY_DB();
         KhachHang kh = new KhachHang();
+        LayXeClass layxe = new LayXeClass();
         public GiaoDienQuanLiXeUC()
         {
             InitializeComponent();
@@ -317,10 +318,66 @@ namespace QuanLiXe.UserControls
             panelThanhToan.Visible = true;
             string tong = tongtime.Days + " Ngày " + tongtime.Hours + " Giờ " + tongtime.Minutes + " Phút";
             kh.updateLayXe(txtSearch.Text.ToUpper().Trim(), ngaylay, giolay, tong);
+
+            //row[2] = new MemoryStream();
+            //pictureBoxBienSoXe.Image.Save(row[2], pictureBoxBienSoXe.Image.RawFormat);
+            //layxe.insertXe();
             MessageBox.Show("Mời xe ra");
             btMoiXeVao.Visible = true;
             panelThanhToan.Visible = false;
+
+            //DataTable baixe = kh.getCus();
+            string s = btKhuVuc.Text.ToString();
+            string[] sp = s.Split('.');
+            switch (sp[0])
+            {
+                case "A":
+                    kh.updateBaiXe("0", sp[1]);
+                    break;
+                case "B":
+                    kh.updateBaiXe2("0", sp[1]);
+                    break;
+                case "C":
+                    kh.updateBaiXe3("0", sp[1]);
+                    break;
+                case "D":
+                    kh.updateBaiXe4("0", sp[1]);
+                    break;
+                case "E":
+                    kh.updateBaiXe5("0", sp[1]);
+                    break;
+                case "F":
+                    kh.updateBaiXe6("0", sp[1]);
+                    break;
+                case "G":
+                    kh.updateBaiXe7("0", sp[1]);
+                    break;
+                case "H":
+                    kh.updateBaiXe8("0", sp[1]);
+                    break;
+                case "K":
+                    kh.updateBaiXe9("0", sp[1]);
+                    break;
+            }
+            MemoryStream nguoigui = new MemoryStream();
+            MemoryStream bienso = new MemoryStream();
+            DateTime ngaygui = DTPNgayGui.Value;
+            TimeSpan giogui = Convert.ToDateTime(txtGioGui.Text).TimeOfDay;
+            pictureBoxBienSoXe.Image.Save(bienso, pictureBoxBienSoXe.Image.RawFormat);
+            pictureBoxNguoiGui.Image.Save(nguoigui, pictureBoxNguoiGui.Image.RawFormat);
+            DataTable table = layxe.SearchXe(s);
+            int i = 1;
+            string xe = table.Rows[0][1].ToString();
+            string tongtimeyeucau = table.Rows[0][9].ToString();
+            float tongtien;
+            int x = Convert.ToInt32(table.Rows[0][10]);
+            layxe.insertXe(btKhuVuc.Text, xe, bienso, nguoigui, Convert.ToDateTime(Convert.ToDateTime(DTPNgayGui.Text)), Convert.ToDateTime(txtGioGui.Text).TimeOfDay, Convert.ToDateTime(Convert.ToDateTime(dtpNgayLay.Text)), Convert.ToDateTime(txtGioLay.Text).TimeOfDay, tongtime.ToString(), tongtimeyeucau, x, i);
+
+
+
         }
+        bool ktrow = false;
+        DataTable row;
         DateTime ngaylay;
         TimeSpan giolay;
         DateTime timeguithuc, timelaythuc;
@@ -329,6 +386,58 @@ namespace QuanLiXe.UserControls
         {
             btMoiXeVao.Visible = false;
             panelThanhToan.Visible = true;
+            #region cờ hó danh làm
+            string vitri = txtSearch.Text.Trim().ToUpper();
+            DataTable dt = layxe.SearchXe(vitri);
+
+            if (dt.Rows.Count > 0)
+            {
+                btKhuVuc.Text = dt.Rows[0][0].ToString();
+                string xe = dt.Rows[0][1].ToString().Trim();
+                if (xe == "Ô tô")
+                {
+                    pictureBoxVienXeDap.SendToBack();
+                    pictureBoxVienXeMay.SendToBack();
+                }
+                else if (xe == "Xe máy")
+                {
+                    pictureBoxVienXeDap.SendToBack();
+                    pictureBoxVienOto.SendToBack();
+                }
+                else
+                {
+                    pictureBoxVienOto.SendToBack();
+                    pictureBoxVienXeMay.SendToBack();
+                }
+                byte[] pic = (byte[])dt.Rows[0][3];
+                MemoryStream picture = new MemoryStream(pic);
+                pictureBoxNguoiGui.Image = Image.FromStream(picture);
+                byte[] picbienso = (byte[])dt.Rows[0][2];
+                MemoryStream pictureBienso = new MemoryStream(picbienso);
+                //pictureBoxBienSoXe.Image = (pic.)
+                pictureBoxBienSoXe.Image = Image.FromStream(pictureBienso);
+                DTPNgayGui.Text = dt.Rows[0][4].ToString().Trim();
+                txtGioGui.Text = dt.Rows[0][5].ToString().Trim();
+                string guitheo = dt.Rows[0][9].ToString().Trim();
+                if (guitheo == "Hour") radHour.Checked = true;
+                else if (guitheo == "Day") radDay.Checked = true;
+                else if (guitheo == "Week") radWeek.Checked = true;
+                else radMonth.Checked = true;
+
+                ngaylay = dtpNgayLay.Value;
+                giolay = Convert.ToDateTime(DateTime.Now.ToString("HH:mm:ss")).TimeOfDay;
+                txtGioLay.Text = giolay.ToString();
+                timeguithuc = Convert.ToDateTime(Convert.ToDateTime(DTPNgayGui.Text) + Convert.ToDateTime(txtGioGui.Text).TimeOfDay);
+                timelaythuc = Convert.ToDateTime(Convert.ToDateTime(dtpNgayLay.Text) + Convert.ToDateTime(txtGioLay.Text).TimeOfDay);
+                tongtime = timelaythuc.Subtract(timeguithuc);
+                txtNgay.Text = tongtime.Days.ToString();
+                txtGio.Text = tongtime.Hours.ToString();
+                txtPhut.Text = tongtime.Minutes.ToString();
+            }
+
+            #endregion
+            #region Na Lam
+            /*
             DataTable dt = kh.getQLXRV();
             int countRow = dt.Rows.Count;
             int i = 0;
@@ -359,6 +468,7 @@ namespace QuanLiXe.UserControls
                     pictureBoxNguoiGui.Image = Image.FromStream(picture);
                     byte[] picbienso = (byte[])dt.Rows[i][2];
                     MemoryStream pictureBienso = new MemoryStream(picbienso);
+                    //pictureBoxBienSoXe.Image = (pic.)
                     pictureBoxBienSoXe.Image = Image.FromStream(pictureBienso);
                     DTPNgayGui.Text = dt.Rows[i][4].ToString().Trim();
                     txtGioGui.Text = dt.Rows[i][5].ToString().Trim();
@@ -377,12 +487,17 @@ namespace QuanLiXe.UserControls
                     txtNgay.Text = tongtime.Days.ToString();
                     txtGio.Text = tongtime.Hours.ToString();
                     txtPhut.Text = tongtime.Minutes.ToString();
-                    
+
+                    //layxe.insertXe()
+                    //row = dt.Rows[i];
+                    //ktrow = true;
                     break;
                 }
                 i++;
             }
             if (i >= countRow) MessageBox.Show("Không tìm thấy", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            */
+            #endregion
             mydb.closeConnection();
         }
 
