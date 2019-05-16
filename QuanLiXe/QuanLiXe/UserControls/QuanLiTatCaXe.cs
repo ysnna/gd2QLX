@@ -181,6 +181,7 @@ namespace QuanLiXe.UserControls
         {
             dgvLuuTruXeDaLay.BringToFront();
             btXoa.Visible = true;
+            btSua.Visible = false;
             txtSearchLayXe.BringToFront();
             btSearchLayXe.BringToFront();
             txtSearchLayXe.Text = "";

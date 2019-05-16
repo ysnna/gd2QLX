@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DoanhThu.cs" />
     <Compile Include="Form\AddNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>

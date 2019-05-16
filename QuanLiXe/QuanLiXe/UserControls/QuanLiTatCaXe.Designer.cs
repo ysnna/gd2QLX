@@ -324,7 +324,7 @@
             this.btXoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btXoa.BackColor = System.Drawing.Color.LightCoral;
             this.btXoa.Font = new System.Drawing.Font("UTM Centur", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btXoa.Location = new System.Drawing.Point(800, 749);
+            this.btXoa.Location = new System.Drawing.Point(928, 749);
             this.btXoa.Name = "btXoa";
             this.btXoa.Size = new System.Drawing.Size(145, 46);
             this.btXoa.TabIndex = 66;

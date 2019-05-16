@@ -34,7 +34,7 @@ namespace QuanLiXe
             menuStrip.Location = new Point(350, 0);
             pictureBoxBack.Location = new Point(370, 12);
             pictureBoxBack.BackColor = quanLiTatCaXe.BackColor;
-            tongDoanThuUC.Location = new Point(350, 0);
+            TongDoanhThuUC.Location = new Point(350, 0);
         }
 
         private void btThongTinKhachHang_Click(object sender, EventArgs e)
@@ -85,7 +85,7 @@ namespace QuanLiXe
             panelClick.BringToFront();
             panelClick.Height = btThongKeDoanhThu.Height;
             panelClick.Top = btThongKeDoanhThu.Top;
-            tongDoanThuUC.BringToFront();
+            TongDoanhThuUC.BringToFront();
         }
 
         private void btHopDongKhachHang_Click(object sender, EventArgs e)
