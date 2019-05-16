@@ -66,6 +66,8 @@ namespace QuanLiXe
         {
             quanLiTatCaXe.BringToFront();
             pictureBoxBack.BringToFront();
+            this.quanLiTatCaXe.refreshData();
+            this.quanLiTatCaXe.refreshDataLayXe();
         }
 
         private void pictureBoxBack_Click(object sender, EventArgs e)

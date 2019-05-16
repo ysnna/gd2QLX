@@ -16,7 +16,7 @@ namespace QuanLiXe
         //Get tu bang QLLXe ra
         public DataTable getDoanhThu(DateTime ngaylay)
         {
-            SqlCommand cmd = new SqlCommand("select loaixe,ngaylayxe,count (loaixe) as loaixe,sum (tongtien) as tongtien from QLLAYXE where ngaylayxe= @ngaylay group by loaixe, ngaylayxe", mydb.getConnection);
+            SqlCommand cmd = new SqlCommand("select loaixe, ngaylayxe, count (loaixe), sum (tongtien) from QLLAYXE where ngaylayxe=@ngaylay group by loaixe, ngaylayxe", mydb.getConnection);
             cmd.Parameters.Add("@ngaylay", SqlDbType.Date).Value = ngaylay;
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -47,9 +47,10 @@ namespace QuanLiXe
         }
 
         //Get tu bang DoanhThuGiuXe de lay thong ke
-        public DataTable getThongKe()
+        public DataTable getThongKe(DateTime date)
         {
-            SqlCommand cmd = new SqlCommand("select * from DOANHTHUGUIXE", mydb.getConnection);
+            SqlCommand cmd = new SqlCommand("select * from DOANHTHUGUIXE where ngaylay=@ngaylay", mydb.getConnection);
+            cmd.Parameters.Add("@ngaylay", SqlDbType.Date).Value = date;
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -66,12 +67,23 @@ namespace QuanLiXe
             if (dt.Rows.Count > 0) return true;
             return false;
         }
-        public bool updateDoanhThu(int soluong, int tongtien, string loaixe)
+        public DataTable getDataNgayCu(DateTime date, string loaixe)
         {
-            SqlCommand cmd = new SqlCommand("update DOANHTHUGUIXE set soluong=@soluong, tongtien=@tongtien where loaixe=@loaixe ", mydb.getConnection);
+            SqlCommand cmd = new SqlCommand("select * from DOANHTHUGUIXE where ngaylay=@ngaylay and loaixe=@loaixe", mydb.getConnection);
+            cmd.Parameters.Add("@ngaylay", SqlDbType.Date).Value = date;
+            cmd.Parameters.Add("@loaixe", SqlDbType.NVarChar).Value = loaixe;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+        public bool updateDoanhThu(string loaixe, DateTime ngaylay, int soluong, int tongtien)
+        {
+            SqlCommand cmd = new SqlCommand("update DOANHTHUGUIXE set soluong=@soluong, tongtien=@tongtien where loaixe=@loaixe and ngaylay=@ngaylay", mydb.getConnection);
+            cmd.Parameters.Add("@loaixe", SqlDbType.NVarChar).Value = loaixe;
+            cmd.Parameters.Add("@ngaylay", SqlDbType.Date).Value = ngaylay;
             cmd.Parameters.Add("@soluong", SqlDbType.Int).Value = soluong;
             cmd.Parameters.Add("@tongtien", SqlDbType.Int).Value = tongtien;
-            cmd.Parameters.Add("@loaixe", SqlDbType.NVarChar).Value = loaixe;
             mydb.openConnection();
             if (cmd.ExecuteNonQuery() == 1)
             {

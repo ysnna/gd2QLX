@@ -22,18 +22,14 @@ namespace QuanLiXe.UserControls
         //Load tong doanh thu
         private void TongDoanThuUC_Load(object sender, EventArgs e)
         {
-            dgvThongKe.RowTemplate.Height = 70;
-            dgvThongKe.DataSource = dthu.getThongKe();
-            dgvThongKe.Columns[0].HeaderText = "Loại xe";
-            dgvThongKe.Columns[1].HeaderText = "Ngày";
-            dgvThongKe.Columns[2].HeaderText = "Số lượng";
-            dgvThongKe.Columns[3].HeaderText = "Tổng tiền";
+            //dateTimePickerToday.Hide();
+            refreshData();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DateTime today = Convert.ToDateTime(dateTimePicker.Text);
-            DataTable dt = dthu.getDoanhThu(Convert.ToDateTime(dateTimePicker.Text));
+            DateTime today = Convert.ToDateTime(dateTimePickerToday.Text);
+            DataTable dt = dthu.getDoanhThu(Convert.ToDateTime(dateTimePickerToday.Text));
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 string loaixe = dt.Rows[i][0].ToString();
@@ -45,10 +41,25 @@ namespace QuanLiXe.UserControls
                 }
                 else
                 {
-                    dthu.updateDoanhThu(soluong, tongtien, loaixe);
+                    DataTable find = dthu.getDataNgayCu(today, loaixe);
+                    soluong += Convert.ToInt32(find.Rows[i][2]);
+                    tongtien += Convert.ToInt32(find.Rows[i][3]);
+                    dthu.updateDoanhThu(loaixe, today, soluong, tongtien);
                 }
             }
-            dgvThongKe.DataSource = dthu.getThongKe();
+            MessageBox.Show("Đã lưu", "Đang lưu...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            refreshData();
+        }
+        void refreshData()
+        {
+            DateTime date = Convert.ToDateTime(dateTimePicker.Text);
+            dgvThongKe.DataSource = dthu.getThongKe(date);
+            dgvThongKe.RowTemplate.Height = 50;
+        }
+
+        private void dateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            refreshData();
         }
     }
 }

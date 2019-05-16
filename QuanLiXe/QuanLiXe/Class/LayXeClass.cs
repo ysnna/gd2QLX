@@ -57,14 +57,21 @@ namespace QuanLiXe
                         }
                         else
                         {
-                            if (phut < 30)
+                            if (gio == 0)
                             {
-                                tongphi = Convert.ToInt32(dtgia.Rows[2][1].ToString()) * gio;
+                                tongphi = Convert.ToInt32(dtgia.Rows[2][1].ToString());
                             }
-                            else
+                            else 
                             {
-                                gio++;
-                                tongphi = Convert.ToInt32(dtgia.Rows[2][1].ToString()) * gio;
+                                if (phut < 30)
+                                {
+                                    tongphi = Convert.ToInt32(dtgia.Rows[2][1].ToString()) * gio;
+                                }
+                                else
+                                {
+                                    gio++;
+                                    tongphi = Convert.ToInt32(dtgia.Rows[2][1].ToString()) * gio;
+                                }
                             }
                         }
                     }
@@ -144,14 +151,21 @@ namespace QuanLiXe
                         }
                         else
                         {
-                            if (phut < 30)
+                            if (gio == 0)
                             {
-                                tongphi = Convert.ToInt32(dtgia.Rows[1][1].ToString()) * gio;
+                                tongphi = Convert.ToInt32(dtgia.Rows[1][1].ToString());
                             }
                             else
                             {
-                                gio++;
-                                tongphi = Convert.ToInt32(dtgia.Rows[1][1].ToString()) * gio;
+                                if (phut < 30)
+                                {
+                                    tongphi = Convert.ToInt32(dtgia.Rows[1][1].ToString()) * gio;
+                                }
+                                else
+                                {
+                                    gio++;
+                                    tongphi = Convert.ToInt32(dtgia.Rows[1][1].ToString()) * gio;
+                                }
                             }
                         }
                     }
@@ -231,14 +245,21 @@ namespace QuanLiXe
                         }
                         else
                         {
-                            if (phut < 30)
+                            if (gio == 0)
                             {
-                                tongphi = Convert.ToInt32(dtgia.Rows[0][1].ToString()) * gio;
+                                tongphi = Convert.ToInt32(dtgia.Rows[0][1].ToString());
                             }
                             else
                             {
-                                gio++;
-                                tongphi = Convert.ToInt32(dtgia.Rows[0][1].ToString()) * gio;
+                                if (phut < 30)
+                                {
+                                    tongphi = Convert.ToInt32(dtgia.Rows[0][1].ToString()) * gio;
+                                }
+                                else
+                                {
+                                    gio++;
+                                    tongphi = Convert.ToInt32(dtgia.Rows[0][1].ToString()) * gio;
+                                }
                             }
                         }
                     }
@@ -296,7 +317,7 @@ namespace QuanLiXe
                         }
                     }
                     break;
-                #endregion
+                    #endregion
             }
             return tongphi;
         }

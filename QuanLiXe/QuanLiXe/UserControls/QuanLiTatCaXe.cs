@@ -25,7 +25,7 @@ namespace QuanLiXe.UserControls
         private void QuanLiTatCaXe_Load(object sender, EventArgs e)
         {
             dgvQuanLiAllXe.DataSource = kh.getQLXRV();
-            refreshData();
+            this.refreshData();
             txtSearch.BringToFront();
             btSearch.BringToFront();
             labelDauSaiViTri.Visible = false;
@@ -35,6 +35,7 @@ namespace QuanLiXe.UserControls
             dgvQuanLiAllXe.ReadOnly = true;
             dgvLuuTruXeDaLay.ReadOnly = true;
             refreshDataLayXe();
+            
         }
 
         private void pictureBoxXeMay_Click(object sender, EventArgs e)
@@ -164,7 +165,7 @@ namespace QuanLiXe.UserControls
                     string sID = dgvLuuTruXeDaLay.Rows[i].Cells[1].Value.ToString().Trim();
                     layxe.deleteCus(sID);
                 }
-                //pictureBoxRefresh_Click(sender, e);
+                this.refreshDataLayXe();
             }
         }
 
