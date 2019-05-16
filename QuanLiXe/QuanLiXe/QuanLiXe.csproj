@@ -61,10 +61,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaiXeForm.cs">
+    <Compile Include="Form\AddNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BaiXeForm.Designer.cs">
+    <Compile Include="Form\AddNhanVien.Designer.cs">
+      <DependentUpon>AddNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\AddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\AddCustomer.Designer.cs">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Contract.cs" />
+    <Compile Include="Class\Cus.cs" />
+    <Compile Include="Class\NhanVien.cs" />
+    <Compile Include="Form\BaiXeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\BaiXeForm.Designer.cs">
       <DependentUpon>BaiXeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="dataSetBaiXe.Designer.cs">
@@ -72,35 +87,47 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dataSetBaiXe.xsd</DependentUpon>
     </Compile>
-    <Compile Include="FormChinhGia.cs">
+    <Compile Include="Form\FormChinhGia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormChinhGia.Designer.cs">
+    <Compile Include="Form\FormChinhGia.Designer.cs">
       <DependentUpon>FormChinhGia.cs</DependentUpon>
     </Compile>
-    <Compile Include="KhachHang.cs" />
-    <Compile Include="LayXeClass.cs" />
-    <Compile Include="LoginForm.cs">
+    <Compile Include="Class\KhachHang.cs" />
+    <Compile Include="Class\LayXeClass.cs" />
+    <Compile Include="Form\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
+    <Compile Include="Form\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MY_DB.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Class\MY_DB.cs" />
+    <Compile Include="Class\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuanLiBaiXe_Class.cs" />
-    <Compile Include="QuanLiForm.cs">
+    <Compile Include="Class\QuanLiBaiXe_Class.cs" />
+    <Compile Include="Form\QuanLiForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QuanLiForm.Designer.cs">
+    <Compile Include="Form\QuanLiForm.Designer.cs">
       <DependentUpon>QuanLiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ConTractList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ConTractList.Designer.cs">
+      <DependentUpon>ConTractList.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\GioiThieuUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\GioiThieuUC.Designer.cs">
       <DependentUpon>GioiThieuUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\NhanVienUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\NhanVienUC.Designer.cs">
+      <DependentUpon>NhanVienUC.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\QuanLiTatCaXe.cs">
       <SubType>UserControl</SubType>
@@ -141,13 +168,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_DESKTOP_RRRHOP4QLLayXe.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BaiXeForm.resx">
+    <EmbeddedResource Include="Form\AddNhanVien.resx">
+      <DependentUpon>AddNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\AddCustomer.resx">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\BaiXeForm.resx">
       <DependentUpon>BaiXeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormChinhGia.resx">
+    <EmbeddedResource Include="Form\FormChinhGia.resx">
       <DependentUpon>FormChinhGia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
+    <EmbeddedResource Include="Form\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -159,11 +192,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="QuanLiForm.resx">
+    <EmbeddedResource Include="Form\QuanLiForm.resx">
       <DependentUpon>QuanLiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ConTractList.resx">
+      <DependentUpon>ConTractList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\GioiThieuUC.resx">
       <DependentUpon>GioiThieuUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\NhanVienUC.resx">
+      <DependentUpon>NhanVienUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\QuanLiTatCaXe.resx">
       <DependentUpon>QuanLiTatCaXe.cs</DependentUpon>

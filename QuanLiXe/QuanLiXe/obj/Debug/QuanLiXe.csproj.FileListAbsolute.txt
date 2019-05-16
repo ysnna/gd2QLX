@@ -108,3 +108,7 @@ E:\LTWindows\WindowsQLXe\QLXe\gd2QLX\QuanLiXe\QuanLiXe\obj\Debug\QuanLiXe.csproj
 E:\LTWindows\WindowsQLXe\QLXe\gd2QLX\QuanLiXe\QuanLiXe\obj\Debug\QuanLiXe.exe
 E:\LTWindows\WindowsQLXe\QLXe\gd2QLX\QuanLiXe\QuanLiXe\obj\Debug\QuanLiXe.pdb
 E:\LTWindows\WindowsQLXe\QLXe\gd2QLX\QuanLiXe\QuanLiXe\obj\Debug\QuanLiXe.FormChinhGia.resources
+E:\LTWindows\WindowsQLXe\QLXe\gd2QLX\QuanLiXe\QuanLiXe\obj\Debug\QuanLiXe.UserControls.HopDongGui.resources
+E:\LTWindows\WindowsQLXe\QLXe\gd2QLX\QuanLiXe\QuanLiXe\obj\Debug\QuanLiXe.AddCustomer.resources
+E:\LTWindows\WindowsQLXe\QLXe\gd2QLX\QuanLiXe\QuanLiXe\obj\Debug\QuanLiXe.UserControls.NhanVienUC.resources
+E:\LTWindows\WindowsQLXe\QLXe\gd2QLX\QuanLiXe\QuanLiXe\obj\Debug\QuanLiXe.AddNhanVien.resources

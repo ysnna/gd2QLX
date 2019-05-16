@@ -138,7 +138,7 @@
             // 
             // btXeMay
             // 
-            this.btXeMay.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btXeMay.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btXeMay.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btXeMay.BackgroundImage")));
             this.btXeMay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btXeMay.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -506,9 +506,9 @@
             this.lbThanhTien.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbThanhTien.Location = new System.Drawing.Point(10, 81);
             this.lbThanhTien.Name = "lbThanhTien";
-            this.lbThanhTien.Size = new System.Drawing.Size(213, 36);
+            this.lbThanhTien.Size = new System.Drawing.Size(132, 36);
             this.lbThanhTien.TabIndex = 95;
-            this.lbThanhTien.Text = "= 500000 VND";
+            this.lbThanhTien.Text = "= (VND)";
             // 
             // label7
             // 
@@ -629,7 +629,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BackColor = System.Drawing.Color.LightBlue;
             this.Controls.Add(this.txtGioLay);
             this.Controls.Add(this.dtpNgayLay);
             this.Controls.Add(this.btRefreshLayXe);

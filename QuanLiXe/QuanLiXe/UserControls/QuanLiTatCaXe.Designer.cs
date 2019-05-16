@@ -49,11 +49,7 @@
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.qUANLIXERAVAOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this._DESKTOP_RRRHOP4DataSet = new QuanLiXe._DESKTOP_RRRHOP4DataSet();
             this.pictureBoxXeMay = new System.Windows.Forms.PictureBox();
@@ -64,11 +60,6 @@
             this.btXoa = new System.Windows.Forms.Button();
             this.qUANLIXERAVAOTableAdapter = new QuanLiXe._DESKTOP_RRRHOP4DataSetTableAdapters.QUANLIXERAVAOTableAdapter();
             this.dgvLuuTruXeDaLay = new System.Windows.Forms.DataGridView();
-            this.btXeDaLay = new System.Windows.Forms.Button();
-            this.btGiaoDienChinh = new System.Windows.Forms.Button();
-            this._DESKTOP_RRRHOP4QLLayXe = new QuanLiXe._DESKTOP_RRRHOP4QLLayXe();
-            this.qLLAYXEBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qLLAYXETableAdapter = new QuanLiXe._DESKTOP_RRRHOP4QLLayXeTableAdapters.QLLAYXETableAdapter();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewImageColumn4 = new System.Windows.Forms.DataGridViewImageColumn();
@@ -81,6 +72,13 @@
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.useridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qLLAYXEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._DESKTOP_RRRHOP4QLLayXe = new QuanLiXe._DESKTOP_RRRHOP4QLLayXe();
+            this.btXeDaLay = new System.Windows.Forms.Button();
+            this.btGiaoDienChinh = new System.Windows.Forms.Button();
+            this.qLLAYXETableAdapter = new QuanLiXe._DESKTOP_RRRHOP4QLLayXeTableAdapters.QLLAYXETableAdapter();
+            this.btSearchLayXe = new System.Windows.Forms.Button();
+            this.txtSearchLayXe = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRefresh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuanLiAllXe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qUANLIXERAVAOBindingSource)).BeginInit();
@@ -89,8 +87,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxXeDap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLuuTruXeDaLay)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._DESKTOP_RRRHOP4QLLayXe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLLAYXEBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._DESKTOP_RRRHOP4QLLayXe)).BeginInit();
             this.SuspendLayout();
             // 
             // txtSearch
@@ -165,11 +163,7 @@
             this.dataGridViewImageColumn1,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9});
+            this.dataGridViewTextBoxColumn8});
             this.dgvQuanLiAllXe.DataSource = this.qUANLIXERAVAOBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
@@ -198,84 +192,55 @@
             this.dgvQuanLiAllXe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvQuanLiAllXe.Size = new System.Drawing.Size(1080, 660);
             this.dgvQuanLiAllXe.TabIndex = 60;
-            this.dgvQuanLiAllXe.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQuanLiAllXe_CellContentClick);
             // 
             // dataGridViewTextBoxColumn2
             // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn2.DataPropertyName = "loaixe";
             this.dataGridViewTextBoxColumn2.HeaderText = "Loại xe";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 119;
             // 
             // dataGridViewTextBoxColumn1
             // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn1.DataPropertyName = "vitri";
             this.dataGridViewTextBoxColumn1.HeaderText = "Vị trí";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 94;
             // 
             // dataGridViewImageColumn2
             // 
+            this.dataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewImageColumn2.DataPropertyName = "ava";
-            this.dataGridViewImageColumn2.HeaderText = "Người gửi";
+            this.dataGridViewImageColumn2.HeaderText = "Người gửi xe";
             this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            this.dataGridViewImageColumn2.Width = 123;
             // 
             // dataGridViewImageColumn1
             // 
+            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewImageColumn1.DataPropertyName = "bienso";
-            this.dataGridViewImageColumn1.HeaderText = "Biển số";
+            this.dataGridViewImageColumn1.HeaderText = "Biển số xe";
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.Width = 101;
             // 
             // dataGridViewTextBoxColumn3
             // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn3.DataPropertyName = "ngayguixe";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Ngày gửi";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Ngày gửi xe";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 133;
             // 
             // dataGridViewTextBoxColumn4
             // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn4.DataPropertyName = "gioguixe";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Giờ gửi";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Giờ gửi xe";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 118;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "ngaylayxe";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Ngày lấy";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 132;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "giolayxe";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Giờ lấy";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 117;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "tongTime";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Thời gian thực";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Width = 197;
             // 
             // dataGridViewTextBoxColumn8
             // 
+            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn8.DataPropertyName = "timeyeucau";
             this.dataGridViewTextBoxColumn8.HeaderText = "Yêu cầu gửi";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Width = 163;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "tongtien";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Thành tiền";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             // 
             // qUANLIXERAVAOBindingSource
             // 
@@ -380,7 +345,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvLuuTruXeDaLay.AutoGenerateColumns = false;
             this.dgvLuuTruXeDaLay.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvLuuTruXeDaLay.BackgroundColor = System.Drawing.Color.LightGreen;
+            this.dgvLuuTruXeDaLay.BackgroundColor = System.Drawing.Color.LightSteelBlue;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("UVN Anh Hai", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -413,7 +378,7 @@
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvLuuTruXeDaLay.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvLuuTruXeDaLay.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvLuuTruXeDaLay.Location = new System.Drawing.Point(107, 89);
+            this.dgvLuuTruXeDaLay.Location = new System.Drawing.Point(0, 83);
             this.dgvLuuTruXeDaLay.Name = "dgvLuuTruXeDaLay";
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
@@ -431,46 +396,6 @@
             this.dgvLuuTruXeDaLay.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvLuuTruXeDaLay.Size = new System.Drawing.Size(1080, 660);
             this.dgvLuuTruXeDaLay.TabIndex = 67;
-            // 
-            // btXeDaLay
-            // 
-            this.btXeDaLay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btXeDaLay.BackColor = System.Drawing.Color.LightCoral;
-            this.btXeDaLay.Font = new System.Drawing.Font("UTM Centur", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btXeDaLay.Location = new System.Drawing.Point(163, 749);
-            this.btXeDaLay.Name = "btXeDaLay";
-            this.btXeDaLay.Size = new System.Drawing.Size(144, 46);
-            this.btXeDaLay.TabIndex = 68;
-            this.btXeDaLay.Text = "Xe đã lấy";
-            this.btXeDaLay.UseVisualStyleBackColor = false;
-            this.btXeDaLay.Click += new System.EventHandler(this.btXeDaLay_Click);
-            // 
-            // btGiaoDienChinh
-            // 
-            this.btGiaoDienChinh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btGiaoDienChinh.BackColor = System.Drawing.Color.LightCoral;
-            this.btGiaoDienChinh.Font = new System.Drawing.Font("UTM Centur", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btGiaoDienChinh.Location = new System.Drawing.Point(13, 749);
-            this.btGiaoDienChinh.Name = "btGiaoDienChinh";
-            this.btGiaoDienChinh.Size = new System.Drawing.Size(144, 46);
-            this.btGiaoDienChinh.TabIndex = 69;
-            this.btGiaoDienChinh.Text = "Quản lí";
-            this.btGiaoDienChinh.UseVisualStyleBackColor = false;
-            this.btGiaoDienChinh.Click += new System.EventHandler(this.btGiaoDienChinh_Click);
-            // 
-            // _DESKTOP_RRRHOP4QLLayXe
-            // 
-            this._DESKTOP_RRRHOP4QLLayXe.DataSetName = "_DESKTOP_RRRHOP4QLLayXe";
-            this._DESKTOP_RRRHOP4QLLayXe.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // qLLAYXEBindingSource
-            // 
-            this.qLLAYXEBindingSource.DataMember = "QLLAYXE";
-            this.qLLAYXEBindingSource.DataSource = this._DESKTOP_RRRHOP4QLLayXe;
-            // 
-            // qLLAYXETableAdapter
-            // 
-            this.qLLAYXETableAdapter.ClearBeforeFill = true;
             // 
             // dataGridViewTextBoxColumn11
             // 
@@ -556,11 +481,77 @@
             this.useridDataGridViewTextBoxColumn.HeaderText = "User";
             this.useridDataGridViewTextBoxColumn.Name = "useridDataGridViewTextBoxColumn";
             // 
+            // qLLAYXEBindingSource
+            // 
+            this.qLLAYXEBindingSource.DataMember = "QLLAYXE";
+            this.qLLAYXEBindingSource.DataSource = this._DESKTOP_RRRHOP4QLLayXe;
+            // 
+            // _DESKTOP_RRRHOP4QLLayXe
+            // 
+            this._DESKTOP_RRRHOP4QLLayXe.DataSetName = "_DESKTOP_RRRHOP4QLLayXe";
+            this._DESKTOP_RRRHOP4QLLayXe.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // btXeDaLay
+            // 
+            this.btXeDaLay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btXeDaLay.BackColor = System.Drawing.Color.LightCoral;
+            this.btXeDaLay.Font = new System.Drawing.Font("UTM Centur", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btXeDaLay.Location = new System.Drawing.Point(163, 749);
+            this.btXeDaLay.Name = "btXeDaLay";
+            this.btXeDaLay.Size = new System.Drawing.Size(144, 46);
+            this.btXeDaLay.TabIndex = 68;
+            this.btXeDaLay.Text = "Xe đã lấy";
+            this.btXeDaLay.UseVisualStyleBackColor = false;
+            this.btXeDaLay.Click += new System.EventHandler(this.btXeDaLay_Click);
+            // 
+            // btGiaoDienChinh
+            // 
+            this.btGiaoDienChinh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btGiaoDienChinh.BackColor = System.Drawing.Color.LightCoral;
+            this.btGiaoDienChinh.Font = new System.Drawing.Font("UTM Centur", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btGiaoDienChinh.Location = new System.Drawing.Point(13, 749);
+            this.btGiaoDienChinh.Name = "btGiaoDienChinh";
+            this.btGiaoDienChinh.Size = new System.Drawing.Size(144, 46);
+            this.btGiaoDienChinh.TabIndex = 69;
+            this.btGiaoDienChinh.Text = "Quản lí";
+            this.btGiaoDienChinh.UseVisualStyleBackColor = false;
+            this.btGiaoDienChinh.Click += new System.EventHandler(this.btGiaoDienChinh_Click);
+            // 
+            // qLLAYXETableAdapter
+            // 
+            this.qLLAYXETableAdapter.ClearBeforeFill = true;
+            // 
+            // btSearchLayXe
+            // 
+            this.btSearchLayXe.BackColor = System.Drawing.Color.Transparent;
+            this.btSearchLayXe.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btSearchLayXe.BackgroundImage")));
+            this.btSearchLayXe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btSearchLayXe.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSearchLayXe.ForeColor = System.Drawing.Color.Transparent;
+            this.btSearchLayXe.Location = new System.Drawing.Point(436, 27);
+            this.btSearchLayXe.Name = "btSearchLayXe";
+            this.btSearchLayXe.Size = new System.Drawing.Size(41, 40);
+            this.btSearchLayXe.TabIndex = 71;
+            this.btSearchLayXe.UseVisualStyleBackColor = false;
+            this.btSearchLayXe.Click += new System.EventHandler(this.btSearchLayXe_Click);
+            // 
+            // txtSearchLayXe
+            // 
+            this.txtSearchLayXe.BackColor = System.Drawing.SystemColors.Info;
+            this.txtSearchLayXe.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchLayXe.Location = new System.Drawing.Point(191, 27);
+            this.txtSearchLayXe.Multiline = true;
+            this.txtSearchLayXe.Name = "txtSearchLayXe";
+            this.txtSearchLayXe.Size = new System.Drawing.Size(270, 40);
+            this.txtSearchLayXe.TabIndex = 70;
+            // 
             // QuanLiTatCaXe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.Controls.Add(this.btSearchLayXe);
+            this.Controls.Add(this.txtSearchLayXe);
             this.Controls.Add(this.btSearch);
             this.Controls.Add(this.btGiaoDienChinh);
             this.Controls.Add(this.btXeDaLay);
@@ -586,8 +577,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxXeDap)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLuuTruXeDaLay)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._DESKTOP_RRRHOP4QLLayXe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLLAYXEBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._DESKTOP_RRRHOP4QLLayXe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -619,17 +610,6 @@
         private System.Windows.Forms.BindingSource qUANLIXERAVAOBindingSource;
         private _DESKTOP_RRRHOP4DataSet _DESKTOP_RRRHOP4DataSet;
         private _DESKTOP_RRRHOP4DataSetTableAdapters.QUANLIXERAVAOTableAdapter qUANLIXERAVAOTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridView dgvLuuTruXeDaLay;
         private System.Windows.Forms.Button btXeDaLay;
         private System.Windows.Forms.Button btGiaoDienChinh;
@@ -648,5 +628,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
         private System.Windows.Forms.DataGridViewTextBoxColumn useridDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.Button btSearchLayXe;
+        public System.Windows.Forms.TextBox txtSearchLayXe;
     }
 }
