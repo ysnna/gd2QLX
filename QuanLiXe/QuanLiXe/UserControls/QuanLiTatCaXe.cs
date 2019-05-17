@@ -112,48 +112,8 @@ namespace QuanLiXe.UserControls
 
         private void btSua_Click_1(object sender, EventArgs e)
         {
-            //int id;
-            //string fname = TextBoxFname.Text;
-            //string lname = TextBoxLname.Text;
-            //DateTime bdate = DateTimePicker1.Value;
-            //string phone = TextBoxPhone.Text;
-            //string adrs = TextBoxAddress.Text;
-            //string gender = "Male";
-            //if (RadioButtonFemale.Checked)
-            //{
-            //    gender = "Female";
-            //}
-            //MemoryStream pic = new MemoryStream();
-            //int born_year = DateTimePicker1.Value.Year;
-            //int this_year = DateTime.Now.Year;
-            //if (((this_year - born_year) < 10) || ((this_year - born_year) > 100))
-            //{
-            //    MessageBox.Show("The student age must be between 10 and 100 year", "Birth date error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            //}
-            //else if (verif())
-            //{
-            //    try
-            //    {
-            //        id = Convert.ToInt32(TextBoxID.Text);
-            //        PictureBoxStudentImage.Image.Save(pic, PictureBoxStudentImage.Image.RawFormat);
-            //        if (student.updateStudent(id, fname, lname, bdate, gender, phone, adrs, pic))
-            //        {
-            //            MessageBox.Show("Student information updated", "Edit student", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //        }
-            //        else
-            //        {
-            //            MessageBox.Show("Error", "Edit Student", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //        }
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        MessageBox.Show(ex.Message, "Edit student", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            //    }
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Empty fields", "Edit student", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            //}
+            EditGuiXe edit = new EditGuiXe();
+            edit.ShowDialog();
         }
 
         private void btXoa_Click(object sender, EventArgs e)

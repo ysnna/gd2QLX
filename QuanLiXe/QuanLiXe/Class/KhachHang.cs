@@ -304,6 +304,28 @@ namespace QuanLiXe
             }
         }
 
+        public bool updateGiaoDienChinh(string vitri, string loaixe, MemoryStream ava, MemoryStream bienso, DateTime ngaygui, TimeSpan giogui, string yeucau)
+        {
+            SqlCommand cmd = new SqlCommand("update QUANLIXERAVAO set loaixe=@loaixe, ava=@ava, bienso=@bienso, ngayguixe=@ngaygui, gioguixe=@giogui, timeyeucau=@yeucau where vitri=@vt ", mydb.getConnection);
+            cmd.Parameters.Add("@loaixe", SqlDbType.NVarChar).Value = loaixe;
+            cmd.Parameters.Add("@ava", SqlDbType.Image).Value = ava.ToArray();
+            cmd.Parameters.Add("@bienso", SqlDbType.Image).Value = bienso.ToArray();
+            cmd.Parameters.Add("@ngaygui", SqlDbType.Date).Value = ngaygui;
+            cmd.Parameters.Add("@giogui", SqlDbType.Time).Value = giogui;
+            cmd.Parameters.Add("@yeucau", SqlDbType.NChar).Value = yeucau;
+            cmd.Parameters.Add("@vt", SqlDbType.VarChar).Value = vitri;
+            mydb.openConnection();
+            if (cmd.ExecuteNonQuery() == 1)
+            {
+                mydb.closeConnection();
+                return true;
+            }
+            else
+            {
+                mydb.closeConnection();
+                return false;
+            }
+        }
         //Update thông tin, cần bổ sung biến //**
         //public bool updateCus(string vitri, string loaixe, MemoryStream anhbienso, MemoryStream anhxe,
         //    DateTime ngaygui, DateTime giogui, string yeucau)

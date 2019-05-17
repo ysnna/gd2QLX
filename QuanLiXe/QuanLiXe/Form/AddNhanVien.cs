@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
 
 namespace QuanLiXe
 {
@@ -18,6 +18,8 @@ namespace QuanLiXe
             InitializeComponent();
         }
         NhanVien nv = new NhanVien();
+        NhanVien1 uc = new NhanVien1();
+
         private void ptbAva_Click(object sender, EventArgs e)
         {
             OpenFileDialog open = new OpenFileDialog();
@@ -40,18 +42,33 @@ namespace QuanLiXe
             DateTime bdate = dateTimePicker1.Value;
             string address = txtAddress.Text;
             string cmnd = txtCmnd.Text;
-            string type = "part time";
-            if (radioFull.Checked)
+            string type = "Giam Sat";
+            if (radioTho.Checked)
             {
-                gender = "full time";
+                type = "Tho";
+            }
+            else if (radioVP.Checked)
+            {
+                type = "Van phong";
             }
 
             MemoryStream pic = new MemoryStream();
             ptbAva.Image.Save(pic, ptbAva.Image.RawFormat);
             if (nv.insertNhanVien(manv, ho, ten, gender, bdate, sdt, address, cmnd, pic, type))
             {
-                MessageBox.Show("oke!");
+                MessageBox.Show("Thêm nhân viên thành công", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
+            else
+            {
+                MessageBox.Show("Mã số nhân viên đã tồn tại", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void AddNhanVien_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            uc.dgvNhanVien.DataSource = nv.getAllNV();
+            uc.dgvNhanVien.Refresh();
         }
     }
 }

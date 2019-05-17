@@ -19,7 +19,7 @@ namespace QuanLiXe.UserControls
         {
             InitializeComponent();
         }
-        NhanVien nv = new NhanVien();
+        NhanVien1 nv = new NhanVien1();
         private void btnSearch_Click(object sender, EventArgs e)
         {
             SqlCommand cmd = new SqlCommand("select * from NhanVien where MaNV like'%" + txtSearch.Text + "%'");
