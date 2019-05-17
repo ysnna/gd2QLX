@@ -27,7 +27,7 @@ namespace QuanLiXe.UserControls
             //xử lí hình ảnh, code có tham khảo msdn
             DataGridViewImageColumn picCol = new DataGridViewImageColumn();
             dgvNhanVien.RowTemplate.Height = 90; //chỉnh pic đẹp
-            dgvNhanVien.DataSource = nv.searchNhanVien(cmd);
+            //dgvNhanVien.DataSource = nv.searchNhanVien(cmd);
             picCol = (DataGridViewImageColumn)dgvNhanVien.Columns[8];
             picCol.ImageLayout = DataGridViewImageCellLayout.Zoom;
             dgvNhanVien.AllowUserToAddRows = false;
@@ -41,7 +41,7 @@ namespace QuanLiXe.UserControls
 
         private void NhanVienUC_Load(object sender, EventArgs e)
         {
-            dgvNhanVien.DataSource = nv.getAllCus();
+            //dgvNhanVien.DataSource = nv.getAllCus();
             dgvNhanVien.Show();
         }
     }

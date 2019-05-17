@@ -18,7 +18,8 @@ namespace QuanLiXe
             InitializeComponent();
         }
         NhanVien nv = new NhanVien();
-        NhanVien1 uc = new NhanVien1();
+        //NhanVien1 uc = new NhanVien1();
+        
 
         private void ptbAva_Click(object sender, EventArgs e)
         {
@@ -67,8 +68,8 @@ namespace QuanLiXe
 
         private void AddNhanVien_FormClosing(object sender, FormClosingEventArgs e)
         {
-            uc.dgvNhanVien.DataSource = nv.getAllNV();
-            uc.dgvNhanVien.Refresh();
+            //uc.dgvNhanVien.DataSource = nv.getAllNV();
+            //uc.dgvNhanVien.Refresh();
         }
     }
 }

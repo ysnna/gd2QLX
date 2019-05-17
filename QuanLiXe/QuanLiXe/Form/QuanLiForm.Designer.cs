@@ -44,6 +44,7 @@
             this.baiXeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quanLiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBoxBack = new System.Windows.Forms.PictureBox();
+            this.nhanVien1 = new QuanLiXe.UserControls.NhanVien1();
             this.TongDoanhThuUC = new QuanLiXe.UserControls.TongDoanThuUC();
             this.quanLiTatCaXe = new QuanLiXe.UserControls.QuanLiTatCaXe();
             this.giaoDienQuanLiXeUC = new QuanLiXe.UserControls.GiaoDienQuanLiXeUC();
@@ -255,6 +256,16 @@
             this.pictureBoxBack.TabStop = false;
             this.pictureBoxBack.Click += new System.EventHandler(this.pictureBoxBack_Click);
             // 
+            // nhanVien1
+            // 
+            this.nhanVien1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.nhanVien1.Location = new System.Drawing.Point(350, 0);
+            this.nhanVien1.Name = "nhanVien1";
+            this.nhanVien1.Size = new System.Drawing.Size(1469, 866);
+            this.nhanVien1.TabIndex = 64;
+            // 
             // TongDoanhThuUC
             // 
             this.TongDoanhThuUC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -329,6 +340,7 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(1426, 798);
+            this.Controls.Add(this.nhanVien1);
             this.Controls.Add(this.TongDoanhThuUC);
             this.Controls.Add(this.panelForm);
             this.Controls.Add(this.pictureBoxBack);
@@ -377,5 +389,6 @@
         private UserControls.HopDongGui hopDongGui;
         private UserControls.NhanVienUC NhanVienUC;
         private UserControls.TongDoanThuUC TongDoanhThuUC;
+        private UserControls.NhanVien1 nhanVien1;
     }
 }

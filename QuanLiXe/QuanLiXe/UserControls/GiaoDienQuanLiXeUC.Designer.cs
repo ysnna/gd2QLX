@@ -579,11 +579,11 @@
             // 
             // btRefreshGuiXe
             // 
-            this.btRefreshGuiXe.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btRefreshGuiXe.BackColor = System.Drawing.Color.Silver;
             this.btRefreshGuiXe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btRefreshGuiXe.Cursor = System.Windows.Forms.Cursors.Default;
             this.btRefreshGuiXe.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btRefreshGuiXe.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.btRefreshGuiXe.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btRefreshGuiXe.Location = new System.Drawing.Point(86, 885);
             this.btRefreshGuiXe.Name = "btRefreshGuiXe";
             this.btRefreshGuiXe.Size = new System.Drawing.Size(141, 52);
@@ -594,11 +594,11 @@
             // 
             // btRefreshLayXe
             // 
-            this.btRefreshLayXe.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btRefreshLayXe.BackColor = System.Drawing.Color.Silver;
             this.btRefreshLayXe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btRefreshLayXe.Cursor = System.Windows.Forms.Cursors.Default;
             this.btRefreshLayXe.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btRefreshLayXe.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.btRefreshLayXe.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btRefreshLayXe.Location = new System.Drawing.Point(233, 886);
             this.btRefreshLayXe.Name = "btRefreshLayXe";
             this.btRefreshLayXe.Size = new System.Drawing.Size(141, 52);
