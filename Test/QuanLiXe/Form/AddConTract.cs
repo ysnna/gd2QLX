@@ -20,7 +20,7 @@ namespace QuanLiXe
         void clearform()
         {
             txtConID.Text = "";
-            txtCustomID.Text = "";
+            txtMaKH.Text = "";
             txtDescription.Text = "";
             txtPaid.Text = "";
             txtThoiHan.Text = "";
@@ -30,7 +30,7 @@ namespace QuanLiXe
             //Khai báo để vào insert
             #region khai báo
             string mahd = txtConID.Text;
-            string makh = txtCustomID.Text;
+            string makh = txtMaKH.Text;
             string thoihan = txtThoiHan.Text;
             string theloai;
             theloai = cbTheLoai.Text;
@@ -92,7 +92,7 @@ namespace QuanLiXe
             string des = txtDescription.Text;
             DateTime ngaybatdau = dtpDateStart.Value;
             DateTime ngayketthuc = DateTime.Now;
-            string makh = txtCustomID.Text;
+            string makh = txtMaKH.Text;
             string theloai;
             string type;
             if (radiobtnGui.Checked)
@@ -118,7 +118,7 @@ namespace QuanLiXe
 
         private void AddConTract_Load(object sender, EventArgs e)
         {
-            txtCustomID.Text = Global.IDKH;
+            txtMaKH.Text = Global.IDKH;
             cbTheLoai.DataSource = con.getLoaiXe();
             cbTheLoai.DisplayMember = "LoaiXe";
             cbTheLoai.ValueMember = "id";
@@ -129,6 +129,11 @@ namespace QuanLiXe
         {
             string bienso = txtBienSo.Text;
             ListBoxBienSo.Items.Add(bienso);
+        }
+
+        private void radiobtnGui_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

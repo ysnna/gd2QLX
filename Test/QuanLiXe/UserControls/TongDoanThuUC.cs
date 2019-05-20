@@ -22,7 +22,7 @@ namespace QuanLiXe.UserControls
         //Load tong doanh thu
         private void TongDoanThuUC_Load(object sender, EventArgs e)
         {
-            //dateTimePickerToday.Hide();
+            dateTimePickerToday.Hide();
             refreshData();
         }
 

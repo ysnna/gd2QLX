@@ -166,14 +166,13 @@ namespace QuanLiXe
                 return false;
             }
         }
-        public DataTable searchNhanVien(string manv)
+        public DataTable search(SqlCommand cmd)
         {
-            SqlCommand cmd = new SqlCommand("select * from NhanVien where MaNV=@manv", mydb.getConnection);
-            cmd.Parameters.Add("@manv", SqlDbType.VarChar).Value = manv;
+            cmd.Connection = mydb.getConnection;
             SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            return dt;
+            DataTable table = new DataTable();
+            da.Fill(table);
+            return table;
         }
         public DataTable getAllNV()
         {

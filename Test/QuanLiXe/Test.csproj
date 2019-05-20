@@ -194,6 +194,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_DESKTOP_RRRHOP4DoanhThu.xsd</DependentUpon>
     </Compile>
+    <Compile Include="_DESKTOP_RRRHOP4HD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_DESKTOP_RRRHOP4HD.xsd</DependentUpon>
+    </Compile>
     <Compile Include="_DESKTOP_RRRHOP4NhanVien.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -321,6 +326,17 @@
     </None>
     <None Include="_DESKTOP_RRRHOP4DoanhThu.xss">
       <DependentUpon>_DESKTOP_RRRHOP4DoanhThu.xsd</DependentUpon>
+    </None>
+    <None Include="_DESKTOP_RRRHOP4HD.xsc">
+      <DependentUpon>_DESKTOP_RRRHOP4HD.xsd</DependentUpon>
+    </None>
+    <None Include="_DESKTOP_RRRHOP4HD.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_DESKTOP_RRRHOP4HD.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_DESKTOP_RRRHOP4HD.xss">
+      <DependentUpon>_DESKTOP_RRRHOP4HD.xsd</DependentUpon>
     </None>
     <None Include="_DESKTOP_RRRHOP4NhanVien.xsc">
       <DependentUpon>_DESKTOP_RRRHOP4NhanVien.xsd</DependentUpon>

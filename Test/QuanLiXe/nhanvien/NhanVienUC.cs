@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Data.SqlClient;
 
 namespace QuanLiXe
 {
@@ -20,12 +21,12 @@ namespace QuanLiXe
         NhanVien nv = new NhanVien();
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            SqlCommand cmd = new SqlCommand("select * from NHANVIEN where Concat(maNV, fname, lname) like N'%" + txtSearch.Text + "%'");
             dgvNhanVien.ReadOnly = true;
-            string manv = txtSearch.Text;
             //xử lí hình ảnh, code có tham khảo msdn
             DataGridViewImageColumn picCol = new DataGridViewImageColumn();
             dgvNhanVien.RowTemplate.Height = 90; //chỉnh pic đẹp
-            dgvNhanVien.DataSource = nv.searchNhanVien(manv);
+            dgvNhanVien.DataSource = nv.search(cmd);
             picCol = (DataGridViewImageColumn)dgvNhanVien.Columns[8];
             picCol.ImageLayout = DataGridViewImageCellLayout.Zoom;
             dgvNhanVien.AllowUserToAddRows = false;

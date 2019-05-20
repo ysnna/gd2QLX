@@ -25,6 +25,7 @@ namespace QuanLiXe.UserControls
         private void QuanLiTatCaXe_Load(object sender, EventArgs e)
         {
             dgvQuanLiAllXe.DataSource = kh.getQLXRV();
+            btSua.Visible = false;
             this.refreshData();
             txtSearch.BringToFront();
             btSearch.BringToFront();
