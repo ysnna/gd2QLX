@@ -28,7 +28,22 @@ namespace QuanLiXe
         void connectionBaiXe()
         {
             dgvBaiXe.DataSource = kh.getCus();
-            //foreach ()
+            int countRow = dgvBaiXe.RowCount;
+            int countCol = dgvBaiXe.ColumnCount;
+            foreach (DataGridViewRow row in dgvBaiXe.Rows)
+            {
+                for (int j = 1; j < countCol; j++)
+                    if (Convert.ToInt32(row.Cells[j].Value) > 0)
+                    {
+                        row.Cells[j].Value = "";
+                        row.Cells[j].Style.BackColor = Color.Tomato;
+                    }
+                    else
+                    {
+                        row.Cells[j].Value = "";
+                        row.Cells[j].Style.BackColor = Color.SteelBlue;
+                    }
+            }
         }
         private void btBackThoat_Click(object sender, EventArgs e)
         {

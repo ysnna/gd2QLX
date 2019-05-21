@@ -50,10 +50,19 @@
             this.giaoDienQuanLiXeUC = new QuanLiXe.UserControls.GiaoDienQuanLiXeUC();
             this.hopDongGui = new QuanLiXe.UserControls.HopDongGui();
             this.gioiThieuUC = new QuanLiXe.UserControls.GioiThieuUC();
+            this.panelTho = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btThongKeDoanhThuTho = new System.Windows.Forms.Button();
+            this.btQuanLiBaiXeTho = new System.Windows.Forms.Button();
+            this.btThongTinTho = new System.Windows.Forms.Button();
+            this.panelClickTho = new System.Windows.Forms.Panel();
+            this.btGioiThieuTho = new System.Windows.Forms.Button();
             this.panelForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
+            this.panelTho.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panelForm
@@ -323,12 +332,112 @@
             this.gioiThieuUC.Size = new System.Drawing.Size(1518, 814);
             this.gioiThieuUC.TabIndex = 59;
             // 
+            // panelTho
+            // 
+            this.panelTho.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panelTho.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panelTho.Controls.Add(this.panelClickTho);
+            this.panelTho.Controls.Add(this.pictureBox2);
+            this.panelTho.Controls.Add(this.btThongKeDoanhThuTho);
+            this.panelTho.Controls.Add(this.btQuanLiBaiXeTho);
+            this.panelTho.Controls.Add(this.btThongTinTho);
+            this.panelTho.Controls.Add(this.btGioiThieuTho);
+            this.panelTho.Location = new System.Drawing.Point(358, 68);
+            this.panelTho.Name = "panelTho";
+            this.panelTho.Size = new System.Drawing.Size(355, 811);
+            this.panelTho.TabIndex = 9;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(32, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(282, 147);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btThongKeDoanhThuTho
+            // 
+            this.btThongKeDoanhThuTho.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btThongKeDoanhThuTho.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btThongKeDoanhThuTho.FlatAppearance.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.btThongKeDoanhThuTho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btThongKeDoanhThuTho.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThongKeDoanhThuTho.ForeColor = System.Drawing.Color.Transparent;
+            this.btThongKeDoanhThuTho.Location = new System.Drawing.Point(3, 434);
+            this.btThongKeDoanhThuTho.Name = "btThongKeDoanhThuTho";
+            this.btThongKeDoanhThuTho.Size = new System.Drawing.Size(349, 80);
+            this.btThongKeDoanhThuTho.TabIndex = 6;
+            this.btThongKeDoanhThuTho.Text = "Thống kê doanh thu";
+            this.btThongKeDoanhThuTho.UseVisualStyleBackColor = true;
+            this.btThongKeDoanhThuTho.Click += new System.EventHandler(this.btThongKeDoanhThuTho_Click);
+            // 
+            // btQuanLiBaiXeTho
+            // 
+            this.btQuanLiBaiXeTho.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btQuanLiBaiXeTho.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btQuanLiBaiXeTho.FlatAppearance.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.btQuanLiBaiXeTho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btQuanLiBaiXeTho.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btQuanLiBaiXeTho.ForeColor = System.Drawing.Color.Transparent;
+            this.btQuanLiBaiXeTho.Location = new System.Drawing.Point(3, 348);
+            this.btQuanLiBaiXeTho.Name = "btQuanLiBaiXeTho";
+            this.btQuanLiBaiXeTho.Size = new System.Drawing.Size(349, 80);
+            this.btQuanLiBaiXeTho.TabIndex = 5;
+            this.btQuanLiBaiXeTho.Text = "Quản lí bãi xe";
+            this.btQuanLiBaiXeTho.UseVisualStyleBackColor = true;
+            this.btQuanLiBaiXeTho.Click += new System.EventHandler(this.btQuanLiBaiXeTho_Click);
+            // 
+            // btThongTinTho
+            // 
+            this.btThongTinTho.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btThongTinTho.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btThongTinTho.FlatAppearance.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.btThongTinTho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btThongTinTho.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThongTinTho.ForeColor = System.Drawing.Color.Transparent;
+            this.btThongTinTho.Location = new System.Drawing.Point(3, 262);
+            this.btThongTinTho.Name = "btThongTinTho";
+            this.btThongTinTho.Size = new System.Drawing.Size(349, 80);
+            this.btThongTinTho.TabIndex = 2;
+            this.btThongTinTho.Text = "Thông tin nhân viên";
+            this.btThongTinTho.UseVisualStyleBackColor = true;
+            this.btThongTinTho.Click += new System.EventHandler(this.btThongTinTho_Click);
+            // 
+            // panelClickTho
+            // 
+            this.panelClickTho.BackColor = System.Drawing.Color.AliceBlue;
+            this.panelClickTho.Location = new System.Drawing.Point(3, 176);
+            this.panelClickTho.Name = "panelClickTho";
+            this.panelClickTho.Size = new System.Drawing.Size(23, 80);
+            this.panelClickTho.TabIndex = 1;
+            // 
+            // btGioiThieuTho
+            // 
+            this.btGioiThieuTho.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btGioiThieuTho.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btGioiThieuTho.FlatAppearance.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.btGioiThieuTho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btGioiThieuTho.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btGioiThieuTho.ForeColor = System.Drawing.Color.Transparent;
+            this.btGioiThieuTho.Location = new System.Drawing.Point(3, 176);
+            this.btGioiThieuTho.Name = "btGioiThieuTho";
+            this.btGioiThieuTho.Size = new System.Drawing.Size(349, 80);
+            this.btGioiThieuTho.TabIndex = 0;
+            this.btGioiThieuTho.Text = "Giới thiệu";
+            this.btGioiThieuTho.UseVisualStyleBackColor = true;
+            this.btGioiThieuTho.Click += new System.EventHandler(this.btGioiThieuTho_Click);
+            // 
             // QuanLiForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(1864, 812);
+            this.Controls.Add(this.panelTho);
             this.Controls.Add(this.panelForm);
             this.Controls.Add(this.pictureBoxBack);
             this.Controls.Add(this.menuStrip);
@@ -349,6 +458,8 @@
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).EndInit();
+            this.panelTho.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -378,5 +489,12 @@
         //private UserControls.NhanVienUC NhanVienUC;
         private UserControls.TongDoanThuUC TongDoanhThuUC;
         private NhanVienUC nhanVienUC1;
+        private System.Windows.Forms.Panel panelTho;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btThongKeDoanhThuTho;
+        private System.Windows.Forms.Button btQuanLiBaiXeTho;
+        private System.Windows.Forms.Button btThongTinTho;
+        private System.Windows.Forms.Panel panelClickTho;
+        private System.Windows.Forms.Button btGioiThieuTho;
     }
 }

@@ -24,8 +24,12 @@ namespace QuanLiXe.UserControls
         {
             dateTimePickerToday.Hide();
             refreshData();
+            loadChart();
         }
-
+        void loadChart()
+        {
+            
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             DateTime today = Convert.ToDateTime(dateTimePickerToday.Text);

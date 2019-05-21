@@ -156,7 +156,7 @@
             // 
             // btnPaid
             // 
-            this.btnPaid.BackColor = System.Drawing.Color.Teal;
+            this.btnPaid.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnPaid.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPaid.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPaid.ForeColor = System.Drawing.Color.White;

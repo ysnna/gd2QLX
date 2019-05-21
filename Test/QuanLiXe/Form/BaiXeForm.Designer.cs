@@ -35,13 +35,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BaiXeForm));
             this.dgvBaiXe = new System.Windows.Forms.DataGridView();
-            this.bAIXEBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._DESKTOP_BAIXE = new QuanLiXe._DESKTOP_BAIXE();
-            this.btBaiOto = new System.Windows.Forms.Button();
-            this.btBaiXeMay = new System.Windows.Forms.Button();
-            this.btBaiXeDap = new System.Windows.Forms.Button();
-            this.btBackThoat = new System.Windows.Forms.Button();
-            this.bAIXETableAdapter = new QuanLiXe._DESKTOP_BAIXETableAdapters.BAIXETableAdapter();
             this.vitriXeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.khuADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.khuBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,6 +45,13 @@
             this.khuGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.khuHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.khuKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bAIXEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._DESKTOP_BAIXE = new QuanLiXe._DESKTOP_BAIXE();
+            this.btBaiOto = new System.Windows.Forms.Button();
+            this.btBaiXeMay = new System.Windows.Forms.Button();
+            this.btBaiXeDap = new System.Windows.Forms.Button();
+            this.btBackThoat = new System.Windows.Forms.Button();
+            this.bAIXETableAdapter = new QuanLiXe._DESKTOP_BAIXETableAdapters.BAIXETableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBaiXe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bAIXEBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._DESKTOP_BAIXE)).BeginInit();
@@ -97,16 +97,15 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvBaiXe.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvBaiXe.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvBaiXe.Enabled = false;
             this.dgvBaiXe.GridColor = System.Drawing.SystemColors.ControlText;
-            this.dgvBaiXe.Location = new System.Drawing.Point(10, 68);
+            this.dgvBaiXe.Location = new System.Drawing.Point(14, 74);
             this.dgvBaiXe.Name = "dgvBaiXe";
             this.dgvBaiXe.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvBaiXe.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
@@ -115,80 +114,10 @@
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             this.dgvBaiXe.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvBaiXe.RowTemplate.Height = 30;
             this.dgvBaiXe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgvBaiXe.Size = new System.Drawing.Size(1187, 662);
+            this.dgvBaiXe.Size = new System.Drawing.Size(1187, 642);
             this.dgvBaiXe.TabIndex = 0;
-            // 
-            // bAIXEBindingSource
-            // 
-            this.bAIXEBindingSource.DataMember = "BAIXE";
-            this.bAIXEBindingSource.DataSource = this._DESKTOP_BAIXE;
-            // 
-            // _DESKTOP_BAIXE
-            // 
-            this._DESKTOP_BAIXE.DataSetName = "_DESKTOP_BAIXE";
-            this._DESKTOP_BAIXE.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // btBaiOto
-            // 
-            this.btBaiOto.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btBaiOto.BackColor = System.Drawing.Color.HotPink;
-            this.btBaiOto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btBaiOto.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btBaiOto.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btBaiOto.Location = new System.Drawing.Point(147, 8);
-            this.btBaiOto.Name = "btBaiOto";
-            this.btBaiOto.Size = new System.Drawing.Size(350, 61);
-            this.btBaiOto.TabIndex = 1;
-            this.btBaiOto.Text = "Bãi xe ô tô";
-            this.btBaiOto.UseVisualStyleBackColor = false;
-            // 
-            // btBaiXeMay
-            // 
-            this.btBaiXeMay.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btBaiXeMay.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btBaiXeMay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btBaiXeMay.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btBaiXeMay.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btBaiXeMay.Location = new System.Drawing.Point(495, 8);
-            this.btBaiXeMay.Name = "btBaiXeMay";
-            this.btBaiXeMay.Size = new System.Drawing.Size(464, 61);
-            this.btBaiXeMay.TabIndex = 2;
-            this.btBaiXeMay.Text = "Bãi xe máy";
-            this.btBaiXeMay.UseVisualStyleBackColor = false;
-            // 
-            // btBaiXeDap
-            // 
-            this.btBaiXeDap.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btBaiXeDap.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.btBaiXeDap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btBaiXeDap.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btBaiXeDap.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btBaiXeDap.Location = new System.Drawing.Point(958, 8);
-            this.btBaiXeDap.Name = "btBaiXeDap";
-            this.btBaiXeDap.Size = new System.Drawing.Size(239, 61);
-            this.btBaiXeDap.TabIndex = 3;
-            this.btBaiXeDap.Text = "Bãi xe đạp";
-            this.btBaiXeDap.UseVisualStyleBackColor = false;
-            // 
-            // btBackThoat
-            // 
-            this.btBackThoat.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btBackThoat.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.btBackThoat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btBackThoat.BackgroundImage")));
-            this.btBackThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btBackThoat.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btBackThoat.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btBackThoat.Location = new System.Drawing.Point(10, 8);
-            this.btBackThoat.Name = "btBackThoat";
-            this.btBackThoat.Size = new System.Drawing.Size(141, 61);
-            this.btBackThoat.TabIndex = 4;
-            this.btBackThoat.UseVisualStyleBackColor = false;
-            this.btBackThoat.Click += new System.EventHandler(this.btBackThoat_Click);
-            // 
-            // bAIXETableAdapter
-            // 
-            this.bAIXETableAdapter.ClearBeforeFill = true;
             // 
             // vitriXeDataGridViewTextBoxColumn
             // 
@@ -271,13 +200,84 @@
             this.khuKDataGridViewTextBoxColumn.ReadOnly = true;
             this.khuKDataGridViewTextBoxColumn.Width = 118;
             // 
+            // bAIXEBindingSource
+            // 
+            this.bAIXEBindingSource.DataMember = "BAIXE";
+            this.bAIXEBindingSource.DataSource = this._DESKTOP_BAIXE;
+            // 
+            // _DESKTOP_BAIXE
+            // 
+            this._DESKTOP_BAIXE.DataSetName = "_DESKTOP_BAIXE";
+            this._DESKTOP_BAIXE.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // btBaiOto
+            // 
+            this.btBaiOto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btBaiOto.BackColor = System.Drawing.Color.HotPink;
+            this.btBaiOto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btBaiOto.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btBaiOto.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btBaiOto.Location = new System.Drawing.Point(151, 14);
+            this.btBaiOto.Name = "btBaiOto";
+            this.btBaiOto.Size = new System.Drawing.Size(350, 61);
+            this.btBaiOto.TabIndex = 1;
+            this.btBaiOto.Text = "Bãi xe ô tô";
+            this.btBaiOto.UseVisualStyleBackColor = false;
+            // 
+            // btBaiXeMay
+            // 
+            this.btBaiXeMay.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btBaiXeMay.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btBaiXeMay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btBaiXeMay.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btBaiXeMay.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btBaiXeMay.Location = new System.Drawing.Point(499, 14);
+            this.btBaiXeMay.Name = "btBaiXeMay";
+            this.btBaiXeMay.Size = new System.Drawing.Size(464, 61);
+            this.btBaiXeMay.TabIndex = 2;
+            this.btBaiXeMay.Text = "Bãi xe máy";
+            this.btBaiXeMay.UseVisualStyleBackColor = false;
+            // 
+            // btBaiXeDap
+            // 
+            this.btBaiXeDap.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btBaiXeDap.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.btBaiXeDap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btBaiXeDap.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btBaiXeDap.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btBaiXeDap.Location = new System.Drawing.Point(962, 14);
+            this.btBaiXeDap.Name = "btBaiXeDap";
+            this.btBaiXeDap.Size = new System.Drawing.Size(239, 61);
+            this.btBaiXeDap.TabIndex = 3;
+            this.btBaiXeDap.Text = "Bãi xe đạp";
+            this.btBaiXeDap.UseVisualStyleBackColor = false;
+            // 
+            // btBackThoat
+            // 
+            this.btBackThoat.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btBackThoat.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.btBackThoat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btBackThoat.BackgroundImage")));
+            this.btBackThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btBackThoat.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btBackThoat.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btBackThoat.Location = new System.Drawing.Point(14, 14);
+            this.btBackThoat.Name = "btBackThoat";
+            this.btBackThoat.Size = new System.Drawing.Size(141, 61);
+            this.btBackThoat.TabIndex = 4;
+            this.btBackThoat.UseVisualStyleBackColor = false;
+            this.btBackThoat.Click += new System.EventHandler(this.btBackThoat_Click);
+            // 
+            // bAIXETableAdapter
+            // 
+            this.bAIXETableAdapter.ClearBeforeFill = true;
+            // 
             // BaiXeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1206, 740);
+            this.ClientSize = new System.Drawing.Size(1213, 728);
             this.Controls.Add(this.btBaiXeDap);
             this.Controls.Add(this.btBaiXeMay);
             this.Controls.Add(this.btBaiOto);

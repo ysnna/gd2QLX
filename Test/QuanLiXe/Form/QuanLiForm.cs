@@ -27,6 +27,7 @@ namespace QuanLiXe
         private void QuanLiForm_Load(object sender, EventArgs e)
         {
             menuStrip.Visible = false;
+            panelTho.Location = new Point(-3, 0);
             gioiThieuUC.BringToFront();
             gioiThieuUC.Location = new Point(350, 0);
             giaoDienQuanLiXeUC.Location = new Point(350, 0);
@@ -103,6 +104,40 @@ namespace QuanLiXe
             panelClick.BringToFront();
             panelClick.Height = btThongKeDoanhThu.Height;
             panelClick.Top = btHopDongCongTy.Top;
+        }
+
+        private void btGioiThieuTho_Click(object sender, EventArgs e)
+        {
+            this.panelClickTho.BringToFront();
+            panelClickTho.Height = btGioiThieuTho.Height;
+            panelClickTho.Top = btGioiThieuTho.Top;
+            gioiThieuUC.BringToFront();
+        }
+
+        private void btThongTinTho_Click(object sender, EventArgs e)
+        {
+            panelClickTho.BringToFront();
+            panelClickTho.Height = btThongTinTho.Height; 
+            panelClickTho.Top = btThongTinTho.Top;
+            //btThongTinTho.BringToFront();
+        }
+
+        private void btQuanLiBaiXeTho_Click(object sender, EventArgs e)
+        {
+            panelClickTho.BringToFront();
+            panelClickTho.Height = btQuanLiBaiXeTho.Height;
+            panelClickTho.Top = btQuanLiBaiXeTho.Top;
+            giaoDienQuanLiXeUC.BringToFront();
+            menuStrip.Visible = true;
+            menuStrip.BringToFront();
+        }
+
+        private void btThongKeDoanhThuTho_Click(object sender, EventArgs e)
+        {
+            panelClickTho.BringToFront();
+            panelClickTho.Height = btThongKeDoanhThuTho.Height;
+            panelClickTho.Top = btThongKeDoanhThuTho.Top;
+            TongDoanhThuUC.BringToFront();
         }
     }
 }
